@@ -1,0 +1,17 @@
+{
+ "rule": "argmin over legal priors of geomean_models(selected-LR val score)",
+ "geomean": {
+  "haar": 8.106756318572382,
+  "gauss90": 8.150586370820022
+ },
+ "best": "haar",
+ "prior": {
+  "kind": "haar"
+ },
+ "chosen_lr": {
+  "M1_riemannian": 0.003,
+  "M2_euclid6d": 0.003,
+  "M3_quat": 0.003,
+  "M4_euler": 0.0003
+ }
+}

@@ -1,0 +1,797 @@
+2026-09-29 00:32:50,131 [pid5116] INFO [n2] scheduler start: 7 cpu + 2 mps workers
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 10 leaked semaphore objects to clean up at shutdown: {'/mp-s9gg_248', '/mp-t1lyf5s4', '/mp-64t192t6', '/mp-tkwfwi80', '/mp-mmjwf4k5', '/mp-76rz31u0', '/mp-d6p3wtdq', '/mp-ejmv155t', '/mp-ks84yk7b', '/mp-frcadq03'}
+  warnings.warn(
+2026-09-29 00:34:57,096 [pid5247] INFO [n2] scheduler start: 4 cpu + 3 mps workers
+2026-09-29 00:34:58,270 [pid5252] INFO [train] resume M2_euclid6d_D90_s100 at step 2000
+2026-09-29 00:34:58,290 [pid5253] INFO [train] resume M4_euler_D90_s100 at step 2000
+2026-09-29 00:34:58,294 [pid5250] INFO [train] resume M1_riemannian_D90_s100 at step 2000
+2026-09-29 00:34:58,306 [pid5251] INFO [train] resume M3_quat_D90_s100 at step 2000
+2026-09-29 00:34:58,367 [pid5255] ERROR [n2] n2_hp_trunc150_lr0.0003/M1_riemannian_D30_s100 FAILED: TypeError('RNG state must be a torch.ByteTensor')
+Traceback (most recent call last):
+  File "/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/night2.py", line 100, in run_task
+    fm.train_one(t["model"], t["D"], t["seed"], t["lr"], t["steps"], rd, device=t["device"],
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 prior=t["prior"], dataset=t["dataset"], **t["arch"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/fm.py", line 172, in train_one
+    g.set_state(ck["gen"]); torch.set_rng_state(ck["torch_rng"])
+    ~~~~~~~~~~~^^^^^^^^^^^
+TypeError: RNG state must be a torch.ByteTensor
+
+2026-09-29 00:34:58,368 [pid5247] INFO [n2] mps n2_hp_trunc150_lr0.0003/M1_riemannian_D30_s100: error: TypeError('RNG state must be a torch.ByteTensor')  (1s, 6 running)
+2026-09-29 00:34:58,416 [pid5254] ERROR [n2] n2_hp_trunc150_lr0.0003/M2_euclid6d_D30_s100 FAILED: TypeError('RNG state must be a torch.ByteTensor')
+Traceback (most recent call last):
+  File "/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/night2.py", line 100, in run_task
+    fm.train_one(t["model"], t["D"], t["seed"], t["lr"], t["steps"], rd, device=t["device"],
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 prior=t["prior"], dataset=t["dataset"], **t["arch"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/fm.py", line 172, in train_one
+    g.set_state(ck["gen"]); torch.set_rng_state(ck["torch_rng"])
+    ~~~~~~~~~~~^^^^^^^^^^^
+TypeError: RNG state must be a torch.ByteTensor
+
+2026-09-29 00:34:58,902 [pid5247] INFO [n2] mps n2_hp_trunc150_lr0.0003/M2_euclid6d_D30_s100: error: TypeError('RNG state must be a torch.ByteTensor')  (2s, 6 running)
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 10 leaked semaphore objects to clean up at shutdown: {'/mp-c8577dhq', '/mp-_m4nf7jw', '/mp-56nliezt', '/mp-gzofzcs9', '/mp-l_j4on7d', '/mp-9uzhv0rr', '/mp-18rf2usk', '/mp-fkrvx1j1', '/mp-0zq87yp9', '/mp-76m3yfxw'}
+  warnings.warn(
+2026-09-29 00:39:35,041 [pid5605] INFO [n2] scheduler start: 8 cpu workers
+2026-09-29 00:39:36,184 [pid5612] INFO [train] resume M1_riemannian_D90_s100 at step 4000
+2026-09-29 00:39:36,201 [pid5609] INFO [train] resume M2_euclid6d_D90_s100 at step 6000
+2026-09-29 00:39:36,202 [pid5614] INFO [train] resume M4_euler_D90_s100 at step 6000
+2026-09-29 00:39:36,210 [pid5610] INFO [train] resume M3_quat_D90_s100 at step 6000
+2026-09-29 00:39:36,211 [pid5613] INFO [train] resume M2_euclid6d_D90_s100 at step 2000
+2026-09-29 00:39:36,230 [pid5611] INFO [train] resume M3_quat_D90_s100 at step 2000
+2026-09-29 00:39:36,233 [pid5608] INFO [train] resume M1_riemannian_D90_s100 at step 2000
+2026-09-29 00:49:02,800 [pid5614] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0408 781s
+2026-09-29 00:49:04,371 [pid5605] INFO [n2] cpu n2_pilot_gauss30/M4_euler_D90_s100: ok  (569s, 7 running)
+2026-09-29 00:49:17,697 [pid5609] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0351 787s
+2026-09-29 00:49:18,352 [pid5605] INFO [n2] cpu n2_pilot_gauss30/M2_euclid6d_D90_s100: ok  (583s, 7 running)
+2026-09-29 00:49:54,884 [pid5610] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0381 833s
+2026-09-29 00:49:55,741 [pid5605] INFO [n2] cpu n2_pilot_gauss30/M3_quat_D90_s100: ok  (621s, 7 running)
+2026-09-29 00:51:43,399 [pid5611] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0287 817s
+2026-09-29 00:51:44,257 [pid5605] INFO [n2] cpu n2_pilot_gauss60/M3_quat_D90_s100: ok  (729s, 7 running)
+2026-09-29 00:52:05,735 [pid5612] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0258 928s
+2026-09-29 00:52:07,342 [pid5605] INFO [n2] cpu n2_pilot_gauss30/M1_riemannian_D90_s100: ok  (752s, 7 running)
+2026-09-29 00:52:28,609 [pid5613] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0437 856s
+2026-09-29 00:52:30,198 [pid5605] INFO [n2] cpu n2_pilot_gauss60/M2_euclid6d_D90_s100: ok  (775s, 7 running)
+2026-09-29 00:53:01,628 [pid5608] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0629 902s
+2026-09-29 00:53:03,202 [pid5605] INFO [n2] cpu n2_pilot_gauss60/M1_riemannian_D90_s100: ok  (808s, 7 running)
+2026-09-29 00:53:37,052 [pid5615] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0782 841s
+2026-09-29 00:53:37,831 [pid5605] INFO [n2] cpu n2_pilot_gauss60/M4_euler_D90_s100: ok  (843s, 7 running)
+2026-09-29 01:02:33,640 [pid5873] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0359 794s
+2026-09-29 01:02:34,543 [pid5605] INFO [n2] cpu n2_pilot_gauss90/M2_euclid6d_D90_s100: ok  (1380s, 7 running)
+2026-09-29 01:02:48,595 [pid5881] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0315 771s
+2026-09-29 01:02:50,024 [pid5605] INFO [n2] cpu n2_pilot_gauss90/M3_quat_D90_s100: ok  (1395s, 7 running)
+2026-09-29 01:04:11,950 [pid5924] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0953 746s
+2026-09-29 01:04:13,247 [pid5605] INFO [n2] cpu n2_pilot_gauss90/M4_euler_D90_s100: ok  (1478s, 7 running)
+2026-09-29 01:04:15,325 [pid5868] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0813 909s
+2026-09-29 01:04:16,071 [pid5605] INFO [n2] cpu n2_pilot_gauss90/M1_riemannian_D90_s100: ok  (1481s, 7 running)
+2026-09-29 01:04:16,078 [pid5605] INFO [n2] sigma pilot: geomean {30: 8.097279451247323, 60: 8.524261699584052, 90: 7.424763242567993} -> sigma* = 90
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-t1b7w6yr', '/mp-04cz3uo7', '/mp-cd05t955', '/mp-tv0ljg8g', '/mp-gygbusxp'}
+  warnings.warn(
+2026-09-29 01:05:09,022 [pid6442] INFO [n2] scheduler start: 8 cpu workers
+2026-09-29 01:19:43,140 [pid6447] INFO [train] done M4_euler_D30_s100 lr=0.0003 loss=0.0881 873s
+2026-09-29 01:19:47,859 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M4_euler_D30_s100: ok  (879s, 7 running)
+2026-09-29 01:19:49,126 [pid6450] INFO [train] done M2_euclid6d_D30_s100 lr=0.0003 loss=0.0531 879s
+2026-09-29 01:19:51,085 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M2_euclid6d_D30_s100: ok  (882s, 7 running)
+2026-09-29 01:20:04,066 [pid6452] INFO [train] done M3_quat_D30_s100 lr=0.0003 loss=0.0473 894s
+2026-09-29 01:20:04,432 [pid6451] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0604 894s
+2026-09-29 01:20:06,016 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M3_quat_D30_s100: ok  (897s, 7 running)
+2026-09-29 01:20:06,841 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M2_euclid6d_D90_s100: ok  (898s, 7 running)
+2026-09-29 01:20:13,872 [pid6448] INFO [train] done M3_quat_D90_s100 lr=0.0003 loss=0.0487 904s
+2026-09-29 01:20:15,674 [pid6446] INFO [train] done M4_euler_D90_s100 lr=0.0003 loss=0.1397 905s
+2026-09-29 01:20:16,630 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M3_quat_D90_s100: ok  (908s, 7 running)
+2026-09-29 01:20:18,367 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M4_euler_D90_s100: ok  (909s, 7 running)
+2026-09-29 01:20:55,532 [pid6445] INFO [train] done M1_riemannian_D30_s100 lr=0.0003 loss=0.0965 945s
+2026-09-29 01:20:58,150 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M1_riemannian_D30_s100: ok  (949s, 7 running)
+2026-09-29 01:22:25,340 [pid6449] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.1065 1035s
+2026-09-29 01:22:29,781 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M1_riemannian_D90_s100: ok  (1041s, 7 running)
+2026-09-29 01:33:38,975 [pid6708] INFO [train] done M4_euler_D150_s100 lr=0.0003 loss=0.2671 810s
+2026-09-29 01:33:42,466 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M4_euler_D150_s100: ok  (1713s, 7 running)
+2026-09-29 01:34:02,419 [pid6706] INFO [train] done M3_quat_D150_s100 lr=0.0003 loss=0.0799 835s
+2026-09-29 01:34:04,855 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M3_quat_D150_s100: ok  (1736s, 7 running)
+2026-09-29 01:34:06,836 [pid6701] INFO [train] done M2_euclid6d_D150_s100 lr=0.0003 loss=0.0699 854s
+2026-09-29 01:34:08,934 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M2_euclid6d_D150_s100: ok  (1740s, 7 running)
+2026-09-29 01:34:42,076 [pid6730] INFO [train] done M3_quat_D30_s100 lr=0.001 loss=0.0303 822s
+2026-09-29 01:34:46,899 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M3_quat_D30_s100: ok  (1778s, 7 running)
+2026-09-29 01:34:59,991 [pid6722] INFO [train] done M1_riemannian_D30_s100 lr=0.001 loss=0.0720 881s
+2026-09-29 01:35:05,290 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M1_riemannian_D30_s100: ok  (1796s, 7 running)
+2026-09-29 01:35:08,438 [pid6723] INFO [train] done M2_euclid6d_D30_s100 lr=0.001 loss=0.0291 888s
+2026-09-29 01:35:10,215 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M2_euclid6d_D30_s100: ok  (1801s, 7 running)
+2026-09-29 01:35:25,250 [pid6698] INFO [train] done M1_riemannian_D150_s100 lr=0.0003 loss=0.1182 936s
+2026-09-29 01:35:30,843 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0003/M1_riemannian_D150_s100: ok  (1822s, 7 running)
+2026-09-29 01:35:51,061 [pid6751] INFO [train] done M4_euler_D30_s100 lr=0.001 loss=0.0560 799s
+2026-09-29 01:35:53,561 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M4_euler_D30_s100: ok  (1845s, 7 running)
+2026-09-29 01:47:17,445 [pid6897] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0359 791s
+2026-09-29 01:47:22,460 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M2_euclid6d_D90_s100: ok  (2533s, 7 running)
+2026-09-29 01:47:35,571 [pid6905] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0953 767s
+2026-09-29 01:47:36,692 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M4_euler_D90_s100: ok  (2548s, 7 running)
+2026-09-29 01:47:55,746 [pid6898] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0315 825s
+2026-09-29 01:47:59,323 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M3_quat_D90_s100: ok  (2570s, 7 running)
+2026-09-29 01:48:17,118 [pid6892] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0813 873s
+2026-09-29 01:48:22,371 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M1_riemannian_D90_s100: ok  (2593s, 7 running)
+2026-09-29 01:49:10,655 [pid6915] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.0475 818s
+2026-09-29 01:49:14,813 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M3_quat_D150_s100: ok  (2646s, 7 running)
+2026-09-29 01:49:22,705 [pid6917] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.1917 808s
+2026-09-29 01:49:25,577 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M4_euler_D150_s100: ok  (2657s, 7 running)
+2026-09-29 01:49:28,899 [pid6912] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.0426 857s
+2026-09-29 01:49:30,318 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M2_euclid6d_D150_s100: ok  (2661s, 7 running)
+2026-09-29 01:50:56,741 [pid6908] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.0916 950s
+2026-09-29 01:51:01,315 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.001/M1_riemannian_D150_s100: ok  (2752s, 7 running)
+2026-09-29 02:00:58,993 [pid7029] INFO [train] done M2_euclid6d_D30_s100 lr=0.003 loss=0.0190 801s
+2026-09-29 02:01:01,736 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M2_euclid6d_D30_s100: ok  (3353s, 7 running)
+2026-09-29 02:01:04,928 [pid7051] INFO [train] done M4_euler_D30_s100 lr=0.003 loss=0.0556 761s
+2026-09-29 02:01:09,717 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M4_euler_D30_s100: ok  (3361s, 7 running)
+2026-09-29 02:01:49,485 [pid7037] INFO [train] done M3_quat_D30_s100 lr=0.003 loss=0.0234 828s
+2026-09-29 02:01:53,269 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M3_quat_D30_s100: ok  (3404s, 7 running)
+2026-09-29 02:02:50,596 [pid7026] INFO [train] done M1_riemannian_D30_s100 lr=0.003 loss=0.1161 926s
+2026-09-29 02:02:55,441 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M1_riemannian_D30_s100: ok  (3466s, 7 running)
+2026-09-29 02:03:18,900 [pid7071] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0223 832s
+2026-09-29 02:03:22,582 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M2_euclid6d_D90_s100: ok  (3494s, 7 running)
+2026-09-29 02:03:24,205 [pid7293] INFO [train] resume M1_riemannian_D30_s100 at step 12000
+2026-09-29 02:03:58,842 [pid7087] INFO [train] done M4_euler_D90_s100 lr=0.003 loss=0.0994 776s
+2026-09-29 02:04:00,726 [pid7073] INFO [train] done M3_quat_D90_s100 lr=0.003 loss=0.0252 868s
+2026-09-29 02:04:01,341 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M4_euler_D90_s100: ok  (3532s, 7 running)
+2026-09-29 02:04:02,610 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M3_quat_D90_s100: ok  (3534s, 7 running)
+2026-09-29 02:04:03,078 [pid7295] INFO [train] resume M2_euclid6d_D30_s100 at step 14000
+2026-09-29 02:04:04,574 [pid7296] INFO [train] resume M3_quat_D30_s100 at step 12000
+2026-09-29 02:04:23,306 [pid7067] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0755 907s
+2026-09-29 02:04:28,376 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M1_riemannian_D90_s100: ok  (3559s, 7 running)
+2026-09-29 02:04:29,944 [pid7305] INFO [train] resume M4_euler_D30_s100 at step 12000
+2026-09-29 02:09:34,830 [pid7295] INFO [train] done M2_euclid6d_D30_s100 lr=0.0003 loss=0.0545 1080s
+2026-09-29 02:09:37,613 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M2_euclid6d_D30_s100: ok  (3869s, 7 running)
+2026-09-29 02:09:39,373 [pid7360] INFO [train] resume M1_riemannian_D90_s100 at step 2000
+2026-09-29 02:10:17,682 [pid7293] INFO [train] done M1_riemannian_D30_s100 lr=0.0003 loss=0.0569 1139s
+2026-09-29 02:10:21,652 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M1_riemannian_D30_s100: ok  (3913s, 7 running)
+2026-09-29 02:10:23,416 [pid7370] INFO [train] resume M2_euclid6d_D90_s100 at step 2000
+2026-09-29 02:10:58,889 [pid7296] INFO [train] done M3_quat_D30_s100 lr=0.0003 loss=0.0431 1067s
+2026-09-29 02:11:00,913 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M3_quat_D30_s100: ok  (3952s, 7 running)
+2026-09-29 02:11:40,888 [pid7305] INFO [train] done M4_euler_D30_s100 lr=0.0003 loss=0.0821 1050s
+2026-09-29 02:11:45,219 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M4_euler_D30_s100: ok  (3996s, 7 running)
+2026-09-29 02:13:48,616 [pid7262] INFO [train] done M2_euclid6d_D150_s100 lr=0.003 loss=0.0263 757s
+2026-09-29 02:13:51,702 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M2_euclid6d_D150_s100: ok  (4123s, 7 running)
+2026-09-29 02:14:48,085 [pid7284] INFO [train] done M4_euler_D150_s100 lr=0.003 loss=0.1051 711s
+2026-09-29 02:14:48,131 [pid7270] INFO [train] done M3_quat_D150_s100 lr=0.003 loss=0.0350 773s
+2026-09-29 02:14:50,607 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M3_quat_D150_s100: ok  (4182s, 7 running)
+2026-09-29 02:14:51,237 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M4_euler_D150_s100: ok  (4182s, 7 running)
+2026-09-29 02:15:19,921 [pid7258] INFO [train] done M1_riemannian_D150_s100 lr=0.003 loss=0.0808 856s
+2026-09-29 02:15:24,673 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.003/M1_riemannian_D150_s100: ok  (4216s, 7 running)
+2026-09-29 02:15:24,690 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:24:06,434 [pid7370] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0609 926s
+2026-09-29 02:24:10,050 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M2_euclid6d_D90_s100: ok  (4741s, 7 running)
+2026-09-29 02:24:10,068 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:25:16,711 [pid7360] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.0624 1034s
+2026-09-29 02:25:19,585 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M1_riemannian_D90_s100: ok  (4811s, 7 running)
+2026-09-29 02:25:19,602 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:28:07,719 [pid7374] INFO [train] done M3_quat_D90_s100 lr=0.0003 loss=0.0464 1025s
+2026-09-29 02:28:11,460 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M3_quat_D90_s100: ok  (4982s, 7 running)
+2026-09-29 02:28:11,478 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:28:54,498 [pid7382] INFO [train] done M4_euler_D90_s100 lr=0.0003 loss=0.1404 1028s
+2026-09-29 02:28:58,305 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M4_euler_D90_s100: ok  (5029s, 7 running)
+2026-09-29 02:28:58,323 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:29:10,124 [pid7429] INFO [train] done M1_riemannian_D30_s100 lr=0.01 loss=0.4660 824s
+2026-09-29 02:29:15,551 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M1_riemannian_D30_s100: ok  (5047s, 7 running)
+2026-09-29 02:29:15,567 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:30:07,618 [pid7415] INFO [train] done M2_euclid6d_D150_s100 lr=0.0003 loss=0.0709 915s
+2026-09-29 02:30:11,050 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M2_euclid6d_D150_s100: ok  (5102s, 7 running)
+2026-09-29 02:30:11,067 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:31:28,142 [pid7401] INFO [train] done M1_riemannian_D150_s100 lr=0.0003 loss=0.0701 1055s
+2026-09-29 02:31:33,969 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M1_riemannian_D150_s100: ok  (5185s, 7 running)
+2026-09-29 02:31:33,987 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:31:52,881 [pid7416] INFO [train] done M3_quat_D150_s100 lr=0.0003 loss=0.0773 1020s
+2026-09-29 02:31:57,842 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M3_quat_D150_s100: ok  (5209s, 7 running)
+2026-09-29 02:31:57,858 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:38:17,599 [pid7542] INFO [train] done M3_quat_D30_s100 lr=0.01 loss=0.6581 776s
+2026-09-29 02:38:22,440 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M3_quat_D30_s100: ok  (5593s, 7 running)
+2026-09-29 02:38:22,457 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:38:23,091 [pid7523] INFO [train] done M2_euclid6d_D30_s100 lr=0.01 loss=0.6819 851s
+2026-09-29 02:38:24,866 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M2_euclid6d_D30_s100: ok  (5596s, 7 running)
+2026-09-29 02:38:24,879 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:40:51,963 [pid7570] INFO [train] done M4_euler_D30_s100 lr=0.01 loss=1.7814 759s
+2026-09-29 02:40:56,738 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M4_euler_D30_s100: ok  (5748s, 7 running)
+2026-09-29 02:40:56,756 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:42:35,645 [pid7597] INFO [train] done M2_euclid6d_D90_s100 lr=0.01 loss=0.7618 798s
+2026-09-29 02:42:37,937 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M2_euclid6d_D90_s100: ok  (5849s, 7 running)
+2026-09-29 02:42:37,956 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:43:18,644 [pid7608] INFO [train] done M3_quat_D90_s100 lr=0.01 loss=0.6917 786s
+2026-09-29 02:43:20,497 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M3_quat_D90_s100: ok  (5891s, 7 running)
+2026-09-29 02:43:20,514 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:43:35,575 [pid7590] INFO [train] done M1_riemannian_D90_s100 lr=0.01 loss=1.2235 876s
+2026-09-29 02:43:40,993 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M1_riemannian_D90_s100: ok  (5912s, 7 running)
+2026-09-29 02:43:41,008 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:44:46,248 [pid7625] INFO [train] done M4_euler_D90_s100 lr=0.01 loss=2.1279 791s
+2026-09-29 02:44:50,462 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M4_euler_D90_s100: ok  (5981s, 7 running)
+2026-09-29 02:44:50,480 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:47:12,488 [pid7630] INFO [train] done M1_riemannian_D150_s100 lr=0.01 loss=1.2530 913s
+2026-09-29 02:47:18,134 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M1_riemannian_D150_s100: ok  (6129s, 7 running)
+2026-09-29 02:47:18,151 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:51:51,963 [pid7720] INFO [train] done M2_euclid6d_D150_s100 lr=0.01 loss=0.7786 808s
+2026-09-29 02:51:56,258 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M2_euclid6d_D150_s100: ok  (6407s, 7 running)
+2026-09-29 02:51:56,276 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:52:35,358 [pid7722] INFO [train] done M3_quat_D150_s100 lr=0.01 loss=0.7221 848s
+2026-09-29 02:52:40,196 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M3_quat_D150_s100: ok  (6451s, 7 running)
+2026-09-29 02:52:40,216 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:53:31,973 [pid7750] INFO [train] done M4_euler_D150_s100 lr=0.01 loss=1.2801 753s
+2026-09-29 02:53:36,216 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.01/M4_euler_D150_s100: ok  (6507s, 7 running)
+2026-09-29 02:53:36,233 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:56:01,833 [pid7780] INFO [train] done M2_euclid6d_D30_s100 lr=0.0001 loss=0.0902 760s
+2026-09-29 02:56:04,442 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M2_euclid6d_D30_s100: ok  (6655s, 7 running)
+2026-09-29 02:56:04,461 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:57:41,463 [pid7782] INFO [train] done M3_quat_D30_s100 lr=0.0001 loss=0.0748 839s
+2026-09-29 02:57:43,322 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M3_quat_D30_s100: ok  (6754s, 7 running)
+2026-09-29 02:57:43,339 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:58:07,077 [pid7768] INFO [train] done M1_riemannian_D30_s100 lr=0.0001 loss=0.1345 927s
+2026-09-29 02:58:11,455 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M1_riemannian_D30_s100: ok  (6782s, 7 running)
+2026-09-29 02:58:11,470 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 02:58:46,954 [pid7800] INFO [train] done M4_euler_D30_s100 lr=0.0001 loss=0.1369 835s
+2026-09-29 02:58:48,644 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M4_euler_D30_s100: ok  (6820s, 7 running)
+2026-09-29 02:58:48,662 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:02:46,685 [pid7827] INFO [train] done M1_riemannian_D90_s100 lr=0.0001 loss=0.1416 927s
+2026-09-29 03:02:48,066 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M1_riemannian_D90_s100: ok  (7059s, 7 running)
+2026-09-29 03:02:48,081 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:05:31,158 [pid7881] INFO [train] done M2_euclid6d_D90_s100 lr=0.0001 loss=0.0989 813s
+2026-09-29 03:05:33,835 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M2_euclid6d_D90_s100: ok  (7225s, 7 running)
+2026-09-29 03:05:33,850 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:05:51,533 [pid7891] INFO [train] done M3_quat_D90_s100 lr=0.0001 loss=0.0737 790s
+2026-09-29 03:05:52,815 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M3_quat_D90_s100: ok  (7244s, 7 running)
+2026-09-29 03:05:52,830 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:07:28,503 [pid7903] INFO [train] done M4_euler_D90_s100 lr=0.0001 loss=0.2237 831s
+2026-09-29 03:07:32,809 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M4_euler_D90_s100: ok  (7344s, 7 running)
+2026-09-29 03:07:32,827 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:10:29,771 [pid7982] INFO [train] done M1_riemannian_D150_s100 lr=0.0001 loss=0.1569 864s
+2026-09-29 03:10:34,821 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M1_riemannian_D150_s100: ok  (7526s, 7 running)
+2026-09-29 03:10:34,839 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:11:05,005 [pid8048] INFO [train] done M3_quat_D150_s100 lr=0.0001 loss=0.1061 772s
+2026-09-29 03:11:09,104 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M3_quat_D150_s100: ok  (7560s, 7 running)
+2026-09-29 03:11:09,122 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:11:23,358 [pid8059] INFO [train] done M4_euler_D150_s100 lr=0.0001 loss=0.4446 753s
+2026-09-29 03:11:24,989 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M4_euler_D150_s100: ok  (7576s, 7 running)
+2026-09-29 03:11:25,009 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:11:34,984 [pid8040] INFO [train] done M2_euclid6d_D150_s100 lr=0.0001 loss=0.1083 830s
+2026-09-29 03:11:39,139 [pid6442] INFO [n2] cpu n2_hp_gauss90_lr0.0001/M2_euclid6d_D150_s100: ok  (7590s, 7 running)
+2026-09-29 03:11:39,154 [pid6442] INFO [n2] LR search gauss90: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 03:11:39,170 [pid6442] INFO [n2] LR search gauss90 final: {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.003, 'M4_euler': 0.0003}  grid [0.0001, 0.0003, 0.001, 0.003, 0.01]
+2026-09-29 03:11:39,175 [pid6442] INFO [n2] best prior: {'haar': 8.106756318572382, 'gauss90': 8.150586370820022} -> haar
+2026-09-29 03:19:13,845 [pid8104] INFO [train] done M4_euler_D150_s100 lr=0.0003 loss=0.2717 984s
+2026-09-29 03:19:16,890 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0003/M4_euler_D150_s100: ok  (8048s, 7 running)
+2026-09-29 03:22:39,375 [pid8138] INFO [train] done M2_euclid6d_D30_s100 lr=0.001 loss=0.0300 1005s
+2026-09-29 03:22:41,432 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M2_euclid6d_D30_s100: ok  (8252s, 7 running)
+2026-09-29 03:22:57,648 [pid8134] INFO [train] done M1_riemannian_D30_s100 lr=0.001 loss=0.0384 1042s
+2026-09-29 03:23:01,227 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M1_riemannian_D30_s100: ok  (8272s, 7 running)
+2026-09-29 03:23:57,395 [pid8156] INFO [train] done M3_quat_D30_s100 lr=0.001 loss=0.0273 983s
+2026-09-29 03:24:00,430 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M3_quat_D30_s100: ok  (8331s, 7 running)
+2026-09-29 03:25:47,322 [pid8188] INFO [train] done M4_euler_D30_s100 lr=0.001 loss=0.0528 911s
+2026-09-29 03:25:50,458 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M4_euler_D30_s100: ok  (8441s, 7 running)
+2026-09-29 03:26:44,429 [pid8201] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0301 904s
+2026-09-29 03:26:47,302 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M3_quat_D90_s100: ok  (8498s, 7 running)
+2026-09-29 03:27:31,072 [pid8199] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0349 964s
+2026-09-29 03:27:35,263 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M2_euclid6d_D90_s100: ok  (8546s, 7 running)
+2026-09-29 03:28:31,662 [pid8194] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0425 1041s
+2026-09-29 03:28:34,105 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M1_riemannian_D90_s100: ok  (8605s, 7 running)
+2026-09-29 03:34:31,175 [pid8297] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0955 913s
+2026-09-29 03:34:33,781 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M4_euler_D90_s100: ok  (8965s, 7 running)
+2026-09-29 03:38:06,084 [pid8354] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.0415 903s
+2026-09-29 03:38:10,232 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M2_euclid6d_D150_s100: ok  (9181s, 7 running)
+2026-09-29 03:39:25,030 [pid8351] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.0477 1002s
+2026-09-29 03:39:26,828 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M1_riemannian_D150_s100: ok  (9258s, 7 running)
+2026-09-29 03:39:38,901 [pid8362] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.0455 937s
+2026-09-29 03:39:42,999 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M3_quat_D150_s100: ok  (9274s, 7 running)
+2026-09-29 03:42:06,858 [pid8393] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.1806 975s
+2026-09-29 03:42:07,973 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.001/M4_euler_D150_s100: ok  (9419s, 7 running)
+2026-09-29 03:43:06,730 [pid8414] INFO [train] done M2_euclid6d_D30_s100 lr=0.003 loss=0.0229 930s
+2026-09-29 03:43:08,475 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M2_euclid6d_D30_s100: ok  (9479s, 7 running)
+2026-09-29 03:44:02,269 [pid8428] INFO [train] done M3_quat_D30_s100 lr=0.003 loss=0.0286 926s
+2026-09-29 03:44:05,270 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M3_quat_D30_s100: ok  (9536s, 7 running)
+2026-09-29 03:44:51,292 [pid8404] INFO [train] done M1_riemannian_D30_s100 lr=0.003 loss=0.0620 1082s
+2026-09-29 03:44:54,691 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M1_riemannian_D30_s100: ok  (9586s, 7 running)
+2026-09-29 03:50:09,084 [pid8495] INFO [train] done M4_euler_D30_s100 lr=0.003 loss=0.0316 934s
+2026-09-29 03:50:11,342 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M4_euler_D30_s100: ok  (9902s, 7 running)
+2026-09-29 03:54:36,330 [pid8568] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0464 984s
+2026-09-29 03:54:40,534 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M1_riemannian_D90_s100: ok  (10172s, 7 running)
+2026-09-29 03:54:46,675 [pid6442] INFO [n2] cpu main/M1_riemannian_D10_s0: ok  (10178s, 7 running)
+2026-09-29 03:54:52,159 [pid6442] INFO [n2] cpu main/M2_euclid6d_D10_s0: ok  (10183s, 7 running)
+2026-09-29 03:54:57,575 [pid6442] INFO [n2] cpu main/M3_quat_D10_s0: ok  (10189s, 7 running)
+2026-09-29 03:55:02,866 [pid6442] INFO [n2] cpu main/M4_euler_D10_s0: ok  (10194s, 7 running)
+2026-09-29 03:55:09,217 [pid6442] INFO [n2] cpu main/M1_riemannian_D30_s0: ok  (10200s, 7 running)
+2026-09-29 03:55:14,731 [pid6442] INFO [n2] cpu main/M2_euclid6d_D30_s0: ok  (10206s, 7 running)
+2026-09-29 03:55:20,161 [pid6442] INFO [n2] cpu main/M3_quat_D30_s0: ok  (10211s, 7 running)
+2026-09-29 03:55:25,462 [pid6442] INFO [n2] cpu main/M4_euler_D30_s0: ok  (10216s, 7 running)
+2026-09-29 03:55:31,653 [pid6442] INFO [n2] cpu main/M1_riemannian_D90_s0: ok  (10223s, 7 running)
+2026-09-29 03:55:37,128 [pid6442] INFO [n2] cpu main/M2_euclid6d_D90_s0: ok  (10228s, 7 running)
+2026-09-29 03:55:42,556 [pid6442] INFO [n2] cpu main/M3_quat_D90_s0: ok  (10234s, 7 running)
+2026-09-29 03:55:47,791 [pid6442] INFO [n2] cpu main/M4_euler_D90_s0: ok  (10239s, 7 running)
+2026-09-29 03:55:51,670 [pid8597] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0219 983s
+2026-09-29 03:55:52,961 [pid6442] INFO [n2] cpu main/M3_quat_D150_s0: ok  (10244s, 7 running)
+2026-09-29 03:55:54,114 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M2_euclid6d_D90_s100: ok  (10245s, 7 running)
+2026-09-29 03:55:55,524 [pid8601] INFO [train] done M3_quat_D90_s100 lr=0.003 loss=0.0237 971s
+2026-09-29 03:55:58,304 [pid6442] INFO [n2] cpu main/M4_euler_D150_s0: ok  (10249s, 7 running)
+2026-09-29 03:56:00,077 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M3_quat_D90_s100: ok  (10251s, 7 running)
+2026-09-29 03:56:00,790 [pid6442] INFO [n2] cpu main/M1_riemannian_D175_s0: ok  (10252s, 7 running)
+2026-09-29 03:56:03,684 [pid6442] INFO [n2] cpu main/M2_euclid6d_D175_s0: ok  (10255s, 7 running)
+2026-09-29 03:56:05,719 [pid6442] INFO [n2] cpu main/M3_quat_D175_s0: ok  (10257s, 7 running)
+2026-09-29 03:56:06,524 [pid6442] INFO [n2] cpu main/M4_euler_D175_s0: ok  (10258s, 7 running)
+2026-09-29 03:56:10,444 [pid6442] INFO [n2] cpu main/M1_riemannian_D10_s1: ok  (10261s, 7 running)
+2026-09-29 03:56:11,492 [pid6442] INFO [n2] cpu main/M2_euclid6d_D10_s1: ok  (10262s, 7 running)
+2026-09-29 03:56:12,021 [pid6442] INFO [n2] cpu main/M3_quat_D10_s1: ok  (10263s, 7 running)
+2026-09-29 03:56:15,654 [pid6442] INFO [n2] cpu main/M4_euler_D10_s1: ok  (10267s, 7 running)
+2026-09-29 03:56:18,010 [pid6442] INFO [n2] cpu main/M1_riemannian_D30_s1: ok  (10269s, 7 running)
+2026-09-29 03:56:18,446 [pid6442] INFO [n2] cpu main/M2_euclid6d_D30_s1: ok  (10269s, 7 running)
+2026-09-29 03:56:20,199 [pid6442] INFO [n2] cpu main/M3_quat_D30_s1: ok  (10271s, 7 running)
+2026-09-29 03:56:23,409 [pid6442] INFO [n2] cpu main/M4_euler_D30_s1: ok  (10274s, 7 running)
+2026-09-29 03:56:24,887 [pid6442] INFO [n2] cpu main/M1_riemannian_D90_s1: ok  (10276s, 7 running)
+2026-09-29 03:56:25,645 [pid6442] INFO [n2] cpu main/M2_euclid6d_D90_s1: ok  (10277s, 7 running)
+2026-09-29 03:56:28,774 [pid6442] INFO [n2] cpu main/M3_quat_D90_s1: ok  (10280s, 7 running)
+2026-09-29 03:56:30,205 [pid6442] INFO [n2] cpu main/M4_euler_D90_s1: ok  (10281s, 7 running)
+2026-09-29 03:56:31,983 [pid6442] INFO [n2] cpu main/M1_riemannian_D150_s1: ok  (10283s, 7 running)
+2026-09-29 03:56:34,433 [pid6442] INFO [n2] cpu main/M2_euclid6d_D150_s1: ok  (10285s, 7 running)
+2026-09-29 03:56:36,029 [pid6442] INFO [n2] cpu main/M3_quat_D150_s1: ok  (10287s, 7 running)
+2026-09-29 03:56:37,701 [pid6442] INFO [n2] cpu main/M4_euler_D150_s1: ok  (10289s, 7 running)
+2026-09-29 03:56:41,188 [pid6442] INFO [n2] cpu main/M1_riemannian_D175_s1: ok  (10292s, 7 running)
+2026-09-29 03:56:41,962 [pid6442] INFO [n2] cpu main/M2_euclid6d_D175_s1: ok  (10293s, 7 running)
+2026-09-29 03:56:43,037 [pid6442] INFO [n2] cpu main/M3_quat_D175_s1: ok  (10294s, 7 running)
+2026-09-29 03:56:46,572 [pid6442] INFO [n2] cpu main/M4_euler_D175_s1: ok  (10298s, 7 running)
+2026-09-29 03:56:48,766 [pid6442] INFO [n2] cpu main/M1_riemannian_D10_s2: ok  (10300s, 7 running)
+2026-09-29 03:56:49,173 [pid6442] INFO [n2] cpu main/M2_euclid6d_D10_s2: ok  (10300s, 7 running)
+2026-09-29 03:56:50,193 [pid6442] INFO [n2] cpu main/M3_quat_D10_s2: ok  (10301s, 7 running)
+2026-09-29 03:56:54,082 [pid6442] INFO [n2] cpu main/M4_euler_D10_s2: ok  (10305s, 7 running)
+2026-09-29 03:56:55,835 [pid6442] INFO [n2] cpu main/M1_riemannian_D30_s2: ok  (10307s, 7 running)
+2026-09-29 03:56:56,389 [pid6442] INFO [n2] cpu main/M2_euclid6d_D30_s2: ok  (10307s, 7 running)
+2026-09-29 03:56:59,489 [pid6442] INFO [n2] cpu main/M3_quat_D30_s2: ok  (10310s, 7 running)
+2026-09-29 03:57:01,051 [pid6442] INFO [n2] cpu main/M4_euler_D30_s2: ok  (10312s, 7 running)
+2026-09-29 03:57:01,920 [pid8625] INFO [train] done M4_euler_D90_s100 lr=0.003 loss=0.0784 892s
+2026-09-29 03:57:02,859 [pid6442] INFO [n2] cpu main/M1_riemannian_D90_s2: ok  (10314s, 7 running)
+2026-09-29 03:57:03,570 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M4_euler_D90_s100: ok  (10315s, 7 running)
+2026-09-29 03:57:04,599 [pid6442] INFO [n2] cpu main/M2_euclid6d_D90_s2: ok  (10316s, 7 running)
+2026-09-29 03:57:06,163 [pid6442] INFO [n2] cpu main/M3_quat_D90_s2: ok  (10317s, 7 running)
+2026-09-29 03:57:08,237 [pid6442] INFO [n2] cpu main/M4_euler_D90_s2: ok  (10319s, 7 running)
+2026-09-29 03:57:10,391 [pid6442] INFO [n2] cpu main/M1_riemannian_D150_s2: ok  (10321s, 7 running)
+2026-09-29 03:57:10,730 [pid6442] INFO [n2] cpu main/M2_euclid6d_D150_s2: ok  (10322s, 7 running)
+2026-09-29 03:57:11,189 [pid6442] INFO [n2] cpu main/M3_quat_D150_s2: ok  (10322s, 7 running)
+2026-09-29 03:57:12,984 [pid6442] INFO [n2] cpu main/M4_euler_D150_s2: ok  (10324s, 7 running)
+2026-09-29 03:57:15,892 [pid6442] INFO [n2] cpu main/M2_euclid6d_D175_s2: ok  (10327s, 7 running)
+2026-09-29 03:57:16,357 [pid6442] INFO [n2] cpu main/M1_riemannian_D175_s2: ok  (10327s, 7 running)
+2026-09-29 03:57:16,707 [pid6442] INFO [n2] cpu main/M3_quat_D175_s2: ok  (10328s, 7 running)
+2026-09-29 03:57:18,277 [pid6442] INFO [n2] cpu main/M4_euler_D175_s2: ok  (10329s, 7 running)
+2026-09-29 03:57:21,986 [pid6442] INFO [n2] cpu main/M2_euclid6d_D10_s3: ok  (10333s, 7 running)
+2026-09-29 03:57:22,353 [pid6442] INFO [n2] cpu main/M1_riemannian_D10_s3: ok  (10333s, 7 running)
+2026-09-29 03:57:22,385 [pid6442] INFO [n2] cpu main/M3_quat_D10_s3: ok  (10333s, 7 running)
+2026-09-29 03:57:22,897 [pid6442] INFO [n2] cpu main/M4_euler_D10_s3: ok  (10334s, 7 running)
+2026-09-29 03:57:27,636 [pid6442] INFO [n2] cpu main/M3_quat_D30_s3: ok  (10339s, 7 running)
+2026-09-29 03:57:27,919 [pid6442] INFO [n2] cpu main/M2_euclid6d_D30_s3: ok  (10339s, 7 running)
+2026-09-29 03:57:28,203 [pid6442] INFO [n2] cpu main/M1_riemannian_D30_s3: ok  (10339s, 7 running)
+2026-09-29 03:57:28,380 [pid6442] INFO [n2] cpu main/M4_euler_D30_s3: ok  (10339s, 7 running)
+2026-09-29 03:57:33,610 [pid6442] INFO [n2] cpu main/M2_euclid6d_D90_s3: ok  (10345s, 7 running)
+2026-09-29 03:57:33,987 [pid6442] INFO [n2] cpu main/M3_quat_D90_s3: ok  (10345s, 7 running)
+2026-09-29 03:57:34,148 [pid6442] INFO [n2] cpu main/M4_euler_D90_s3: ok  (10345s, 7 running)
+2026-09-29 03:57:34,389 [pid6442] INFO [n2] cpu main/M1_riemannian_D90_s3: ok  (10345s, 7 running)
+2026-09-29 03:57:39,479 [pid6442] INFO [n2] cpu main/M3_quat_D150_s3: ok  (10350s, 7 running)
+2026-09-29 03:57:39,868 [pid6442] INFO [n2] cpu main/M1_riemannian_D150_s3: ok  (10351s, 7 running)
+2026-09-29 03:57:39,896 [pid6442] INFO [n2] cpu main/M4_euler_D150_s3: ok  (10351s, 7 running)
+2026-09-29 03:57:39,897 [pid6442] INFO [n2] cpu main/M2_euclid6d_D150_s3: ok  (10351s, 6 running)
+2026-09-29 03:57:44,961 [pid6442] INFO [n2] cpu main/M2_euclid6d_D175_s3: ok  (10356s, 7 running)
+2026-09-29 03:57:45,325 [pid6442] INFO [n2] cpu main/M1_riemannian_D175_s3: ok  (10356s, 7 running)
+2026-09-29 03:57:45,687 [pid6442] INFO [n2] cpu main/M4_euler_D175_s3: ok  (10357s, 7 running)
+2026-09-29 03:57:45,782 [pid6442] INFO [n2] cpu main/M3_quat_D175_s3: ok  (10357s, 7 running)
+2026-09-29 03:57:50,387 [pid6442] INFO [n2] cpu main/M1_riemannian_D10_s4: ok  (10361s, 7 running)
+2026-09-29 03:57:50,773 [pid6442] INFO [n2] cpu main/M2_euclid6d_D10_s4: ok  (10362s, 7 running)
+2026-09-29 03:57:50,919 [pid6442] INFO [n2] cpu main/M4_euler_D10_s4: ok  (10362s, 7 running)
+2026-09-29 03:57:50,935 [pid6442] INFO [n2] cpu main/M3_quat_D10_s4: ok  (10362s, 7 running)
+2026-09-29 03:57:56,183 [pid6442] INFO [n2] cpu main/M2_euclid6d_D30_s4: ok  (10367s, 7 running)
+2026-09-29 03:57:56,586 [pid6442] INFO [n2] cpu main/M4_euler_D30_s4: ok  (10368s, 7 running)
+2026-09-29 03:57:56,841 [pid6442] INFO [n2] cpu main/M1_riemannian_D30_s4: ok  (10368s, 7 running)
+2026-09-29 03:57:56,963 [pid6442] INFO [n2] cpu main/M3_quat_D30_s4: ok  (10368s, 7 running)
+2026-09-29 03:58:02,058 [pid6442] INFO [n2] cpu main/M1_riemannian_D90_s4: ok  (10373s, 7 running)
+2026-09-29 03:58:02,436 [pid6442] INFO [n2] cpu main/M4_euler_D90_s4: ok  (10373s, 7 running)
+2026-09-29 03:58:02,598 [pid6442] INFO [n2] cpu main/M2_euclid6d_D90_s4: ok  (10374s, 7 running)
+2026-09-29 03:58:02,745 [pid6442] INFO [n2] cpu main/M3_quat_D90_s4: ok  (10374s, 7 running)
+2026-09-29 03:58:07,902 [pid6442] INFO [n2] cpu main/M2_euclid6d_D150_s4: ok  (10379s, 7 running)
+2026-09-29 03:58:08,283 [pid6442] INFO [n2] cpu main/M3_quat_D150_s4: ok  (10379s, 7 running)
+2026-09-29 03:58:08,416 [pid6442] INFO [n2] cpu main/M1_riemannian_D150_s4: ok  (10379s, 7 running)
+2026-09-29 03:58:08,765 [pid6442] INFO [n2] cpu main/M4_euler_D150_s4: ok  (10380s, 7 running)
+2026-09-29 03:58:11,940 [pid8644] INFO [train] done M1_riemannian_D150_s100 lr=0.003 loss=0.0422 902s
+2026-09-29 03:58:13,236 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M1_riemannian_D150_s100: ok  (10384s, 7 running)
+2026-09-29 03:58:13,860 [pid6442] INFO [n2] cpu main/M2_euclid6d_D175_s4: ok  (10385s, 7 running)
+2026-09-29 03:58:13,874 [pid6442] INFO [n2] cpu main/M3_quat_D175_s4: ok  (10385s, 7 running)
+2026-09-29 03:58:13,942 [pid6442] INFO [n2] cpu main/M1_riemannian_D175_s4: ok  (10385s, 7 running)
+2026-09-29 03:58:13,977 [pid6442] INFO [n2] cpu main/M4_euler_D175_s4: ok  (10385s, 7 running)
+2026-09-29 03:58:33,011 [pid8653] INFO [train] done M2_euclid6d_D150_s100 lr=0.003 loss=0.0255 866s
+2026-09-29 03:58:36,074 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M2_euclid6d_D150_s100: ok  (10407s, 7 running)
+2026-09-29 04:00:18,134 [pid8664] INFO [train] done M3_quat_D150_s100 lr=0.003 loss=0.0337 922s
+2026-09-29 04:00:22,560 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M3_quat_D150_s100: ok  (10514s, 7 running)
+2026-09-29 04:06:24,862 [pid8727] INFO [train] done M4_euler_D150_s100 lr=0.003 loss=0.1045 972s
+2026-09-29 04:06:27,937 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.003/M4_euler_D150_s100: ok  (10879s, 7 running)
+2026-09-29 04:06:27,955 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:10:03,472 [pid8996] INFO [train] done M4_euler_D10_s0 lr=0.0003 loss=0.0777 708s
+2026-09-29 04:10:17,820 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D10_s0: ok  (11109s, 7 running)
+2026-09-29 04:10:17,839 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:10:19,761 [pid8994] INFO [train] done M2_euclid6d_D10_s0 lr=0.003 loss=0.0211 725s
+2026-09-29 04:10:34,857 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D10_s0: ok  (11126s, 7 running)
+2026-09-29 04:10:34,873 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:11:55,921 [pid9006] INFO [train] done M2_euclid6d_D30_s0 lr=0.003 loss=0.0192 798s
+2026-09-29 04:11:57,721 [pid8995] INFO [train] done M3_quat_D10_s0 lr=0.003 loss=0.0266 822s
+2026-09-29 04:12:11,852 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D30_s0: ok  (11223s, 7 running)
+2026-09-29 04:12:11,871 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:12:12,764 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D10_s0: ok  (11224s, 7 running)
+2026-09-29 04:12:12,781 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:12:37,901 [pid8991] INFO [train] done M1_riemannian_D10_s0 lr=0.001 loss=0.0681 863s
+2026-09-29 04:12:54,085 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D10_s0: ok  (11265s, 7 running)
+2026-09-29 04:12:54,103 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:13:46,049 [pid9031] INFO [train] done M3_quat_D30_s0 lr=0.003 loss=0.0241 802s
+2026-09-29 04:13:59,407 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D30_s0: ok  (11330s, 7 running)
+2026-09-29 04:13:59,431 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:14:19,441 [pid8997] INFO [train] done M1_riemannian_D30_s0 lr=0.001 loss=0.0721 964s
+2026-09-29 04:14:34,480 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D30_s0: ok  (11365s, 7 running)
+2026-09-29 04:14:34,499 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:23:53,704 [pid9090] INFO [train] done M1_riemannian_D30_s100 lr=0.01 loss=0.4372 1044s
+2026-09-29 04:23:55,446 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M1_riemannian_D30_s100: ok  (11926s, 7 running)
+2026-09-29 04:23:55,466 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:26:35,966 [pid9147] INFO [train] done M3_quat_D30_s100 lr=0.01 loss=0.6342 959s
+2026-09-29 04:26:39,808 [pid9140] INFO [train] done M2_euclid6d_D30_s100 lr=0.01 loss=0.6663 980s
+2026-09-29 04:26:39,997 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M3_quat_D30_s100: ok  (12091s, 7 running)
+2026-09-29 04:26:40,021 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:26:41,426 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M2_euclid6d_D30_s100: ok  (12092s, 7 running)
+2026-09-29 04:26:41,444 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:27:30,036 [pid9161] INFO [train] done M4_euler_D30_s100 lr=0.01 loss=1.5923 917s
+2026-09-29 04:27:33,868 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M4_euler_D30_s100: ok  (12145s, 7 running)
+2026-09-29 04:27:33,886 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:27:54,645 [pid9174] INFO [train] done M2_euclid6d_D90_s100 lr=0.01 loss=0.7258 899s
+2026-09-29 04:27:56,524 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M2_euclid6d_D90_s100: ok  (12168s, 7 running)
+2026-09-29 04:27:56,540 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:28:55,629 [pid9194] INFO [train] done M4_euler_D90_s100 lr=0.01 loss=1.9545 859s
+2026-09-29 04:28:59,548 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M4_euler_D90_s100: ok  (12231s, 7 running)
+2026-09-29 04:28:59,567 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:29:42,932 [pid9184] INFO [train] done M3_quat_D90_s100 lr=0.01 loss=0.6676 942s
+2026-09-29 04:29:46,529 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M3_quat_D90_s100: ok  (12278s, 7 running)
+2026-09-29 04:29:46,548 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:30:14,631 [pid9164] INFO [train] done M1_riemannian_D90_s100 lr=0.01 loss=1.0658 1080s
+2026-09-29 04:30:18,349 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M1_riemannian_D90_s100: ok  (12309s, 7 running)
+2026-09-29 04:30:18,367 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:40:53,139 [pid9295] INFO [train] done M1_riemannian_D150_s100 lr=0.01 loss=0.5063 1016s
+2026-09-29 04:40:56,482 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M1_riemannian_D150_s100: ok  (12947s, 7 running)
+2026-09-29 04:40:56,501 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:41:17,365 [pid9332] INFO [train] done M2_euclid6d_D150_s100 lr=0.01 loss=0.7363 876s
+2026-09-29 04:41:19,500 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M2_euclid6d_D150_s100: ok  (12970s, 7 running)
+2026-09-29 04:41:19,516 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:42:55,417 [pid9334] INFO [train] done M3_quat_D150_s100 lr=0.01 loss=0.7075 972s
+2026-09-29 04:42:58,717 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M3_quat_D150_s100: ok  (13070s, 7 running)
+2026-09-29 04:42:58,735 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:43:13,464 [pid9343] INFO [train] done M4_euler_D150_s100 lr=0.01 loss=1.2618 938s
+2026-09-29 04:43:15,449 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.01/M4_euler_D150_s100: ok  (13086s, 7 running)
+2026-09-29 04:43:15,465 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:44:43,858 [pid9346] INFO [train] done M1_riemannian_D30_s100 lr=0.0001 loss=0.0909 1006s
+2026-09-29 04:44:48,585 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M1_riemannian_D30_s100: ok  (13180s, 7 running)
+2026-09-29 04:44:48,604 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:44:58,154 [pid9367] INFO [train] done M2_euclid6d_D30_s100 lr=0.0001 loss=0.0955 957s
+2026-09-29 04:44:59,361 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M2_euclid6d_D30_s100: ok  (13190s, 7 running)
+2026-09-29 04:44:59,377 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:45:25,694 [pid9377] INFO [train] done M3_quat_D30_s100 lr=0.0001 loss=0.0677 938s
+2026-09-29 04:45:28,237 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M3_quat_D30_s100: ok  (13219s, 7 running)
+2026-09-29 04:45:28,253 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:45:28,751 [pid9387] INFO [train] done M4_euler_D30_s100 lr=0.0001 loss=0.1286 909s
+2026-09-29 04:45:29,932 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M4_euler_D30_s100: ok  (13221s, 7 running)
+2026-09-29 04:45:29,948 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:57:24,080 [pid9493] INFO [train] done M2_euclid6d_D90_s100 lr=0.0001 loss=0.0970 963s
+2026-09-29 04:57:26,921 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M2_euclid6d_D90_s100: ok  (13938s, 7 running)
+2026-09-29 04:57:26,941 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:58:13,711 [pid9484] INFO [train] done M1_riemannian_D90_s100 lr=0.0001 loss=0.0969 1036s
+2026-09-29 04:58:16,380 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M1_riemannian_D90_s100: ok  (13987s, 7 running)
+2026-09-29 04:58:16,399 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:58:47,398 [pid9522] INFO [train] done M4_euler_D90_s100 lr=0.0001 loss=0.2282 930s
+2026-09-29 04:58:51,625 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M4_euler_D90_s100: ok  (14023s, 7 running)
+2026-09-29 04:58:51,644 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 04:59:03,408 [pid9515] INFO [train] done M3_quat_D90_s100 lr=0.0001 loss=0.0693 963s
+2026-09-29 04:59:07,324 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M3_quat_D90_s100: ok  (14038s, 7 running)
+2026-09-29 04:59:07,340 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 05:00:03,228 [pid9542] INFO [train] done M3_quat_D150_s100 lr=0.0001 loss=0.1022 873s
+2026-09-29 05:00:05,561 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M3_quat_D150_s100: ok  (14097s, 7 running)
+2026-09-29 05:00:05,579 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 05:00:48,283 [pid9543] INFO [train] done M4_euler_D150_s100 lr=0.0001 loss=0.4520 916s
+2026-09-29 05:00:49,514 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M4_euler_D150_s100: ok  (14140s, 7 running)
+2026-09-29 05:00:49,532 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 05:01:49,413 [pid9537] INFO [train] done M2_euclid6d_D150_s100 lr=0.0001 loss=0.1068 1008s
+2026-09-29 05:01:54,439 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M2_euclid6d_D150_s100: ok  (14205s, 7 running)
+2026-09-29 05:01:54,457 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 05:02:00,713 [pid9533] INFO [train] done M1_riemannian_D150_s100 lr=0.0001 loss=0.1050 1030s
+2026-09-29 05:02:03,499 [pid6442] INFO [n2] cpu n2_hp_trunc150_lr0.0001/M1_riemannian_D150_s100: ok  (14214s, 7 running)
+2026-09-29 05:02:03,507 [pid6442] INFO [n2] LR search trunc150: pick on grid edge {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}; extending for ALL models [0.01, 0.0001]
+2026-09-29 05:02:03,519 [pid6442] INFO [n2] LR search trunc150 final: {'M1_riemannian': 0.001, 'M2_euclid6d': 0.003, 'M3_quat': 0.001, 'M4_euler': 0.0003}  grid [0.0001, 0.0003, 0.001, 0.003, 0.01]
+2026-09-29 05:11:17,432 [pid9772] INFO [train] done M4_euler_D30_s0 lr=0.0003 loss=0.0883 829s
+2026-09-29 05:11:32,319 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D30_s0: ok  (14783s, 7 running)
+2026-09-29 05:11:44,061 [pid9799] INFO [train] done M2_euclid6d_D90_s0 lr=0.003 loss=0.0223 771s
+2026-09-29 05:12:00,360 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D90_s0: ok  (14811s, 7 running)
+2026-09-29 05:12:45,884 [pid9803] INFO [train] done M3_quat_D90_s0 lr=0.003 loss=0.0251 817s
+2026-09-29 05:13:01,202 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D90_s0: ok  (14872s, 7 running)
+2026-09-29 05:13:39,261 [pid9812] INFO [train] done M4_euler_D90_s0 lr=0.0003 loss=0.1399 812s
+2026-09-29 05:13:50,754 [pid9789] INFO [train] done M1_riemannian_D90_s0 lr=0.001 loss=0.0816 933s
+2026-09-29 05:13:54,648 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D90_s0: ok  (14926s, 7 running)
+2026-09-29 05:14:08,125 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D90_s0: ok  (14939s, 7 running)
+2026-09-29 05:15:02,441 [pid9893] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0265 786s
+2026-09-29 05:15:18,423 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D150_s0: ok  (15009s, 7 running)
+2026-09-29 05:15:23,395 [pid9884] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0920 872s
+2026-09-29 05:15:41,502 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D150_s0: ok  (15032s, 7 running)
+2026-09-29 05:15:45,586 [pid9896] INFO [train] done M3_quat_D150_s0 lr=0.003 loss=0.0342 820s
+2026-09-29 05:16:00,362 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D150_s0: ok  (15051s, 7 running)
+2026-09-29 05:25:15,430 [pid10133] INFO [train] done M2_euclid6d_D175_s0 lr=0.003 loss=0.0277 733s
+2026-09-29 05:25:28,110 [pid10115] INFO [train] done M4_euler_D150_s0 lr=0.0003 loss=0.2625 834s
+2026-09-29 05:25:30,834 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D175_s0: ok  (15622s, 7 running)
+2026-09-29 05:25:41,303 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D150_s0: ok  (15632s, 7 running)
+2026-09-29 05:26:13,526 [pid10127] INFO [train] done M1_riemannian_D175_s0 lr=0.001 loss=0.0941 852s
+2026-09-29 05:26:27,351 [pid10150] INFO [train] done M4_euler_D175_s0 lr=0.0003 loss=0.2869 738s
+2026-09-29 05:26:29,482 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D175_s0: ok  (15680s, 7 running)
+2026-09-29 05:26:39,580 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D175_s0: ok  (15691s, 7 running)
+2026-09-29 05:26:41,840 [pid10147] INFO [train] done M3_quat_D175_s0 lr=0.003 loss=0.0373 765s
+2026-09-29 05:26:54,515 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D175_s0: ok  (15705s, 7 running)
+2026-09-29 05:32:19,668 [pid10156] INFO [train] done M1_riemannian_D10_s0 lr=0.001 loss=0.0350 1020s
+2026-09-29 05:32:20,120 [pid10166] INFO [train] done M2_euclid6d_D10_s0 lr=0.003 loss=0.0210 997s
+2026-09-29 05:32:35,115 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D10_s0: ok  (16046s, 7 running)
+2026-09-29 05:32:36,558 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D10_s0: ok  (16048s, 7 running)
+2026-09-29 05:33:42,883 [pid10170] INFO [train] done M3_quat_D10_s0 lr=0.001 loss=0.0257 1061s
+2026-09-29 05:33:55,835 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D10_s0: ok  (16127s, 7 running)
+2026-09-29 05:41:56,753 [pid10279] INFO [train] done M4_euler_D30_s0 lr=0.0003 loss=0.0815 901s
+2026-09-29 05:42:09,369 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D30_s0: ok  (16620s, 7 running)
+2026-09-29 05:42:23,888 [pid10274] INFO [train] done M2_euclid6d_D30_s0 lr=0.003 loss=0.0209 953s
+2026-09-29 05:42:27,160 [pid10270] INFO [train] done M1_riemannian_D30_s0 lr=0.001 loss=0.0379 1004s
+2026-09-29 05:42:30,615 [pid10259] INFO [train] done M4_euler_D10_s0 lr=0.0003 loss=0.0738 1018s
+2026-09-29 05:42:38,475 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D30_s0: ok  (16649s, 7 running)
+2026-09-29 05:42:44,309 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D30_s0: ok  (16655s, 7 running)
+2026-09-29 05:42:45,021 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D10_s0: ok  (16656s, 7 running)
+2026-09-29 05:42:47,392 [pid10278] INFO [train] done M3_quat_D30_s0 lr=0.001 loss=0.0272 966s
+2026-09-29 05:43:00,588 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D30_s0: ok  (16672s, 7 running)
+2026-09-29 05:47:57,165 [pid10333] INFO [train] done M2_euclid6d_D90_s0 lr=0.003 loss=0.0222 919s
+2026-09-29 05:48:10,600 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D90_s0: ok  (16982s, 7 running)
+2026-09-29 05:48:28,804 [pid10330] INFO [train] done M1_riemannian_D90_s0 lr=0.001 loss=0.0429 952s
+2026-09-29 05:48:44,204 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D90_s0: ok  (17015s, 7 running)
+2026-09-29 05:49:11,723 [pid10352] INFO [train] done M3_quat_D90_s0 lr=0.001 loss=0.0306 914s
+2026-09-29 05:49:24,770 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D90_s0: ok  (17056s, 7 running)
+2026-09-29 05:57:28,235 [pid10453] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0257 882s
+2026-09-29 05:57:41,581 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D150_s0: ok  (17553s, 7 running)
+2026-09-29 05:57:50,313 [pid10454] INFO [train] done M3_quat_D150_s0 lr=0.001 loss=0.0458 904s
+2026-09-29 05:58:03,081 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D150_s0: ok  (17574s, 7 running)
+2026-09-29 05:58:39,347 [pid10445] INFO [train] done M4_euler_D90_s0 lr=0.0003 loss=0.1427 988s
+2026-09-29 05:58:47,965 [pid10452] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0476 968s
+2026-09-29 05:58:53,223 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D90_s0: ok  (17624s, 7 running)
+2026-09-29 05:59:04,123 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s0: ok  (17635s, 7 running)
+2026-09-29 05:59:10,276 [pid10456] INFO [train] done M4_euler_D150_s0 lr=0.0003 loss=0.2644 968s
+2026-09-29 05:59:23,605 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D150_s0: ok  (17655s, 7 running)
+2026-09-29 06:05:08,193 [pid10509] INFO [train] done M3_quat_D175_s0 lr=0.001 loss=0.0486 942s
+2026-09-29 06:05:22,177 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D175_s0: ok  (18013s, 7 running)
+2026-09-29 06:05:42,637 [pid10499] INFO [train] done M1_riemannian_D175_s0 lr=0.001 loss=0.0490 1050s
+2026-09-29 06:05:51,456 [pid10507] INFO [train] done M2_euclid6d_D175_s0 lr=0.003 loss=0.0269 1026s
+2026-09-29 06:06:00,906 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D175_s0: ok  (18052s, 7 running)
+2026-09-29 06:06:06,492 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D175_s0: ok  (18057s, 7 running)
+2026-09-29 06:09:35,067 [pid10616] INFO [train] done M4_euler_D10_s1 lr=0.0003 loss=0.0784 610s
+2026-09-29 06:09:49,819 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D10_s1: ok  (18281s, 7 running)
+2026-09-29 06:11:24,352 [pid10606] INFO [train] done M2_euclid6d_D10_s1 lr=0.003 loss=0.0232 749s
+2026-09-29 06:11:39,809 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D10_s1: ok  (18391s, 7 running)
+2026-09-29 06:12:38,486 [pid10598] INFO [train] done M1_riemannian_D10_s1 lr=0.001 loss=0.0707 874s
+2026-09-29 06:12:56,318 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D10_s1: ok  (18467s, 7 running)
+2026-09-29 06:13:35,165 [pid10609] INFO [train] done M3_quat_D10_s1 lr=0.003 loss=0.0290 869s
+2026-09-29 06:13:49,798 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D10_s1: ok  (18521s, 7 running)
+2026-09-29 06:15:11,776 [pid10595] INFO [train] done M4_euler_D175_s0 lr=0.0003 loss=0.2853 1049s
+2026-09-29 06:15:26,906 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D175_s0: ok  (18618s, 7 running)
+2026-09-29 06:19:46,779 [pid10755] INFO [train] done M2_euclid6d_D30_s1 lr=0.003 loss=0.0211 824s
+2026-09-29 06:20:02,774 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D30_s1: ok  (18894s, 7 running)
+2026-09-29 06:20:36,873 [pid10743] INFO [train] done M1_riemannian_D30_s1 lr=0.001 loss=0.0722 913s
+2026-09-29 06:20:55,098 [pid10757] INFO [train] done M3_quat_D30_s1 lr=0.003 loss=0.0240 887s
+2026-09-29 06:20:55,778 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D30_s1: ok  (18947s, 7 running)
+2026-09-29 06:21:09,412 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D30_s1: ok  (18960s, 7 running)
+2026-09-29 06:21:45,010 [pid10803] INFO [train] done M4_euler_D30_s1 lr=0.0003 loss=0.0882 713s
+2026-09-29 06:22:00,056 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D30_s1: ok  (19011s, 7 running)
+2026-09-29 06:25:43,754 [pid10839] INFO [train] done M2_euclid6d_D90_s1 lr=0.003 loss=0.0224 766s
+2026-09-29 06:25:59,691 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D90_s1: ok  (19251s, 7 running)
+2026-09-29 06:26:02,978 [pid10827] INFO [train] done M1_riemannian_D90_s1 lr=0.001 loss=0.0811 861s
+2026-09-29 06:26:20,927 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D90_s1: ok  (19272s, 7 running)
+2026-09-29 06:28:10,383 [pid10853] INFO [train] done M3_quat_D90_s1 lr=0.003 loss=0.0248 859s
+2026-09-29 06:28:25,880 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D90_s1: ok  (19397s, 7 running)
+2026-09-29 06:29:01,169 [pid10864] INFO [train] done M4_euler_D90_s1 lr=0.0003 loss=0.1394 813s
+2026-09-29 06:29:15,839 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D90_s1: ok  (19447s, 7 running)
+2026-09-29 06:33:55,341 [pid10929] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0271 778s
+2026-09-29 06:34:10,953 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D150_s1: ok  (19742s, 7 running)
+2026-09-29 06:34:35,931 [pid10932] INFO [train] done M3_quat_D150_s1 lr=0.003 loss=0.0348 805s
+2026-09-29 06:34:50,618 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D150_s1: ok  (19782s, 7 running)
+2026-09-29 06:34:59,464 [pid10915] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0922 895s
+2026-09-29 06:35:17,238 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D150_s1: ok  (19808s, 7 running)
+2026-09-29 06:35:51,593 [pid10951] INFO [train] done M4_euler_D150_s1 lr=0.0003 loss=0.2659 830s
+2026-09-29 06:36:04,887 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D150_s1: ok  (19856s, 7 running)
+2026-09-29 06:39:04,103 [pid10993] INFO [train] done M2_euclid6d_D175_s1 lr=0.003 loss=0.0286 762s
+2026-09-29 06:39:18,612 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D175_s1: ok  (20050s, 7 running)
+2026-09-29 06:40:24,731 [pid10988] INFO [train] done M1_riemannian_D175_s1 lr=0.001 loss=0.0957 863s
+2026-09-29 06:40:40,844 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D175_s1: ok  (20132s, 7 running)
+2026-09-29 06:41:27,206 [pid11019] INFO [train] done M4_euler_D175_s1 lr=0.0003 loss=0.2873 730s
+2026-09-29 06:41:31,232 [pid11009] INFO [train] done M3_quat_D175_s1 lr=0.003 loss=0.0379 784s
+2026-09-29 06:41:41,172 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D175_s1: ok  (20192s, 7 running)
+2026-09-29 06:41:44,223 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D175_s1: ok  (20195s, 7 running)
+2026-09-29 06:51:15,072 [pid11080] INFO [train] done M2_euclid6d_D10_s1 lr=0.003 loss=0.0215 983s
+2026-09-29 06:51:28,440 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D10_s1: ok  (20779s, 7 running)
+2026-09-29 06:51:32,258 [pid11084] INFO [train] done M3_quat_D10_s1 lr=0.001 loss=0.0261 973s
+2026-09-29 06:51:33,179 [pid11074] INFO [train] done M1_riemannian_D10_s1 lr=0.001 loss=0.0352 1041s
+2026-09-29 06:51:46,744 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D10_s1: ok  (20798s, 7 running)
+2026-09-29 06:51:49,842 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D10_s1: ok  (20801s, 7 running)
+2026-09-29 06:52:17,879 [pid11094] INFO [train] done M4_euler_D10_s1 lr=0.0003 loss=0.0733 971s
+2026-09-29 06:52:30,707 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D10_s1: ok  (20842s, 7 running)
+2026-09-29 06:55:54,770 [pid11127] INFO [train] done M1_riemannian_D30_s1 lr=0.001 loss=0.0383 995s
+2026-09-29 06:56:00,347 [pid11149] INFO [train] done M2_euclid6d_D30_s1 lr=0.003 loss=0.0197 918s
+2026-09-29 06:56:11,187 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D30_s1: ok  (21062s, 7 running)
+2026-09-29 06:56:13,900 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D30_s1: ok  (21065s, 7 running)
+2026-09-29 06:57:17,579 [pid11166] INFO [train] done M3_quat_D30_s1 lr=0.001 loss=0.0276 935s
+2026-09-29 06:57:30,540 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D30_s1: ok  (21142s, 7 running)
+2026-09-29 06:58:11,648 [pid11172] INFO [train] done M4_euler_D30_s1 lr=0.0003 loss=0.0819 985s
+2026-09-29 06:58:24,385 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D30_s1: ok  (21195s, 7 running)
+2026-09-29 07:07:15,076 [pid11293] INFO [train] done M4_euler_D90_s1 lr=0.0003 loss=0.1437 883s
+2026-09-29 07:07:15,301 [pid11288] INFO [train] done M2_euclid6d_D90_s1 lr=0.003 loss=0.0223 927s
+2026-09-29 07:07:29,516 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D90_s1: ok  (21740s, 7 running)
+2026-09-29 07:07:30,309 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D90_s1: ok  (21741s, 7 running)
+2026-09-29 07:07:56,513 [pid11274] INFO [train] done M1_riemannian_D90_s1 lr=0.001 loss=0.0429 986s
+2026-09-29 07:07:57,703 [pid11290] INFO [train] done M3_quat_D90_s1 lr=0.001 loss=0.0300 966s
+2026-09-29 07:08:11,774 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D90_s1: ok  (21783s, 7 running)
+2026-09-29 07:08:13,200 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D90_s1: ok  (21784s, 7 running)
+2026-09-29 07:12:16,455 [pid11342] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0254 961s
+2026-09-29 07:12:29,481 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D150_s1: ok  (22040s, 7 running)
+2026-09-29 07:13:31,580 [pid11351] INFO [train] done M3_quat_D150_s1 lr=0.001 loss=0.0460 959s
+2026-09-29 07:13:32,911 [pid11340] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0473 1040s
+2026-09-29 07:13:45,576 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D150_s1: ok  (22117s, 7 running)
+2026-09-29 07:13:49,118 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s1: ok  (22120s, 7 running)
+2026-09-29 07:14:14,661 [pid11365] INFO [train] done M4_euler_D150_s1 lr=0.0003 loss=0.2679 949s
+2026-09-29 07:14:29,082 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D150_s1: ok  (22160s, 7 running)
+2026-09-29 07:23:47,230 [pid11539] INFO [train] done M3_quat_D175_s1 lr=0.001 loss=0.0487 934s
+2026-09-29 07:24:00,809 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D175_s1: ok  (22732s, 7 running)
+2026-09-29 07:24:45,586 [pid11524] INFO [train] done M1_riemannian_D175_s1 lr=0.001 loss=0.0492 1034s
+2026-09-29 07:25:03,127 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D175_s1: ok  (22794s, 7 running)
+2026-09-29 07:25:19,045 [pid11525] INFO [train] done M2_euclid6d_D175_s1 lr=0.003 loss=0.0267 1067s
+2026-09-29 07:25:23,648 [pid11606] INFO [train] done M2_euclid6d_D10_s2 lr=0.003 loss=0.0220 696s
+2026-09-29 07:25:24,728 [pid11540] INFO [train] done M4_euler_D175_s1 lr=0.0003 loss=0.2903 1030s
+2026-09-29 07:25:35,477 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D175_s1: ok  (22826s, 7 running)
+2026-09-29 07:25:39,399 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D10_s2: ok  (22830s, 7 running)
+2026-09-29 07:25:40,148 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D175_s1: ok  (22831s, 7 running)
+2026-09-29 07:26:29,631 [pid11610] INFO [train] done M3_quat_D10_s2 lr=0.003 loss=0.0278 758s
+2026-09-29 07:26:44,675 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D10_s2: ok  (22896s, 7 running)
+2026-09-29 07:26:48,113 [pid11586] INFO [train] done M1_riemannian_D10_s2 lr=0.001 loss=0.0688 857s
+2026-09-29 07:26:50,791 [pid11612] INFO [train] done M4_euler_D10_s2 lr=0.0003 loss=0.0791 740s
+2026-09-29 07:27:06,126 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D10_s2: ok  (22917s, 7 running)
+2026-09-29 07:27:06,819 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D10_s2: ok  (22918s, 7 running)
+2026-09-29 07:37:54,418 [pid11733] INFO [train] done M4_euler_D30_s2 lr=0.0003 loss=0.0886 733s
+2026-09-29 07:38:08,468 [pid11731] INFO [train] done M3_quat_D30_s2 lr=0.003 loss=0.0240 751s
+2026-09-29 07:38:09,413 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D30_s2: ok  (23580s, 7 running)
+2026-09-29 07:38:22,840 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D30_s2: ok  (23594s, 7 running)
+2026-09-29 07:38:33,829 [pid11727] INFO [train] done M2_euclid6d_D30_s2 lr=0.003 loss=0.0202 809s
+2026-09-29 07:38:41,610 [pid11712] INFO [train] done M1_riemannian_D30_s2 lr=0.001 loss=0.0717 879s
+2026-09-29 07:38:50,162 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D30_s2: ok  (23621s, 7 running)
+2026-09-29 07:39:00,062 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D30_s2: ok  (23631s, 7 running)
+2026-09-29 07:40:00,690 [pid11760] INFO [train] done M3_quat_D90_s2 lr=0.003 loss=0.0249 773s
+2026-09-29 07:40:12,649 [pid11746] INFO [train] done M2_euclid6d_D90_s2 lr=0.003 loss=0.0221 806s
+2026-09-29 07:40:15,950 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D90_s2: ok  (23707s, 7 running)
+2026-09-29 07:40:27,511 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D90_s2: ok  (23718s, 7 running)
+2026-09-29 07:41:31,911 [pid11761] INFO [train] done M4_euler_D90_s2 lr=0.0003 loss=0.1399 863s
+2026-09-29 07:41:43,801 [pid11734] INFO [train] done M1_riemannian_D90_s2 lr=0.001 loss=0.0811 962s
+2026-09-29 07:41:46,821 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D90_s2: ok  (23798s, 7 running)
+2026-09-29 07:42:01,627 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D90_s2: ok  (23813s, 7 running)
+2026-09-29 07:52:12,774 [pid11877] INFO [train] done M3_quat_D150_s2 lr=0.003 loss=0.0346 801s
+2026-09-29 07:52:22,993 [pid11881] INFO [train] done M4_euler_D150_s2 lr=0.0003 loss=0.2630 801s
+2026-09-29 07:52:28,822 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D150_s2: ok  (24440s, 7 running)
+2026-09-29 07:52:37,782 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D150_s2: ok  (24449s, 7 running)
+2026-09-29 07:52:40,954 [pid11869] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0265 857s
+2026-09-29 07:52:55,795 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D150_s2: ok  (24467s, 7 running)
+2026-09-29 07:53:21,720 [pid11897] INFO [train] done M2_euclid6d_D175_s2 lr=0.003 loss=0.0278 773s
+2026-09-29 07:53:36,560 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D175_s2: ok  (24508s, 7 running)
+2026-09-29 07:53:41,846 [pid11865] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0906 931s
+2026-09-29 07:53:58,127 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D150_s2: ok  (24529s, 7 running)
+2026-09-29 07:54:51,167 [pid11894] INFO [train] done M1_riemannian_D175_s2 lr=0.001 loss=0.0941 874s
+2026-09-29 07:54:58,788 [pid11915] INFO [train] done M4_euler_D175_s2 lr=0.0003 loss=0.2874 776s
+2026-09-29 07:55:08,589 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D175_s2: ok  (24600s, 7 running)
+2026-09-29 07:55:12,079 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D175_s2: ok  (24603s, 7 running)
+2026-09-29 07:55:21,368 [pid11910] INFO [train] done M3_quat_D175_s2 lr=0.003 loss=0.0368 813s
+2026-09-29 07:55:33,774 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D175_s2: ok  (24625s, 7 running)
+2026-09-29 08:08:31,120 [pid12031] INFO [train] done M4_euler_D10_s2 lr=0.0003 loss=0.0734 893s
+2026-09-29 08:08:43,913 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D10_s2: ok  (25415s, 7 running)
+2026-09-29 08:08:45,536 [pid12026] INFO [train] done M2_euclid6d_D10_s2 lr=0.003 loss=0.6468 966s
+2026-09-29 08:08:59,278 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D10_s2: ok  (25430s, 7 running)
+2026-09-29 08:09:01,573 [pid12024] INFO [train] done M1_riemannian_D10_s2 lr=0.001 loss=0.0353 991s
+2026-09-29 08:09:17,006 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D10_s2: ok  (25448s, 7 running)
+2026-09-29 08:09:24,327 [pid12029] INFO [train] done M3_quat_D10_s2 lr=0.001 loss=0.0264 987s
+2026-09-29 08:09:37,507 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D10_s2: ok  (25468s, 7 running)
+2026-09-29 08:10:06,998 [pid12052] INFO [train] done M2_euclid6d_D30_s2 lr=0.003 loss=0.0213 897s
+2026-09-29 08:10:20,366 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D30_s2: ok  (25511s, 7 running)
+2026-09-29 08:11:18,268 [pid12063] INFO [train] done M4_euler_D30_s2 lr=0.0003 loss=0.0827 943s
+2026-09-29 08:11:21,084 [pid12042] INFO [train] done M1_riemannian_D30_s2 lr=0.001 loss=0.0382 1041s
+2026-09-29 08:11:27,019 [pid12057] INFO [train] done M3_quat_D30_s2 lr=0.001 loss=0.0278 973s
+2026-09-29 08:11:32,191 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D30_s2: ok  (25583s, 7 running)
+2026-09-29 08:11:37,886 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D30_s2: ok  (25589s, 7 running)
+2026-09-29 08:11:39,468 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D30_s2: ok  (25590s, 7 running)
+2026-09-29 08:24:01,780 [pid12255] INFO [train] done M1_riemannian_D90_s2 lr=0.001 loss=0.0428 916s
+2026-09-29 08:24:04,751 [pid12268] INFO [train] done M4_euler_D90_s2 lr=0.0003 loss=0.1402 866s
+2026-09-29 08:24:19,151 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D90_s2: ok  (26350s, 7 running)
+2026-09-29 08:24:19,810 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D90_s2: ok  (26351s, 7 running)
+2026-09-29 08:25:11,108 [pid12266] INFO [train] done M3_quat_D90_s2 lr=0.001 loss=0.0304 953s
+2026-09-29 08:25:12,248 [pid12262] INFO [train] done M2_euclid6d_D90_s2 lr=0.003 loss=0.0218 971s
+2026-09-29 08:25:25,243 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D90_s2: ok  (26416s, 7 running)
+2026-09-29 08:25:26,597 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D90_s2: ok  (26418s, 7 running)
+2026-09-29 08:26:35,147 [pid12286] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0255 901s
+2026-09-29 08:26:48,665 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D150_s2: ok  (26500s, 7 running)
+2026-09-29 08:27:30,881 [pid12279] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0479 1029s
+2026-09-29 08:27:46,551 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s2: ok  (26558s, 7 running)
+2026-09-29 08:28:31,870 [pid12288] INFO [train] done M3_quat_D150_s2 lr=0.001 loss=0.0464 1012s
+2026-09-29 08:28:45,374 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D150_s2: ok  (26616s, 7 running)
+2026-09-29 08:28:49,608 [pid12289] INFO [train] done M4_euler_D150_s2 lr=0.0003 loss=0.2668 1028s
+2026-09-29 08:29:03,304 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D150_s2: ok  (26634s, 7 running)
+2026-09-29 08:40:03,430 [pid12473] INFO [train] done M2_euclid6d_D10_s3 lr=0.003 loss=0.0221 735s
+2026-09-29 08:40:16,182 [pid12454] INFO [train] done M1_riemannian_D10_s3 lr=0.001 loss=0.0688 806s
+2026-09-29 08:40:17,819 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D10_s3: ok  (27309s, 7 running)
+2026-09-29 08:40:31,505 [pid12431] INFO [train] done M1_riemannian_D175_s2 lr=0.001 loss=0.0486 971s
+2026-09-29 08:40:32,559 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D10_s3: ok  (27324s, 7 running)
+2026-09-29 08:40:36,293 [pid12432] INFO [train] done M2_euclid6d_D175_s2 lr=0.003 loss=0.0263 975s
+2026-09-29 08:40:49,631 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D175_s2: ok  (27341s, 7 running)
+2026-09-29 08:40:51,872 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D175_s2: ok  (27343s, 7 running)
+2026-09-29 08:41:26,388 [pid12489] INFO [train] done M4_euler_D10_s3 lr=0.0003 loss=0.0793 741s
+2026-09-29 08:41:40,594 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D10_s3: ok  (27392s, 7 running)
+2026-09-29 08:41:48,834 [pid12482] INFO [train] done M3_quat_D10_s3 lr=0.003 loss=0.0277 782s
+2026-09-29 08:42:03,111 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D10_s3: ok  (27414s, 7 running)
+2026-09-29 08:42:21,719 [pid12438] INFO [train] done M3_quat_D175_s2 lr=0.001 loss=0.0484 1015s
+2026-09-29 08:42:36,329 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D175_s2: ok  (27447s, 7 running)
+2026-09-29 08:42:40,077 [pid12439] INFO [train] done M4_euler_D175_s2 lr=0.0003 loss=0.2871 1032s
+2026-09-29 08:42:55,342 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D175_s2: ok  (27466s, 7 running)
+2026-09-29 08:54:03,690 [pid12607] INFO [train] done M2_euclid6d_D30_s3 lr=0.003 loss=0.0199 810s
+2026-09-29 08:54:19,517 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D30_s3: ok  (28150s, 7 running)
+2026-09-29 08:54:20,483 [pid12610] INFO [train] done M3_quat_D30_s3 lr=0.003 loss=0.0238 809s
+2026-09-29 08:54:35,602 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D30_s3: ok  (28167s, 7 running)
+2026-09-29 08:54:37,572 [pid12629] INFO [train] done M2_euclid6d_D90_s3 lr=0.003 loss=0.0224 753s
+2026-09-29 08:54:53,454 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D90_s3: ok  (28184s, 7 running)
+2026-09-29 08:54:54,847 [pid12612] INFO [train] done M4_euler_D30_s3 lr=0.0003 loss=0.0877 841s
+2026-09-29 08:54:56,922 [pid12602] INFO [train] done M1_riemannian_D30_s3 lr=0.001 loss=0.0724 877s
+2026-09-29 08:55:10,465 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D30_s3: ok  (28201s, 7 running)
+2026-09-29 08:55:15,506 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D30_s3: ok  (28206s, 7 running)
+2026-09-29 08:56:22,538 [pid12631] INFO [train] done M3_quat_D90_s3 lr=0.003 loss=0.0251 825s
+2026-09-29 08:56:28,892 [pid12632] INFO [train] done M4_euler_D90_s3 lr=0.0003 loss=0.1408 812s
+2026-09-29 08:56:38,531 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D90_s3: ok  (28290s, 7 running)
+2026-09-29 08:56:43,989 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D90_s3: ok  (28295s, 7 running)
+2026-09-29 08:57:28,783 [pid12617] INFO [train] done M1_riemannian_D90_s3 lr=0.001 loss=0.0811 947s
+2026-09-29 08:57:46,195 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D90_s3: ok  (28357s, 7 running)
+2026-09-29 09:07:47,407 [pid12745] INFO [train] done M2_euclid6d_D150_s3 lr=0.003 loss=0.0263 790s
+2026-09-29 09:07:59,987 [pid12746] INFO [train] done M3_quat_D150_s3 lr=0.003 loss=0.0347 785s
+2026-09-29 09:08:03,806 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D150_s3: ok  (28975s, 7 running)
+2026-09-29 09:08:14,845 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D150_s3: ok  (28986s, 7 running)
+2026-09-29 09:08:49,503 [pid12755] INFO [train] done M4_euler_D150_s3 lr=0.0003 loss=0.2639 817s
+2026-09-29 09:08:53,016 [pid12740] INFO [train] done M1_riemannian_D150_s3 lr=0.001 loss=0.0921 872s
+2026-09-29 09:09:04,166 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D150_s3: ok  (29035s, 7 running)
+2026-09-29 09:09:10,329 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D150_s3: ok  (29041s, 7 running)
+2026-09-29 09:10:21,850 [pid12790] INFO [train] done M2_euclid6d_D175_s3 lr=0.003 loss=0.0282 822s
+2026-09-29 09:10:22,898 [pid12756] INFO [train] done M1_riemannian_D175_s3 lr=0.001 loss=0.0941 905s
+2026-09-29 09:10:36,943 [pid6442] INFO [n2] cpu n2_main_gauss90/M2_euclid6d_D175_s3: ok  (29128s, 7 running)
+2026-09-29 09:10:39,975 [pid6442] INFO [n2] cpu n2_main_gauss90/M1_riemannian_D175_s3: ok  (29131s, 7 running)
+2026-09-29 09:11:06,499 [pid12820] INFO [train] done M4_euler_D175_s3 lr=0.0003 loss=0.2866 799s
+2026-09-29 09:11:19,766 [pid6442] INFO [n2] cpu n2_main_gauss90/M4_euler_D175_s3: ok  (29171s, 7 running)
+2026-09-29 09:11:23,561 [pid12792] INFO [train] done M3_quat_D175_s3 lr=0.003 loss=0.0383 878s
+2026-09-29 09:11:35,781 [pid6442] INFO [n2] cpu n2_main_gauss90/M3_quat_D175_s3: ok  (29187s, 7 running)
+2026-09-29 09:23:49,306 [pid13004] INFO [train] done M1_riemannian_D10_s3 lr=0.001 loss=0.0347 944s
+2026-09-29 09:24:04,947 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D10_s3: ok  (29936s, 7 running)
+2026-09-29 09:24:11,543 [pid13006] INFO [train] done M2_euclid6d_D10_s3 lr=0.003 loss=0.0210 955s
+2026-09-29 09:24:24,652 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D10_s3: ok  (29956s, 7 running)
+2026-09-29 09:25:38,696 [pid13034] INFO [train] done M2_euclid6d_D30_s3 lr=0.003 loss=0.0196 897s
+2026-09-29 09:25:48,831 [pid13015] INFO [train] done M3_quat_D10_s3 lr=0.001 loss=0.0255 1003s
+2026-09-29 09:25:52,631 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D30_s3: ok  (30044s, 7 running)
+2026-09-29 09:25:53,467 [pid13017] INFO [train] done M4_euler_D10_s3 lr=0.0003 loss=0.0742 1001s
+2026-09-29 09:26:02,674 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D10_s3: ok  (30054s, 7 running)
+2026-09-29 09:26:06,365 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D10_s3: ok  (30057s, 7 running)
+2026-09-29 09:26:38,869 [pid13032] INFO [train] done M1_riemannian_D30_s3 lr=0.001 loss=0.0375 960s
+2026-09-29 09:26:54,811 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D30_s3: ok  (30106s, 7 running)
+2026-09-29 09:27:15,545 [pid13047] INFO [train] done M4_euler_D30_s3 lr=0.0003 loss=0.0820 938s
+2026-09-29 09:27:24,470 [pid13038] INFO [train] done M3_quat_D30_s3 lr=0.001 loss=0.0270 963s
+2026-09-29 09:27:28,880 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D30_s3: ok  (30140s, 7 running)
+2026-09-29 09:27:37,373 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D30_s3: ok  (30148s, 7 running)
+2026-09-29 09:40:16,579 [pid13226] INFO [train] done M1_riemannian_D90_s3 lr=0.001 loss=0.0427 970s
+2026-09-29 09:40:20,740 [pid13239] INFO [train] done M2_euclid6d_D90_s3 lr=0.003 loss=0.0219 955s
+2026-09-29 09:40:33,253 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D90_s3: ok  (30924s, 7 running)
+2026-09-29 09:40:34,610 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D90_s3: ok  (30926s, 7 running)
+2026-09-29 09:41:06,469 [pid13260] INFO [train] done M3_quat_D90_s3 lr=0.001 loss=0.0300 912s
+2026-09-29 09:41:19,443 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D90_s3: ok  (30970s, 7 running)
+2026-09-29 09:41:56,129 [pid13268] INFO [train] done M2_euclid6d_D150_s3 lr=0.003 loss=0.0252 900s
+2026-09-29 09:42:08,850 [pid6442] INFO [n2] cpu n2_main_trunc150/M2_euclid6d_D150_s3: ok  (31020s, 7 running)
+2026-09-29 09:42:31,054 [pid13274] INFO [train] done M3_quat_D150_s3 lr=0.001 loss=0.0458 901s
+2026-09-29 09:42:32,848 [pid13264] INFO [train] done M4_euler_D90_s3 lr=0.0003 loss=0.1429 988s
+2026-09-29 09:42:45,645 [pid6442] INFO [n2] cpu n2_main_trunc150/M3_quat_D150_s3: ok  (31057s, 7 running)
+2026-09-29 09:42:46,587 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D90_s3: ok  (31058s, 7 running)
+2026-09-29 09:43:41,155 [pid13278] INFO [train] done M4_euler_D150_s3 lr=0.0003 loss=0.2650 962s
+2026-09-29 09:43:41,909 [pid13265] INFO [train] done M1_riemannian_D150_s3 lr=0.001 loss=0.0477 1054s
+2026-09-29 09:43:55,474 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D150_s3: ok  (31126s, 7 running)
+2026-09-29 09:43:58,277 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s3: ok  (31129s, 7 running)
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-s5padxoo', '/mp-h1wqxxzc', '/mp-9fgqvs9x', '/mp-412qoe0j', '/mp-b2fb3ge3'}
+  warnings.warn(

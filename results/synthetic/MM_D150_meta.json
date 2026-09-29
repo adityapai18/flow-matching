@@ -1,0 +1,41 @@
+{
+ "D_deg": 150,
+ "n": 2000,
+ "start_to_target_deg_max_err": 5.684341886080802e-14,
+ "endpoint_matches_target_max_rad": 9.699571010272385e-16,
+ "startpoint_matches_start_max_rad": 0.0,
+ "endpoint_trans_err_max": 2.237726045655905e-16,
+ "orthogonality_residual_max": 2.9984284678565126e-15,
+ "path_type_counts": [
+  667,
+  667,
+  666
+ ],
+ "angle_from_identity_deg": {
+  "max": 179.99317349778426,
+  "p95": 173.7959023469256,
+  "endpoint_mean": 160.10807241961186
+ },
+ "frac_traj_with_canonical_quat_sign_flip": 0.2485,
+ "frac_traj_endpoint_quat_w_below_0.1": 0.0485,
+ "frac_traj_with_euler_jump": 0.34,
+ "frac_traj_with_euler_beta_above_80deg": 0.088,
+ "max_euler_beta_deg": 89.84207225072714,
+ "mode_counts": [
+  653,
+  678,
+  669
+ ],
+ "mode_offsets_deg": [
+  0.0,
+  60.0,
+  -60.0
+ ],
+ "mode_separation_deg": {
+  "min": 115.51637606971035,
+  "mean": 121.31217365085706,
+  "max": 132.90376881315044
+ },
+ "endpoint_is_its_mode_max_rad": 0.0,
+ "seed": 1150
+}

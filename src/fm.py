@@ -60,13 +60,18 @@ def n_params(net):
 
 # ----------------------------------------------------------------------------- data
 
-def load_split(D, split):
-    z = np.load(DATA_DIR / f"D{D}.npz")
+def load_split(D, split, dataset=None):
+    """dataset: npz stem; default f"D{D}" (night-1 unimodal data). "MM_D{D}" = night-2 multimodal."""
+    z = np.load(DATA_DIR / f"{dataset or f'D{D}'}.npz")
     idx = z[f"{split}_idx"]
     R = torch.from_numpy(z["R"][idx])                      # (n, T, 3, 3) float64
     p = torch.from_numpy(z["p"][idx]) / P_SCALE            # (n, T, 3)
     cond = torch.cat([R[:, 0].flatten(-2), p[:, 0]], -1)    # (n, 12)
-    return dict(R=R, p=p, cond=cond, path_type=torch.from_numpy(z["path_type"][idx]))
+    out = dict(R=R, p=p, cond=cond, path_type=torch.from_numpy(z["path_type"][idx]))
+    if "modes_R1" in z:                                      # multimodal: all K valid endpoint rotations
+        out["modes_R1"] = torch.from_numpy(z["modes_R1"][idx])
+        out["mode"] = torch.from_numpy(z["mode"][idx])
+    return out
 
 
 def net_input(rep, x, p, cond, t):
@@ -79,15 +84,51 @@ def split_output(rep, x, out):
     """Network output -> (rotation state velocity, translation velocity), CPU float64.
     Differentiable (used in the training loss as well as for sampling)."""
     B = out.shape[0]
-    out = out.double().cpu()
+    out = out.cpu().double()                  # cpu first: MPS has no float64
     rot = out[:, :T * rep.out_dim].reshape(B, T, rep.out_dim)
     return rep.velocity(x, rot), out[:, T * rep.out_dim:].reshape(B, T, 3)
 
 
-def sample_source(rep, n, g):
-    """Same source for all models: Haar rotations (encoded) + N(0, I) translations."""
-    R0 = G.random_rotation(n * T, g).reshape(n, T, 3, 3)
-    return rep.encode(R0), torch.randn(n, T, 3, dtype=f64, generator=g)
+HAAR = {"kind": "haar"}
+
+
+def prior_name(prior):
+    prior = prior or HAAR
+    return {"haar": lambda: "haar", "gauss": lambda: f"gauss{prior['sigma_deg']:g}",
+            "haar_trunc": lambda: f"trunc{prior['max_deg']:g}"}[prior["kind"]]()
+
+
+def sample_rotations(prior, n, g, R_cond=None, R_tgt=None):
+    """Source rotations (n, T, 3, 3), float64, for night-2's three prior families. The SAME
+    rotations are encoded into every model's representation (common random numbers).
+      haar        night-1 prior; draws are bit-identical to night 1.
+      gauss       R_cond exp(hat(w)), w ~ N(0, sigma^2 I_3) i.i.d. per waypoint; R_cond (n,3,3)
+                  is the conditioning start pose. Legal at inference (start pose is known).
+      haar_trunc  Haar, rejection-resampled until d(source_k, target_k) <= max_deg for every
+                  waypoint k. Needs the TARGET (n,T,3,3): an oracle ablation, not a deployable prior."""
+    prior = prior or HAAR
+    kind = prior["kind"]
+    if kind == "haar":
+        return G.random_rotation(n * T, g).reshape(n, T, 3, 3)
+    if kind == "gauss":
+        w = torch.randn(n, T, 3, dtype=f64, generator=g) * math.radians(prior["sigma_deg"])
+        return R_cond[:, None] @ G.so3_exp(w)
+    if kind == "haar_trunc":
+        R = G.random_rotation(n * T, g).reshape(n, T, 3, 3)
+        lim = math.radians(prior["max_deg"])
+        bad = G.geodesic_distance(R, R_tgt) > lim
+        while bad.any():
+            R[bad] = G.random_rotation(int(bad.sum()), g)
+            bad = G.geodesic_distance(R, R_tgt) > lim
+        return R
+    raise ValueError(prior)
+
+
+def sample_source(rep, n, g, prior=None, R_cond=None, R_tgt=None):
+    """Same source for all models: prior rotations (encoded) + N(0, I) translations.
+    Returns (encoded rotation state, translations, source rotation matrices)."""
+    Rs = sample_rotations(prior, n, g, R_cond, R_tgt)
+    return rep.encode(Rs), torch.randn(n, T, 3, dtype=f64, generator=g), Rs
 
 
 # ----------------------------------------------------------------------------- training
@@ -101,7 +142,7 @@ def lr_lambda(steps):
 
 
 def train_one(model_name, D, seed, lr, steps, run_dir, device="cpu", ckpt_every=2000,
-              width=HIDDEN, depth=N_HIDDEN_LAYERS):
+              width=HIDDEN, depth=N_HIDDEN_LAYERS, prior=None, dataset=None):
     """Resumable. Returns train-info dict. Skips if model.pt already exists."""
     log = get_logger()
     run_dir = Path(run_dir)
@@ -112,8 +153,9 @@ def train_one(model_name, D, seed, lr, steps, run_dir, device="cpu", ckpt_every=
         return info
 
     rep = get_rep(model_name)
-    data = load_split(D, "train")
-    x1_all = rep.encode(data["R"])                          # float64, encoded once
+    data = load_split(D, "train", dataset)
+    R_all = data["R"]
+    x1_all = rep.encode(R_all)                              # float64, encoded once
     p1_all, cond_all = data["p"], data["cond"]
     n_train = cond_all.shape[0]
 
@@ -125,7 +167,7 @@ def train_one(model_name, D, seed, lr, steps, run_dir, device="cpu", ckpt_every=
     start, elapsed, hist = 0, 0.0, []
 
     if ckpt_path.exists():
-        ck = torch.load(ckpt_path, map_location=device, weights_only=False)
+        ck = torch.load(ckpt_path, map_location="cpu", weights_only=False)   # RNG states must stay on CPU
         net.load_state_dict(ck["net"]); opt.load_state_dict(ck["opt"]); sched.load_state_dict(ck["sched"])
         g.set_state(ck["gen"]); torch.set_rng_state(ck["torch_rng"])
         start, elapsed, hist = ck["step"], ck["elapsed"], ck["hist"]
@@ -133,14 +175,15 @@ def train_one(model_name, D, seed, lr, steps, run_dir, device="cpu", ckpt_every=
 
     info = dict(model=model_name, D=D, seed=seed, lr=lr, steps=steps, batch=BATCH, device=str(device),
                 n_params=n_params(net), hidden=width, n_hidden_layers=depth, warmup=WARMUP,
-                clip=CLIP, noise_seed=10_000 * seed + D, done=False)
+                clip=CLIP, noise_seed=10_000 * seed + D, prior=prior or HAAR, dataset=dataset or f"D{D}",
+                done=False)
     write_json(info_path, {**info, "step": start, "hist": hist})
 
     net.train()
     t0, run_loss = time.time(), 0.0
     for step in range(start, steps):
         idx = torch.randint(n_train, (BATCH,), generator=g)
-        x0, p0 = sample_source(rep, BATCH, g)
+        x0, p0, _ = sample_source(rep, BATCH, g, prior, R_all[idx, 0], R_all[idx])
         t = torch.rand(BATCH, dtype=f64, generator=g)
         xt, u = rep.path(x0, x1_all[idx], t[:, None].expand(BATCH, T))
         p1 = p1_all[idx]
@@ -244,30 +287,47 @@ def endpoint_metrics(rep, x, p, R1_true, p1_true):
     )
 
 
-def eval_noise(D, seed, n):
-    """Evaluation source samples. Same stream for every model => paired comparison."""
+def eval_noise(D, seed, n, prior=None, R_cond=None, R_tgt=None):
+    """Evaluation source samples. Same stream for every model => paired comparison.
+    With the default Haar prior this is bit-identical to night 1."""
     g = torch.Generator().manual_seed(900_000 + 1000 * seed + D)
-    R0 = G.random_rotation(n * T, g).reshape(n, T, 3, 3)
+    R0 = sample_rotations(prior, n, g, R_cond, R_tgt)
     return R0, torch.randn(n, T, 3, dtype=f64, generator=g)
 
 
-def evaluate(model_name, D, seed, run_dir, split, nfes, k_samples, out_name, device="cpu"):
-    """Resumable per-NFE evaluation; writes JSON after every NFE."""
+def evaluate(model_name, D, seed, run_dir, split, nfes, k_samples, out_name, device="cpu",
+             prior=None, dataset=None, samples_nfe=None):
+    """Resumable per-NFE evaluation; writes JSON after every NFE.
+    samples_nfe: also save per-sample endpoint error and d0 (distance from the last-waypoint
+    source sample to the target endpoint, as in diag_tail.py) at that NFE, to <out>_samples.npz."""
     run_dir = Path(run_dir)
     out_path = run_dir / out_name
+    smp_path = run_dir / out_name.replace(".json", "_samples.npz")
     res = read_json(out_path, default={"model": model_name, "D": D, "seed": seed, "split": split,
-                                       "k_samples": k_samples, "by_nfe": {}})
+                                       "k_samples": k_samples, "prior": prior or HAAR, "by_nfe": {}})
     todo = [n for n in nfes if str(n) not in res["by_nfe"]]
-    if not todo:
+    want_smp = samples_nfe is not None and not smp_path.exists()
+    if not todo and not want_smp:
         return res
     rep = get_rep(model_name)
     net = load_net(model_name, run_dir, device)
-    data = load_split(D, split)
+    data = load_split(D, split, dataset)
     cond = data["cond"].repeat_interleave(k_samples, 0)
     R1 = data["R"][:, -1].repeat_interleave(k_samples, 0)
     p1 = data["p"][:, -1].repeat_interleave(k_samples, 0)
-    R0n, p0n = eval_noise(D, seed, cond.shape[0])
+    R0n, p0n = eval_noise(D, seed, cond.shape[0], prior, data["R"][:, 0].repeat_interleave(k_samples, 0),
+                          data["R"].repeat_interleave(k_samples, 0))
     x0 = rep.encode(R0n)
+    if want_smp:
+        x, _ = integrate(rep, net, cond, x0, p0n, samples_nfe, device)
+        err = torch.full((cond.shape[0],), 180.0, dtype=f64)
+        R = rep.to_matrix(x)[:, -1]
+        ok = torch.isfinite(R).flatten(-2).all(-1)
+        err[ok] = torch.rad2deg(G.geodesic_distance(R[ok], R1[ok]))
+        d0 = torch.rad2deg(G.geodesic_distance(R0n[:, -1], R1))
+        tmp = smp_path.with_suffix(".tmp.npz")
+        np.savez(tmp, err_deg=err.numpy(), d0_deg=d0.numpy(), nfe=np.array(samples_nfe))
+        tmp.replace(smp_path)
     for nfe in todo:
         t0 = time.time()
         x, p = integrate(rep, net, cond, x0, p0n, nfe, device)
@@ -276,4 +336,89 @@ def evaluate(model_name, D, seed, run_dir, split, nfes, k_samples, out_name, dev
         m["infer_seconds_per_traj"] = dt / cond.shape[0]
         res["by_nfe"][str(nfe)] = m
         write_json(out_path, res)
+    return res
+
+
+# ----------------------------------------------------------------------------- multimodal (night 2, Phase C)
+
+ON_MODE_DEG = 10.0     # a sample "hits" its nearest mode if within this geodesic distance
+
+
+def _w1_to_modes(dist_deg, k):
+    """Exact W1 (geodesic cost, deg) between k equally weighted samples and the uniform
+    distribution over K modes, for one start. dist_deg: (k, K); k must be divisible by K."""
+    from scipy.optimize import linear_sum_assignment
+    K = dist_deg.shape[1]
+    C = np.repeat(dist_deg, k // K, axis=1)            # each mode duplicated k/K times -> square
+    r, c = linear_sum_assignment(C)
+    return float(C[r, c].mean())
+
+
+def mm_metrics(R_end, modes_R1, n_starts, k):
+    """R_end (n*k, 3, 3) projected endpoints, grouped by start; modes_R1 (n, K, 3, 3)."""
+    K = modes_R1.shape[1]
+    Rm = modes_R1.repeat_interleave(k, 0)                                      # (n*k, K, 3, 3)
+    ok = torch.isfinite(R_end).flatten(-2).all(-1)
+    dist = torch.full((R_end.shape[0], K), 180.0, dtype=f64)
+    if ok.any():
+        dist[ok] = torch.rad2deg(G.geodesic_distance(R_end[ok, None].expand(-1, K, 3, 3), Rm[ok]))
+    near, assign = dist.min(-1)
+    hit = near < ON_MODE_DEG
+    counts = torch.zeros(n_starts, K, dtype=torch.long)
+    sidx = torch.arange(R_end.shape[0]) // k
+    counts.index_put_((sidx[hit], assign[hit]), torch.ones(int(hit.sum()), dtype=torch.long), accumulate=True)
+    n_hit = counts.sum(-1)
+    have = n_hit > 0
+    props = counts[have].double() / n_hit[have, None]
+    tv = 0.5 * (props - 1.0 / K).abs().sum(-1)                                 # per start, among on-mode samples
+    dn = dist.reshape(n_starts, k, K).numpy()
+    w1 = np.array([_w1_to_modes(dn[i], k) for i in range(n_starts)])
+    pooled = counts.sum(0).double()
+    return dict(
+        nearest_mode_err_deg=_stats(near),
+        frac_on_mode=float(hit.double().mean()),
+        coverage_all_modes=float((counts > 0).all(-1).double().mean()),     # starts with every mode hit >= 1
+        modes_hit_mean=float((counts > 0).sum(-1).double().mean()),
+        mode_props_pooled=(pooled / pooled.sum()).tolist() if pooled.sum() > 0 else None,
+        mode_props_min_mean=float(props.min(-1).values.mean()) if have.any() else 0.0,
+        tv_from_uniform_mean=float(tv.mean()) if have.any() else 1.0,
+        w1_deg=_stats(torch.from_numpy(w1)),
+        n_nonfinite=int((~ok).sum()), n=int(R_end.shape[0]), n_starts=n_starts, k=k,
+    ), dict(nearest=near.numpy(), assign=assign.numpy(), hit=hit.numpy(), w1=w1)
+
+
+def evaluate_mm(model_name, D, seed, run_dir, split, nfes, k_samples, out_name, device="cpu",
+                prior=None, samples_nfe=None):
+    """Multimodal evaluation: k_samples draws per start (k divisible by K=3); resumable per NFE."""
+    run_dir = Path(run_dir)
+    out_path = run_dir / out_name
+    smp_path = run_dir / out_name.replace(".json", "_samples.npz")
+    res = read_json(out_path, default={"model": model_name, "D": D, "seed": seed, "split": split,
+                                       "k_samples": k_samples, "prior": prior or HAAR,
+                                       "on_mode_deg": ON_MODE_DEG, "by_nfe": {}})
+    todo = [n for n in nfes if str(n) not in res["by_nfe"]]
+    if not todo and (samples_nfe is None or smp_path.exists()):
+        return res
+    rep = get_rep(model_name)
+    net = load_net(model_name, run_dir, device)
+    data = load_split(D, split, f"MM_D{D}")
+    n = data["cond"].shape[0]
+    cond = data["cond"].repeat_interleave(k_samples, 0)
+    R0n, p0n = eval_noise(D, seed, cond.shape[0], prior, data["R"][:, 0].repeat_interleave(k_samples, 0))
+    x0 = rep.encode(R0n)
+    for nfe in sorted(set(todo) | ({samples_nfe} if samples_nfe and not smp_path.exists() else set())):
+        t0 = time.time()
+        x, _ = integrate(rep, net, cond, x0, p0n, nfe, device)
+        dt = time.time() - t0
+        m, per = mm_metrics(rep.to_matrix(x)[:, -1], data["modes_R1"], n, k_samples)
+        res_orth = G.orthogonality_residual(rep.raw_matrix(x)[:, -1])
+        m["orth_residual_endpoint_mean"] = float(res_orth[torch.isfinite(res_orth)].mean())
+        m["infer_seconds_per_traj"] = dt / cond.shape[0]
+        if nfe == samples_nfe and not smp_path.exists():
+            tmp = smp_path.with_suffix(".tmp.npz")
+            np.savez(tmp, nfe=np.array(nfe), data_mode=data["mode"].numpy(), **per)
+            tmp.replace(smp_path)
+        if str(nfe) not in res["by_nfe"]:
+            res["by_nfe"][str(nfe)] = m
+            write_json(out_path, res)
     return res

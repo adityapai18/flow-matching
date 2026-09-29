@@ -70,7 +70,28 @@ def overshoot_gain(o, n_grid=4001):
     return 0.5 * (lo + hi)
 
 
-def generate(D_deg):
+MM_OFFSETS_DEG = (0.0, 60.0, -60.0)   # night-2 multimodal: mode axes at these angles from a
+
+
+def mode_axes(a):
+    """K=3 rotation axes per start, a deterministic function of the start axis a (n,3) -> (n,K,3):
+    a itself, and a tilted by +/-60 deg about e1 = z x a / |z x a|. e1 is singular at a = +/-z
+    (a tangent line field on S^2 must have singularities), so the mode set turns quickly
+    for the ~1.5% of starts within 10 deg of the poles."""
+    z = torch.tensor([0.0, 0.0, 1.0], dtype=f64).expand_as(a)
+    e1 = torch.linalg.cross(z, a)
+    small = e1.norm(dim=-1) < 1e-6
+    e1 = torch.where(small[:, None], torch.linalg.cross(torch.tensor([1.0, 0.0, 0.0], dtype=f64).expand_as(a), a), e1)
+    e1 = e1 / e1.norm(dim=-1, keepdim=True)
+    e2 = torch.linalg.cross(e1, a)
+    phi = torch.deg2rad(torch.tensor(MM_OFFSETS_DEG, dtype=f64))
+    return torch.cos(phi)[None, :, None] * a[:, None] + torch.sin(phi)[None, :, None] * e2[:, None]
+
+
+def generate(D_deg, multimodal=False):
+    """multimodal=False reproduces night 1 bit-for-bit. multimodal=True (night 2, Phase C): same starts
+    (a, sigma, p0) and splits, but the rotation is about b = mode_axes(a)[k], with k ~ U{0,1,2} drawn from a
+    separate stream; translation still moves along a (only the rotation is multimodal)."""
     g = torch.Generator().manual_seed(data_seed(D_deg))
     n, T = N_TRAJ, N_WAYPOINTS
     D = math.radians(D_deg)
@@ -84,7 +105,13 @@ def generate(D_deg):
                           * torch.rand(n, dtype=f64, generator=g))
     R0 = G.so3_exp(a * sigma[:, None])
     p0 = P0_STD * torch.randn(n, 3, dtype=f64, generator=g)
-    R1 = R0 @ G.so3_exp(a * D)
+    if multimodal:
+        axes = mode_axes(a)
+        mode = torch.randint(len(MM_OFFSETS_DEG), (n,), generator=torch.Generator().manual_seed(5000 + D_deg))
+        b = axes[torch.arange(n), mode]
+    else:
+        b = a
+    R1 = R0 @ G.so3_exp(b * D)
     p1 = p0 + L_TRANS * a
 
     ptype = torch.arange(n) % 3
@@ -99,7 +126,7 @@ def generate(D_deg):
     # (1) via-point detour
     m_rot = D * (DETOUR_FRAC[0] + (DETOUR_FRAC[1] - DETOUR_FRAC[0]) * torch.rand(n, dtype=f64, generator=g))
     m_tr = L_TRANS * (DETOUR_FRAC[0] + (DETOUR_FRAC[1] - DETOUR_FRAC[0]) * torch.rand(n, dtype=f64, generator=g))
-    delta = unit_perp(a, g) * m_rot[:, None]
+    delta = unit_perp(b, g) * m_rot[:, None]
     dtr = unit_perp(a, g) * m_tr[:, None]
     R_via = R_geo @ G.so3_exp(delta[:, None, :] * bump[None, :, None])
     p_via = p_geo + dtr[:, None, :] * bump[None, :, None]
@@ -108,7 +135,7 @@ def generate(D_deg):
     o = OVERSHOOT_FRAC[0] + (OVERSHOOT_FRAC[1] - OVERSHOOT_FRAC[0]) * torch.rand(n, dtype=f64, generator=g)
     A = overshoot_gain(o)
     psi = s[None] + A[:, None] * (tau ** 3 * (1 - tau) ** 2)[None]      # (n,T)
-    R_ov = R0[:, None] @ G.so3_exp(a[:, None, :] * (D * psi)[..., None])
+    R_ov = R0[:, None] @ G.so3_exp(b[:, None, :] * (D * psi)[..., None])
     p_ov = p0[:, None] + L_TRANS * a[:, None, :] * s[None, :, None]
 
     sel = ptype[:, None, None, None]
@@ -117,8 +144,11 @@ def generate(D_deg):
 
     perm = torch.randperm(n, generator=g)
     split = {"train": perm[:1600], "val": perm[1600:1800], "test": perm[1800:]}
-    return dict(R=R, p=p, ptype=ptype, axis=a, sigma=sigma, R0=R0, p0=p0, R1=R1, p1=p1,
-                overshoot=o, split=split)
+    out = dict(R=R, p=p, ptype=ptype, axis=a, sigma=sigma, R0=R0, p0=p0, R1=R1, p1=p1,
+               overshoot=o, split=split)
+    if multimodal:
+        out.update(mode=mode, mode_axes=axes, modes_R1=R0[:, None] @ G.so3_exp(axes * D))
+    return out
 
 
 def dataset_stats(d, D_deg):
@@ -151,33 +181,58 @@ def dataset_stats(d, D_deg):
     }
 
 
+def mode_stats(d):
+    """Multimodal extras: how far apart are the K valid endpoints of one start?"""
+    M = d["modes_R1"]
+    K = M.shape[1]
+    sep = torch.stack([torch.rad2deg(G.geodesic_distance(M[:, i], M[:, j]))
+                       for i in range(K) for j in range(i + 1, K)], -1)
+    return {"mode_counts": [int((d["mode"] == k).sum()) for k in range(K)],
+            "mode_offsets_deg": list(MM_OFFSETS_DEG),
+            "mode_separation_deg": {"min": float(sep.min()), "mean": float(sep.mean()), "max": float(sep.max())},
+            "endpoint_is_its_mode_max_rad": float(G.geodesic_distance(
+                M[torch.arange(M.shape[0]), d["mode"]], d["R1"]).max())}
+
+
 def main():
+    """python make_data.py [D ...]        night-1 unimodal levels -> D{D}.npz
+       python make_data.py mm [D ...]     night-2 multimodal levels -> MM_D{D}.npz"""
     log = get_logger()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    levels = [int(x) for x in sys.argv[1:]] or D_LEVELS
+    args = sys.argv[1:]
+    mm = bool(args) and args[0] == "mm"
+    if mm:
+        args = args[1:]
+    levels = [int(x) for x in args] or ([30, 150] if mm else D_LEVELS)
     for D in levels:
-        out = DATA_DIR / f"D{D}.npz"
-        meta_path = DATA_DIR / f"D{D}_meta.json"
+        stem = f"MM_D{D}" if mm else f"D{D}"
+        out = DATA_DIR / f"{stem}.npz"
+        meta_path = DATA_DIR / f"{stem}_meta.json"
         if out.exists() and read_json(meta_path):
-            log.info(f"[data] D={D} cached, skipping")
+            log.info(f"[data] {stem} cached, skipping")
             continue
         try:
-            d = generate(D)
+            d = generate(D, multimodal=mm)
             stats = dataset_stats(d, D)
             assert stats["start_to_target_deg_max_err"] < 1e-8, stats
             assert stats["endpoint_matches_target_max_rad"] < 1e-10, stats
             assert stats["startpoint_matches_start_max_rad"] < 1e-10, stats
             assert stats["endpoint_trans_err_max"] < 1e-10, stats
+            extra = {}
+            if mm:
+                stats.update(mode_stats(d))
+                assert stats["endpoint_is_its_mode_max_rad"] < 1e-10, stats
+                extra = dict(mode=d["mode"].numpy(), mode_axes=d["mode_axes"].numpy(), modes_R1=d["modes_R1"].numpy())
             np.savez_compressed(
                 out, R=d["R"].numpy(), p=d["p"].numpy(), path_type=d["ptype"].numpy(),
                 axis=d["axis"].numpy(), sigma=d["sigma"].numpy(), overshoot=d["overshoot"].numpy(),
                 train_idx=d["split"]["train"].numpy(), val_idx=d["split"]["val"].numpy(),
-                test_idx=d["split"]["test"].numpy(), D_deg=np.array(D))
+                test_idx=d["split"]["test"].numpy(), D_deg=np.array(D), **extra)
             stats["seed"] = data_seed(D)
             write_json(meta_path, stats)
-            log.info(f"[data] D={D} saved: {stats}")
+            log.info(f"[data] {stem} saved: {stats}")
         except Exception as e:  # log, continue with next level
-            log.exception(f"[data] D={D} FAILED: {e}")
+            log.exception(f"[data] {stem} FAILED: {e}")
 
 
 if __name__ == "__main__":
