@@ -1,0 +1,23 @@
+{
+ "M2_euclid6d": {
+  "point_deg": null,
+  "frac_boot_with_crossing": 0.0,
+  "ci95_deg": null
+ },
+ "M3_quat": {
+  "point_deg": 53.79427890912952,
+  "frac_boot_with_crossing": 1.0,
+  "ci95_deg": [
+   50.16242737522191,
+   58.53680680979592
+  ]
+ },
+ "M4_euler": {
+  "point_deg": 94.35555078332447,
+  "frac_boot_with_crossing": 1.0,
+  "ci95_deg": [
+   91.79660110902879,
+   97.63261505856528
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+2026-09-28 00:04:10,534 [pid2908] INFO [hpsearch] 36 tasks on 8 workers
+2026-09-28 00:18:28,617 [pid2913] INFO [train] done M4_euler_D30_s100 lr=0.001 loss=0.0569 857s
+2026-09-28 00:18:30,585 [pid2908] INFO [hpsearch] 1/36 hp_lr0.001/M4_euler_D30_s100: ok  (860s)
+2026-09-28 00:19:06,770 [pid2917] INFO [train] done M4_euler_D30_s100 lr=0.0003 loss=0.0903 895s
+2026-09-28 00:19:09,756 [pid2908] INFO [hpsearch] 2/36 hp_lr0.0003/M4_euler_D30_s100: ok  (899s)
+2026-09-28 00:19:12,379 [pid2910] INFO [train] done M3_quat_D30_s100 lr=0.0003 loss=0.0473 901s
+2026-09-28 00:19:15,034 [pid2908] INFO [hpsearch] 3/36 hp_lr0.0003/M3_quat_D30_s100: ok  (904s)
+2026-09-28 00:19:19,306 [pid2912] INFO [train] done M2_euclid6d_D30_s100 lr=0.0003 loss=0.0526 908s
+2026-09-28 00:19:21,798 [pid2908] INFO [hpsearch] 4/36 hp_lr0.0003/M2_euclid6d_D30_s100: ok  (911s)
+2026-09-28 00:19:40,258 [pid2916] INFO [train] done M3_quat_D30_s100 lr=0.001 loss=0.0295 929s
+2026-09-28 00:19:42,789 [pid2908] INFO [hpsearch] 5/36 hp_lr0.001/M3_quat_D30_s100: ok  (932s)
+2026-09-28 00:19:50,369 [pid2914] INFO [train] done M2_euclid6d_D30_s100 lr=0.001 loss=0.0288 939s
+2026-09-28 00:19:52,570 [pid2908] INFO [hpsearch] 6/36 hp_lr0.001/M2_euclid6d_D30_s100: ok  (942s)
+2026-09-28 00:21:10,497 [pid2911] INFO [train] done M1_riemannian_D30_s100 lr=0.0003 loss=0.1013 1019s
+2026-09-28 00:21:12,877 [pid2908] INFO [hpsearch] 7/36 hp_lr0.0003/M1_riemannian_D30_s100: ok  (1022s)
+2026-09-28 00:21:35,971 [pid2915] INFO [train] done M1_riemannian_D30_s100 lr=0.001 loss=0.0767 1044s
+2026-09-28 00:21:38,536 [pid2908] INFO [hpsearch] 8/36 hp_lr0.001/M1_riemannian_D30_s100: ok  (1048s)
+2026-09-28 00:33:33,485 [pid6345] INFO [train] done M2_euclid6d_D30_s100 lr=0.003 loss=0.0168 861s
+2026-09-28 00:33:38,359 [pid2908] INFO [hpsearch] 9/36 hp_lr0.003/M2_euclid6d_D30_s100: ok  (1768s)
+2026-09-28 00:33:44,646 [pid6399] INFO [train] done M3_quat_D30_s100 lr=0.003 loss=0.0231 866s
+2026-09-28 00:33:47,272 [pid2908] INFO [hpsearch] 10/36 hp_lr0.003/M3_quat_D30_s100: ok  (1777s)
+2026-09-28 00:33:53,386 [pid6470] INFO [train] done M4_euler_D30_s100 lr=0.003 loss=0.0679 868s
+2026-09-28 00:33:55,933 [pid2908] INFO [hpsearch] 11/36 hp_lr0.003/M4_euler_D30_s100: ok  (1785s)
+2026-09-28 00:34:35,941 [pid6829] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0602 880s
+2026-09-28 00:34:39,270 [pid2908] INFO [hpsearch] 12/36 hp_lr0.0003/M2_euclid6d_D90_s100: ok  (1829s)
+2026-09-28 00:35:35,088 [pid6055] INFO [train] done M1_riemannian_D30_s100 lr=0.003 loss=0.0760 1022s
+2026-09-28 00:35:37,827 [pid2908] INFO [hpsearch] 13/36 hp_lr0.003/M1_riemannian_D30_s100: ok  (1887s)
+2026-09-28 00:35:41,089 [pid6917] INFO [train] done M3_quat_D90_s100 lr=0.0003 loss=0.0483 866s
+2026-09-28 00:35:43,089 [pid2908] INFO [hpsearch] 14/36 hp_lr0.0003/M3_quat_D90_s100: ok  (1893s)
+2026-09-28 00:35:55,459 [pid6714] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.1092 970s
+2026-09-28 00:35:57,728 [pid2908] INFO [hpsearch] 15/36 hp_lr0.0003/M1_riemannian_D90_s100: ok  (1907s)
+2026-09-28 00:35:59,472 [pid7008] INFO [train] done M4_euler_D90_s100 lr=0.0003 loss=0.1428 858s
+2026-09-28 00:36:02,040 [pid2908] INFO [hpsearch] 16/36 hp_lr0.0003/M4_euler_D90_s100: ok  (1912s)
+2026-09-28 00:48:56,342 [pid11698] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.0978 855s
+2026-09-28 00:48:57,894 [pid2908] INFO [hpsearch] 17/36 hp_lr0.001/M4_euler_D90_s100: ok  (2687s)
+2026-09-28 00:48:59,703 [pid11407] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0354 909s
+2026-09-28 00:49:03,161 [pid2908] INFO [hpsearch] 18/36 hp_lr0.001/M2_euclid6d_D90_s100: ok  (2693s)
+2026-09-28 00:49:43,382 [pid11471] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0310 944s
+2026-09-28 00:49:47,994 [pid2908] INFO [hpsearch] 19/36 hp_lr0.001/M3_quat_D90_s100: ok  (2737s)
+2026-09-28 00:50:09,705 [pid11375] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0828 989s
+2026-09-28 00:50:12,661 [pid2908] INFO [hpsearch] 20/36 hp_lr0.001/M1_riemannian_D90_s100: ok  (2762s)
+2026-09-28 00:50:40,034 [pid12278] INFO [train] done M4_euler_D90_s100 lr=0.003 loss=0.1045 875s
+2026-09-28 00:50:42,859 [pid2908] INFO [hpsearch] 21/36 hp_lr0.003/M4_euler_D90_s100: ok  (2792s)
+2026-09-28 00:50:49,046 [pid12114] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0218 903s
+2026-09-28 00:50:51,311 [pid2908] INFO [hpsearch] 22/36 hp_lr0.003/M2_euclid6d_D90_s100: ok  (2801s)
+2026-09-28 00:50:56,186 [pid12239] INFO [train] done M3_quat_D90_s100 lr=0.003 loss=0.0245 895s
+2026-09-28 00:50:59,228 [pid2908] INFO [hpsearch] 23/36 hp_lr0.003/M3_quat_D90_s100: ok  (2809s)
+2026-09-28 00:52:16,346 [pid12058] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0780 996s
+2026-09-28 00:52:19,859 [pid2908] INFO [hpsearch] 24/36 hp_lr0.003/M1_riemannian_D90_s100: ok  (2889s)
+2026-09-28 01:03:37,591 [pid17240] INFO [train] done M2_euclid6d_D150_s100 lr=0.0003 loss=0.0698 871s
+2026-09-28 01:03:41,063 [pid2908] INFO [hpsearch] 25/36 hp_lr0.0003/M2_euclid6d_D150_s100: ok  (3571s)
+2026-09-28 01:04:11,413 [pid17638] INFO [train] done M4_euler_D150_s100 lr=0.0003 loss=0.2768 836s
+2026-09-28 01:04:11,964 [pid17546] INFO [train] done M3_quat_D150_s100 lr=0.0003 loss=0.0807 861s
+2026-09-28 01:04:13,584 [pid2908] INFO [hpsearch] 26/36 hp_lr0.0003/M4_euler_D150_s100: ok  (3603s)
+2026-09-28 01:04:14,462 [pid2908] INFO [hpsearch] 27/36 hp_lr0.0003/M3_quat_D150_s100: ok  (3604s)
+2026-09-28 01:04:40,823 [pid17214] INFO [train] done M1_riemannian_D150_s100 lr=0.0003 loss=0.1198 940s
+2026-09-28 01:04:43,222 [pid2908] INFO [hpsearch] 28/36 hp_lr0.0003/M1_riemannian_D150_s100: ok  (3633s)
+2026-09-28 01:05:28,548 [pid17749] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.0423 874s
+2026-09-28 01:05:30,810 [pid2908] INFO [hpsearch] 29/36 hp_lr0.001/M2_euclid6d_D150_s100: ok  (3680s)
+2026-09-28 01:05:41,152 [pid17764] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.0475 879s
+2026-09-28 01:05:43,946 [pid2908] INFO [hpsearch] 30/36 hp_lr0.001/M3_quat_D150_s100: ok  (3693s)
+2026-09-28 01:06:00,875 [pid18151] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.1956 818s
+2026-09-28 01:06:02,773 [pid2908] INFO [hpsearch] 31/36 hp_lr0.001/M4_euler_D150_s100: ok  (3712s)
+2026-09-28 01:06:30,071 [pid17725] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.0920 945s
+2026-09-28 01:06:32,623 [pid2908] INFO [hpsearch] 32/36 hp_lr0.001/M1_riemannian_D150_s100: ok  (3742s)
+2026-09-28 01:13:27,733 [pid25236] INFO [train] done M4_euler_D150_s100 lr=0.003 loss=0.1132 522s
+2026-09-28 01:13:29,788 [pid2908] INFO [hpsearch] 33/36 hp_lr0.003/M4_euler_D150_s100: ok  (4159s)
+2026-09-28 01:13:32,685 [pid24898] INFO [train] done M3_quat_D150_s100 lr=0.003 loss=0.0350 555s
+2026-09-28 01:13:34,627 [pid2908] INFO [hpsearch] 34/36 hp_lr0.003/M3_quat_D150_s100: ok  (4164s)
+2026-09-28 01:13:43,937 [pid24887] INFO [train] done M2_euclid6d_D150_s100 lr=0.003 loss=0.0262 568s
+2026-09-28 01:13:44,809 [pid2908] INFO [hpsearch] 35/36 hp_lr0.003/M2_euclid6d_D150_s100: ok  (4174s)
+2026-09-28 01:13:55,905 [pid24604] INFO [train] done M1_riemannian_D150_s100 lr=0.003 loss=0.0809 612s
+2026-09-28 01:13:56,649 [pid2908] INFO [hpsearch] 36/36 hp_lr0.003/M1_riemannian_D150_s100: ok  (4186s)
+2026-09-28 01:13:56,661 [pid2908] INFO [hpsearch] finished: 36 ok, 0 failed

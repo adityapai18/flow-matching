@@ -1,0 +1,282 @@
+2026-09-28 02:01:00,266 [pid42976] INFO [main] 140 tasks on 8 workers
+2026-09-28 02:14:12,637 [pid42996] INFO [train] done M4_euler_D10_s0 lr=0.0003 loss=0.0816 791s
+2026-09-28 02:14:14,590 [pid42994] INFO [train] done M4_euler_D30_s0 lr=0.0003 loss=0.0904 793s
+2026-09-28 02:14:23,570 [pid42976] INFO [main] 1/140 main/M4_euler_D10_s0: ok  (803s)
+2026-09-28 02:14:24,955 [pid42976] INFO [main] 2/140 main/M4_euler_D30_s0: ok  (805s)
+2026-09-28 02:14:36,866 [pid42991] INFO [train] done M2_euclid6d_D30_s0 lr=0.003 loss=0.0168 815s
+2026-09-28 02:14:46,227 [pid42992] INFO [train] done M1_riemannian_D10_s0 lr=0.003 loss=0.0733 825s
+2026-09-28 02:14:47,795 [pid42976] INFO [main] 3/140 main/M2_euclid6d_D30_s0: ok  (828s)
+2026-09-28 02:14:58,145 [pid42976] INFO [main] 4/140 main/M1_riemannian_D10_s0: ok  (838s)
+2026-09-28 02:15:02,131 [pid42997] INFO [train] done M2_euclid6d_D10_s0 lr=0.003 loss=0.0210 841s
+2026-09-28 02:15:13,084 [pid42976] INFO [main] 5/140 main/M2_euclid6d_D10_s0: ok  (853s)
+2026-09-28 02:15:17,616 [pid42995] INFO [train] done M3_quat_D10_s0 lr=0.003 loss=0.0248 856s
+2026-09-28 02:15:27,948 [pid42976] INFO [main] 6/140 main/M3_quat_D10_s0: ok  (868s)
+2026-09-28 02:15:57,736 [pid42998] INFO [train] done M3_quat_D30_s0 lr=0.003 loss=0.0232 896s
+2026-09-28 02:16:08,224 [pid42976] INFO [main] 7/140 main/M3_quat_D30_s0: ok  (908s)
+2026-09-28 02:17:11,762 [pid42993] INFO [train] done M1_riemannian_D30_s0 lr=0.003 loss=0.0884 970s
+2026-09-28 02:17:24,357 [pid42976] INFO [main] 8/140 main/M1_riemannian_D30_s0: ok  (984s)
+2026-09-28 02:26:57,879 [pid45286] INFO [train] done M2_euclid6d_D60_s0 lr=0.003 loss=0.0196 750s
+2026-09-28 02:27:08,561 [pid42976] INFO [main] 9/140 main/M2_euclid6d_D60_s0: ok  (1568s)
+2026-09-28 02:28:18,314 [pid45285] INFO [train] done M1_riemannian_D60_s0 lr=0.003 loss=0.0819 832s
+2026-09-28 02:28:30,778 [pid42976] INFO [main] 10/140 main/M1_riemannian_D60_s0: ok  (1651s)
+2026-09-28 02:28:44,867 [pid45291] INFO [train] done M4_euler_D60_s0 lr=0.0003 loss=0.1076 824s
+2026-09-28 02:28:48,392 [pid45290] INFO [train] done M3_quat_D60_s0 lr=0.003 loss=0.0239 838s
+2026-09-28 02:28:55,737 [pid42976] INFO [main] 11/140 main/M4_euler_D60_s0: ok  (1675s)
+2026-09-28 02:28:58,531 [pid42976] INFO [main] 12/140 main/M3_quat_D60_s0: ok  (1678s)
+2026-09-28 02:30:03,401 [pid45315] INFO [train] done M4_euler_D90_s0 lr=0.0003 loss=0.1442 757s
+2026-09-28 02:30:09,126 [pid45296] INFO [train] done M1_riemannian_D90_s0 lr=0.003 loss=0.0795 893s
+2026-09-28 02:30:13,949 [pid42976] INFO [main] 13/140 main/M4_euler_D90_s0: ok  (1754s)
+2026-09-28 02:30:21,026 [pid42976] INFO [main] 14/140 main/M1_riemannian_D90_s0: ok  (1761s)
+2026-09-28 02:30:49,795 [pid45297] INFO [train] done M2_euclid6d_D90_s0 lr=0.003 loss=0.0222 919s
+2026-09-28 02:30:55,204 [pid45302] INFO [train] done M3_quat_D90_s0 lr=0.003 loss=0.0247 885s
+2026-09-28 02:31:01,237 [pid42976] INFO [main] 15/140 main/M2_euclid6d_D90_s0: ok  (1801s)
+2026-09-28 02:31:05,306 [pid42976] INFO [main] 16/140 main/M3_quat_D90_s0: ok  (1805s)
+2026-09-28 02:41:25,338 [pid45418] INFO [train] done M2_euclid6d_D120_s0 lr=0.003 loss=0.0243 772s
+2026-09-28 02:41:28,412 [pid45405] INFO [train] done M1_riemannian_D120_s0 lr=0.003 loss=0.0816 857s
+2026-09-28 02:41:30,674 [pid45424] INFO [train] done M4_euler_D120_s0 lr=0.0003 loss=0.2036 749s
+2026-09-28 02:41:36,036 [pid42976] INFO [main] 17/140 main/M2_euclid6d_D120_s0: ok  (2436s)
+2026-09-28 02:41:39,669 [pid42976] INFO [main] 18/140 main/M4_euler_D120_s0: ok  (2439s)
+2026-09-28 02:41:40,256 [pid42976] INFO [main] 19/140 main/M1_riemannian_D120_s0: ok  (2440s)
+2026-09-28 02:43:29,776 [pid45423] INFO [train] done M3_quat_D120_s0 lr=0.003 loss=0.0255 872s
+2026-09-28 02:43:40,252 [pid42976] INFO [main] 20/140 main/M3_quat_D120_s0: ok  (2560s)
+2026-09-28 02:44:46,903 [pid45439] INFO [train] done M1_riemannian_D150_s0 lr=0.003 loss=0.0819 871s
+2026-09-28 02:44:47,262 [pid45448] INFO [train] done M4_euler_D150_s0 lr=0.0003 loss=0.2701 819s
+2026-09-28 02:44:57,984 [pid42976] INFO [main] 21/140 main/M4_euler_D150_s0: ok  (2638s)
+2026-09-28 02:44:59,692 [pid42976] INFO [main] 22/140 main/M1_riemannian_D150_s0: ok  (2639s)
+2026-09-28 02:45:04,231 [pid45443] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0262 880s
+2026-09-28 02:45:15,221 [pid42976] INFO [main] 23/140 main/M2_euclid6d_D150_s0: ok  (2655s)
+2026-09-28 02:45:56,213 [pid45447] INFO [train] done M3_quat_D150_s0 lr=0.003 loss=0.0349 893s
+2026-09-28 02:46:06,499 [pid42976] INFO [main] 24/140 main/M3_quat_D150_s0: ok  (2706s)
+2026-09-28 02:53:16,794 [pid45571] INFO [train] done M2_euclid6d_D175_s0 lr=0.003 loss=0.0278 695s
+2026-09-28 02:53:27,784 [pid42976] INFO [main] 25/140 main/M2_euclid6d_D175_s0: ok  (3148s)
+2026-09-28 02:55:22,783 [pid45572] INFO [train] done M3_quat_D175_s0 lr=0.003 loss=0.0374 820s
+2026-09-28 02:55:33,130 [pid42976] INFO [main] 26/140 main/M3_quat_D175_s0: ok  (3273s)
+2026-09-28 02:55:42,184 [pid45569] INFO [train] done M1_riemannian_D175_s0 lr=0.003 loss=0.0816 844s
+2026-09-28 02:55:55,037 [pid42976] INFO [main] 27/140 main/M1_riemannian_D175_s0: ok  (3295s)
+2026-09-28 02:57:19,881 [pid45593] INFO [train] done M4_euler_D175_s0 lr=0.0003 loss=0.2970 817s
+2026-09-28 02:57:30,234 [pid42976] INFO [main] 28/140 main/M4_euler_D175_s0: ok  (3390s)
+2026-09-28 02:59:05,000 [pid45619] INFO [train] done M4_euler_D10_s1 lr=0.0003 loss=0.0809 776s
+2026-09-28 02:59:06,247 [pid45610] INFO [train] done M2_euclid6d_D10_s1 lr=0.003 loss=0.0211 844s
+2026-09-28 02:59:15,632 [pid42976] INFO [main] 29/140 main/M4_euler_D10_s1: ok  (3495s)
+2026-09-28 02:59:16,796 [pid42976] INFO [main] 30/140 main/M2_euclid6d_D10_s1: ok  (3497s)
+2026-09-28 02:59:20,816 [pid45609] INFO [train] done M1_riemannian_D10_s1 lr=0.003 loss=0.0755 860s
+2026-09-28 02:59:33,626 [pid42976] INFO [main] 31/140 main/M1_riemannian_D10_s1: ok  (3513s)
+2026-09-28 03:00:06,511 [pid45616] INFO [train] done M3_quat_D10_s1 lr=0.003 loss=0.0241 888s
+2026-09-28 03:00:16,990 [pid42976] INFO [main] 32/140 main/M3_quat_D10_s1: ok  (3557s)
+2026-09-28 03:07:54,743 [pid45688] INFO [train] done M1_riemannian_D30_s1 lr=0.003 loss=0.2316 865s
+2026-09-28 03:08:07,315 [pid42976] INFO [main] 33/140 main/M1_riemannian_D30_s1: ok  (4027s)
+2026-09-28 03:09:28,432 [pid45704] INFO [train] done M2_euclid6d_D30_s1 lr=0.003 loss=0.0172 833s
+2026-09-28 03:09:38,224 [pid45713] INFO [train] done M3_quat_D30_s1 lr=0.003 loss=0.0234 821s
+2026-09-28 03:09:39,279 [pid42976] INFO [main] 34/140 main/M2_euclid6d_D30_s1: ok  (4119s)
+2026-09-28 03:09:48,006 [pid42976] INFO [main] 35/140 main/M3_quat_D30_s1: ok  (4128s)
+2026-09-28 03:09:55,234 [pid45737] INFO [train] done M4_euler_D30_s1 lr=0.0003 loss=0.0912 743s
+2026-09-28 03:10:05,618 [pid42976] INFO [main] 36/140 main/M4_euler_D30_s1: ok  (4145s)
+2026-09-28 03:12:29,409 [pid45769] INFO [train] done M2_euclid6d_D60_s1 lr=0.003 loss=0.0198 790s
+2026-09-28 03:12:39,900 [pid42976] INFO [main] 37/140 main/M2_euclid6d_D60_s1: ok  (4300s)
+2026-09-28 03:12:43,085 [pid45782] INFO [train] done M4_euler_D60_s1 lr=0.0003 loss=0.1069 744s
+2026-09-28 03:12:53,057 [pid45771] INFO [train] done M3_quat_D60_s1 lr=0.003 loss=0.0237 797s
+2026-09-28 03:12:53,199 [pid42976] INFO [main] 38/140 main/M4_euler_D60_s1: ok  (4313s)
+2026-09-28 03:13:02,707 [pid42976] INFO [main] 39/140 main/M3_quat_D60_s1: ok  (4322s)
+2026-09-28 03:13:22,610 [pid45766] INFO [train] done M1_riemannian_D60_s1 lr=0.003 loss=0.0759 845s
+2026-09-28 03:13:35,232 [pid42976] INFO [main] 40/140 main/M1_riemannian_D60_s1: ok  (4355s)
+2026-09-28 03:22:35,001 [pid45880] INFO [train] done M4_euler_D90_s1 lr=0.0003 loss=0.1447 747s
+2026-09-28 03:22:45,208 [pid42976] INFO [main] 41/140 main/M4_euler_D90_s1: ok  (4905s)
+2026-09-28 03:23:37,390 [pid45858] INFO [train] done M1_riemannian_D90_s1 lr=0.003 loss=0.0783 928s
+2026-09-28 03:23:49,831 [pid42976] INFO [main] 42/140 main/M1_riemannian_D90_s1: ok  (4970s)
+2026-09-28 03:24:28,001 [pid45879] INFO [train] done M3_quat_D90_s1 lr=0.003 loss=0.0250 877s
+2026-09-28 03:24:33,593 [pid45874] INFO [train] done M2_euclid6d_D90_s1 lr=0.003 loss=0.0225 892s
+2026-09-28 03:24:38,705 [pid42976] INFO [main] 43/140 main/M3_quat_D90_s1: ok  (5018s)
+2026-09-28 03:24:43,700 [pid42976] INFO [main] 44/140 main/M2_euclid6d_D90_s1: ok  (5023s)
+2026-09-28 03:25:11,015 [pid45917] INFO [train] done M2_euclid6d_D120_s1 lr=0.003 loss=0.0241 736s
+2026-09-28 03:25:21,864 [pid42976] INFO [main] 45/140 main/M2_euclid6d_D120_s1: ok  (5062s)
+2026-09-28 03:26:30,025 [pid45919] INFO [train] done M3_quat_D120_s1 lr=0.003 loss=0.0248 805s
+2026-09-28 03:26:40,458 [pid42976] INFO [main] 46/140 main/M3_quat_D120_s1: ok  (5140s)
+2026-09-28 03:27:08,540 [pid45909] INFO [train] done M1_riemannian_D120_s1 lr=0.003 loss=0.0811 866s
+2026-09-28 03:27:20,830 [pid42976] INFO [main] 47/140 main/M1_riemannian_D120_s1: ok  (5181s)
+2026-09-28 03:28:24,129 [pid45924] INFO [train] done M4_euler_D120_s1 lr=0.0003 loss=0.2021 887s
+2026-09-28 03:28:34,097 [pid42976] INFO [main] 48/140 main/M4_euler_D120_s1: ok  (5254s)
+2026-09-28 03:37:09,714 [pid46055] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0266 797s
+2026-09-28 03:37:20,607 [pid42976] INFO [main] 49/140 main/M2_euclid6d_D150_s1: ok  (5780s)
+2026-09-28 03:38:03,837 [pid46065] INFO [train] done M4_euler_D150_s1 lr=0.0003 loss=0.2736 797s
+2026-09-28 03:38:11,982 [pid46042] INFO [train] done M1_riemannian_D150_s1 lr=0.003 loss=0.0840 924s
+2026-09-28 03:38:14,171 [pid42976] INFO [main] 50/140 main/M4_euler_D150_s1: ok  (5834s)
+2026-09-28 03:38:17,545 [pid46063] INFO [train] done M3_quat_D150_s1 lr=0.003 loss=0.0354 816s
+2026-09-28 03:38:23,517 [pid42976] INFO [main] 51/140 main/M1_riemannian_D150_s1: ok  (5843s)
+2026-09-28 03:38:27,456 [pid42976] INFO [main] 52/140 main/M3_quat_D150_s1: ok  (5847s)
+2026-09-28 03:39:27,595 [pid46082] INFO [train] done M2_euclid6d_D175_s1 lr=0.003 loss=0.0281 765s
+2026-09-28 03:39:38,583 [pid42976] INFO [main] 53/140 main/M2_euclid6d_D175_s1: ok  (5918s)
+2026-09-28 03:40:38,942 [pid46072] INFO [train] done M1_riemannian_D175_s1 lr=0.003 loss=0.0832 915s
+2026-09-28 03:40:43,094 [pid46091] INFO [train] done M3_quat_D175_s1 lr=0.003 loss=0.0371 800s
+2026-09-28 03:40:52,118 [pid42976] INFO [main] 54/140 main/M1_riemannian_D175_s1: ok  (5992s)
+2026-09-28 03:40:53,378 [pid42976] INFO [main] 55/140 main/M3_quat_D175_s1: ok  (5993s)
+2026-09-28 03:41:49,378 [pid46100] INFO [train] done M4_euler_D175_s1 lr=0.0003 loss=0.2963 793s
+2026-09-28 03:41:59,824 [pid42976] INFO [main] 56/140 main/M4_euler_D175_s1: ok  (6060s)
+2026-09-28 03:51:43,265 [pid46192] INFO [train] done M3_quat_D10_s2 lr=0.003 loss=0.0230 797s
+2026-09-28 03:51:53,629 [pid42976] INFO [main] 57/140 main/M3_quat_D10_s2: ok  (6653s)
+2026-09-28 03:52:05,589 [pid46180] INFO [train] done M1_riemannian_D10_s2 lr=0.003 loss=0.0709 882s
+2026-09-28 03:52:18,323 [pid42976] INFO [main] 58/140 main/M1_riemannian_D10_s2: ok  (6678s)
+2026-09-28 03:52:42,556 [pid46185] INFO [train] done M2_euclid6d_D10_s2 lr=0.003 loss=0.0239 866s
+2026-09-28 03:52:46,657 [pid46193] INFO [train] done M4_euler_D10_s2 lr=0.0003 loss=0.0814 856s
+2026-09-28 03:52:53,552 [pid42976] INFO [main] 59/140 main/M2_euclid6d_D10_s2: ok  (6713s)
+2026-09-28 03:52:56,154 [pid42976] INFO [main] 60/140 main/M4_euler_D10_s2: ok  (6716s)
+2026-09-28 03:53:11,854 [pid46220] INFO [train] done M2_euclid6d_D30_s2 lr=0.003 loss=0.0172 737s
+2026-09-28 03:53:22,681 [pid42976] INFO [main] 61/140 main/M2_euclid6d_D30_s2: ok  (6742s)
+2026-09-28 03:53:41,040 [pid46222] INFO [train] done M3_quat_D30_s2 lr=0.003 loss=0.0232 765s
+2026-09-28 03:53:51,227 [pid42976] INFO [main] 62/140 main/M3_quat_D30_s2: ok  (6771s)
+2026-09-28 03:55:00,330 [pid46230] INFO [train] done M4_euler_D30_s2 lr=0.0003 loss=0.0912 778s
+2026-09-28 03:55:10,602 [pid42976] INFO [main] 63/140 main/M4_euler_D30_s2: ok  (6850s)
+2026-09-28 03:55:34,401 [pid46203] INFO [train] done M1_riemannian_D30_s2 lr=0.003 loss=0.0733 953s
+2026-09-28 03:55:46,725 [pid42976] INFO [main] 64/140 main/M1_riemannian_D30_s2: ok  (6886s)
+2026-09-28 04:04:50,782 [pid46338] INFO [train] done M2_euclid6d_D60_s2 lr=0.003 loss=0.0195 750s
+2026-09-28 04:05:01,871 [pid42976] INFO [main] 65/140 main/M2_euclid6d_D60_s2: ok  (7442s)
+2026-09-28 04:05:54,144 [pid46348] INFO [train] done M4_euler_D60_s2 lr=0.0003 loss=0.1069 775s
+2026-09-28 04:06:04,240 [pid42976] INFO [main] 66/140 main/M4_euler_D60_s2: ok  (7504s)
+2026-09-28 04:06:17,338 [pid46332] INFO [train] done M1_riemannian_D60_s2 lr=0.003 loss=0.0749 861s
+2026-09-28 04:06:29,871 [pid42976] INFO [main] 67/140 main/M1_riemannian_D60_s2: ok  (7530s)
+2026-09-28 04:07:00,716 [pid46370] INFO [train] done M3_quat_D90_s2 lr=0.003 loss=0.0248 708s
+2026-09-28 04:07:11,186 [pid42976] INFO [main] 68/140 main/M3_quat_D90_s2: ok  (7571s)
+2026-09-28 04:07:18,221 [pid46360] INFO [train] done M2_euclid6d_D90_s2 lr=0.003 loss=0.0220 805s
+2026-09-28 04:07:29,269 [pid42976] INFO [main] 69/140 main/M2_euclid6d_D90_s2: ok  (7589s)
+2026-09-28 04:08:24,325 [pid46346] INFO [train] done M3_quat_D60_s2 lr=0.003 loss=0.0236 928s
+2026-09-28 04:08:34,771 [pid42976] INFO [main] 70/140 main/M3_quat_D60_s2: ok  (7655s)
+2026-09-28 04:08:56,549 [pid46354] INFO [train] done M1_riemannian_D90_s2 lr=0.003 loss=0.0790 932s
+2026-09-28 04:09:08,968 [pid42976] INFO [main] 71/140 main/M1_riemannian_D90_s2: ok  (7689s)
+2026-09-28 04:09:47,485 [pid46378] INFO [train] done M4_euler_D90_s2 lr=0.0003 loss=0.1431 838s
+2026-09-28 04:09:57,718 [pid42976] INFO [main] 72/140 main/M4_euler_D90_s2: ok  (7737s)
+2026-09-28 04:18:16,108 [pid46474] INFO [train] done M1_riemannian_D120_s2 lr=0.003 loss=0.0808 792s
+2026-09-28 04:18:28,833 [pid42976] INFO [main] 73/140 main/M1_riemannian_D120_s2: ok  (8249s)
+2026-09-28 04:20:10,865 [pid46483] INFO [train] done M2_euclid6d_D120_s2 lr=0.003 loss=0.0247 844s
+2026-09-28 04:20:15,170 [pid46495] INFO [train] done M4_euler_D120_s2 lr=0.0003 loss=0.2033 782s
+2026-09-28 04:20:22,302 [pid42976] INFO [main] 74/140 main/M2_euclid6d_D120_s2: ok  (8362s)
+2026-09-28 04:20:24,864 [pid42976] INFO [main] 75/140 main/M4_euler_D120_s2: ok  (8365s)
+2026-09-28 04:20:30,093 [pid46490] INFO [train] done M3_quat_D120_s2 lr=0.003 loss=0.0254 838s
+2026-09-28 04:20:40,527 [pid42976] INFO [main] 76/140 main/M3_quat_D120_s2: ok  (8380s)
+2026-09-28 04:21:15,481 [pid46501] INFO [train] done M1_riemannian_D150_s2 lr=0.003 loss=0.0821 824s
+2026-09-28 04:21:27,949 [pid42976] INFO [main] 77/140 main/M1_riemannian_D150_s2: ok  (8428s)
+2026-09-28 04:22:17,899 [pid46520] INFO [train] done M3_quat_D150_s2 lr=0.003 loss=0.0352 787s
+2026-09-28 04:22:28,518 [pid42976] INFO [main] 78/140 main/M3_quat_D150_s2: ok  (8488s)
+2026-09-28 04:23:41,388 [pid46537] INFO [train] done M4_euler_D150_s2 lr=0.0003 loss=0.2717 821s
+2026-09-28 04:23:51,639 [pid42976] INFO [main] 79/140 main/M4_euler_D150_s2: ok  (8571s)
+2026-09-28 04:24:27,573 [pid46510] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0262 950s
+2026-09-28 04:24:38,287 [pid42976] INFO [main] 80/140 main/M2_euclid6d_D150_s2: ok  (8618s)
+2026-09-28 04:32:41,883 [pid46650] INFO [train] done M4_euler_D175_s2 lr=0.0003 loss=0.2978 719s
+2026-09-28 04:32:48,290 [pid46642] INFO [train] done M2_euclid6d_D175_s2 lr=0.003 loss=0.0281 744s
+2026-09-28 04:32:52,557 [pid42976] INFO [main] 81/140 main/M4_euler_D175_s2: ok  (9112s)
+2026-09-28 04:32:58,276 [pid42976] INFO [main] 82/140 main/M2_euclid6d_D175_s2: ok  (9118s)
+2026-09-28 04:34:30,293 [pid46646] INFO [train] done M3_quat_D175_s2 lr=0.003 loss=0.0374 843s
+2026-09-28 04:34:40,804 [pid42976] INFO [main] 83/140 main/M3_quat_D175_s2: ok  (9221s)
+2026-09-28 04:34:54,739 [pid46617] INFO [train] done M1_riemannian_D175_s2 lr=0.003 loss=0.0821 983s
+2026-09-28 04:35:07,157 [pid42976] INFO [main] 84/140 main/M1_riemannian_D175_s2: ok  (9247s)
+2026-09-28 04:35:31,854 [pid46660] INFO [train] done M1_riemannian_D10_s3 lr=0.003 loss=0.0720 841s
+2026-09-28 04:35:44,406 [pid42976] INFO [main] 85/140 main/M1_riemannian_D10_s3: ok  (9284s)
+2026-09-28 04:36:57,146 [pid46672] INFO [train] done M2_euclid6d_D10_s3 lr=0.003 loss=0.0180 866s
+2026-09-28 04:37:07,980 [pid42976] INFO [main] 86/140 main/M2_euclid6d_D10_s3: ok  (9368s)
+2026-09-28 04:37:10,061 [pid46687] INFO [train] done M3_quat_D10_s3 lr=0.003 loss=0.0251 796s
+2026-09-28 04:37:20,201 [pid42976] INFO [main] 87/140 main/M3_quat_D10_s3: ok  (9380s)
+2026-09-28 04:37:34,865 [pid46696] INFO [train] done M4_euler_D10_s3 lr=0.0003 loss=0.0810 774s
+2026-09-28 04:37:44,946 [pid42976] INFO [main] 88/140 main/M4_euler_D10_s3: ok  (9405s)
+2026-09-28 04:47:03,329 [pid46793] INFO [train] done M3_quat_D30_s3 lr=0.003 loss=0.0233 740s
+2026-09-28 04:47:04,423 [pid46777] INFO [train] done M2_euclid6d_D30_s3 lr=0.003 loss=0.0164 843s
+2026-09-28 04:47:10,337 [pid46775] INFO [train] done M1_riemannian_D30_s3 lr=0.003 loss=0.0856 855s
+2026-09-28 04:47:14,148 [pid42976] INFO [main] 89/140 main/M3_quat_D30_s3: ok  (9974s)
+2026-09-28 04:47:15,166 [pid42976] INFO [main] 90/140 main/M2_euclid6d_D30_s3: ok  (9975s)
+2026-09-28 04:47:21,089 [pid42976] INFO [main] 91/140 main/M1_riemannian_D30_s3: ok  (9981s)
+2026-09-28 04:48:48,162 [pid46801] INFO [train] done M4_euler_D30_s3 lr=0.0003 loss=0.0905 819s
+2026-09-28 04:48:58,452 [pid42976] INFO [main] 92/140 main/M4_euler_D30_s3: ok  (10078s)
+2026-09-28 04:49:37,970 [pid46816] INFO [train] done M1_riemannian_D60_s3 lr=0.003 loss=0.0790 831s
+2026-09-28 04:49:50,408 [pid42976] INFO [main] 93/140 main/M1_riemannian_D60_s3: ok  (10130s)
+2026-09-28 04:50:06,225 [pid46839] INFO [train] done M4_euler_D60_s3 lr=0.0003 loss=0.1078 739s
+2026-09-28 04:50:16,529 [pid42976] INFO [main] 94/140 main/M4_euler_D60_s3: ok  (10156s)
+2026-09-28 04:51:20,783 [pid46829] INFO [train] done M2_euclid6d_D60_s3 lr=0.003 loss=0.0197 850s
+2026-09-28 04:51:31,439 [pid42976] INFO [main] 95/140 main/M2_euclid6d_D60_s3: ok  (10231s)
+2026-09-28 04:52:11,968 [pid46836] INFO [train] done M3_quat_D60_s3 lr=0.003 loss=0.0240 889s
+2026-09-28 04:52:22,350 [pid42976] INFO [main] 96/140 main/M3_quat_D60_s3: ok  (10282s)
+2026-09-28 05:00:56,912 [pid46937] INFO [train] done M3_quat_D90_s3 lr=0.003 loss=0.0249 813s
+2026-09-28 05:01:07,276 [pid42976] INFO [main] 97/140 main/M3_quat_D90_s3: ok  (10807s)
+2026-09-28 05:01:26,079 [pid46931] INFO [train] done M1_riemannian_D90_s3 lr=0.003 loss=0.0783 850s
+2026-09-28 05:01:38,722 [pid42976] INFO [main] 98/140 main/M1_riemannian_D90_s3: ok  (10838s)
+2026-09-28 05:01:42,729 [pid46932] INFO [train] done M2_euclid6d_D90_s3 lr=0.003 loss=0.0224 865s
+2026-09-28 05:01:53,601 [pid42976] INFO [main] 99/140 main/M2_euclid6d_D90_s3: ok  (10853s)
+2026-09-28 05:03:02,949 [pid46953] INFO [train] done M4_euler_D90_s3 lr=0.0003 loss=0.1467 842s
+2026-09-28 05:03:13,194 [pid42976] INFO [main] 100/140 main/M4_euler_D90_s3: ok  (10933s)
+2026-09-28 05:03:44,539 [pid46962] INFO [train] done M1_riemannian_D120_s3 lr=0.003 loss=0.0805 832s
+2026-09-28 05:03:57,035 [pid42976] INFO [main] 101/140 main/M1_riemannian_D120_s3: ok  (10977s)
+2026-09-28 05:04:23,346 [pid46970] INFO [train] done M2_euclid6d_D120_s3 lr=0.003 loss=0.0246 845s
+2026-09-28 05:04:34,320 [pid42976] INFO [main] 102/140 main/M2_euclid6d_D120_s3: ok  (11014s)
+2026-09-28 05:05:19,212 [pid46985] INFO [train] done M3_quat_D120_s3 lr=0.003 loss=0.0255 825s
+2026-09-28 05:05:29,580 [pid42976] INFO [main] 103/140 main/M3_quat_D120_s3: ok  (11069s)
+2026-09-28 05:05:42,109 [pid46991] INFO [train] done M4_euler_D120_s3 lr=0.0003 loss=0.2030 797s
+2026-09-28 05:05:52,493 [pid42976] INFO [main] 104/140 main/M4_euler_D120_s3: ok  (11092s)
+2026-09-28 05:12:52,384 [pid47089] INFO [train] done M2_euclid6d_D150_s3 lr=0.003 loss=0.0263 671s
+2026-09-28 05:13:03,225 [pid42976] INFO [main] 105/140 main/M2_euclid6d_D150_s3: ok  (11523s)
+2026-09-28 05:15:26,424 [pid47110] INFO [train] done M4_euler_D150_s3 lr=0.0003 loss=0.2705 731s
+2026-09-28 05:15:36,661 [pid42976] INFO [main] 106/140 main/M4_euler_D150_s3: ok  (11676s)
+2026-09-28 05:15:44,838 [pid47092] INFO [train] done M3_quat_D150_s3 lr=0.003 loss=0.0345 829s
+2026-09-28 05:15:55,045 [pid42976] INFO [main] 107/140 main/M3_quat_D150_s3: ok  (11695s)
+2026-09-28 05:16:34,676 [pid47126] INFO [train] done M2_euclid6d_D175_s3 lr=0.003 loss=0.0279 718s
+2026-09-28 05:16:45,367 [pid42976] INFO [main] 108/140 main/M2_euclid6d_D175_s3: ok  (11745s)
+2026-09-28 05:16:59,679 [pid47083] INFO [train] done M1_riemannian_D150_s3 lr=0.003 loss=0.0808 950s
+2026-09-28 05:17:12,474 [pid42976] INFO [main] 109/140 main/M1_riemannian_D150_s3: ok  (11772s)
+2026-09-28 05:19:07,536 [pid47119] INFO [train] done M1_riemannian_D175_s3 lr=0.003 loss=0.0824 908s
+2026-09-28 05:19:20,308 [pid42976] INFO [main] 110/140 main/M1_riemannian_D175_s3: ok  (11900s)
+2026-09-28 05:19:30,009 [pid47143] INFO [train] done M4_euler_D175_s3 lr=0.0003 loss=0.2983 815s
+2026-09-28 05:19:40,161 [pid42976] INFO [main] 111/140 main/M4_euler_D175_s3: ok  (11920s)
+2026-09-28 05:20:37,696 [pid47137] INFO [train] done M3_quat_D175_s3 lr=0.003 loss=0.0372 906s
+2026-09-28 05:20:48,098 [pid42976] INFO [main] 112/140 main/M3_quat_D175_s3: ok  (11988s)
+2026-09-28 05:27:22,255 [pid47217] INFO [train] done M1_riemannian_D10_s4 lr=0.003 loss=0.1416 857s
+2026-09-28 05:27:34,737 [pid42976] INFO [main] 113/140 main/M1_riemannian_D10_s4: ok  (12394s)
+2026-09-28 05:28:36,766 [pid47246] INFO [train] done M2_euclid6d_D10_s4 lr=0.003 loss=0.0229 778s
+2026-09-28 05:28:47,833 [pid42976] INFO [main] 114/140 main/M2_euclid6d_D10_s4: ok  (12468s)
+2026-09-28 05:29:59,989 [pid47249] INFO [train] done M3_quat_D10_s4 lr=0.003 loss=0.0240 843s
+2026-09-28 05:30:10,411 [pid42976] INFO [main] 115/140 main/M3_quat_D10_s4: ok  (12550s)
+2026-09-28 05:30:14,063 [pid47257] INFO [train] done M4_euler_D10_s4 lr=0.0003 loss=0.0807 806s
+2026-09-28 05:30:24,337 [pid42976] INFO [main] 116/140 main/M4_euler_D10_s4: ok  (12564s)
+2026-09-28 05:31:58,179 [pid47284] INFO [train] done M2_euclid6d_D30_s4 lr=0.003 loss=0.0168 755s
+2026-09-28 05:32:09,161 [pid42976] INFO [main] 117/140 main/M2_euclid6d_D30_s4: ok  (12669s)
+2026-09-28 05:32:44,447 [pid47290] INFO [train] done M3_quat_D30_s4 lr=0.003 loss=0.0231 782s
+2026-09-28 05:32:53,124 [pid47262] INFO [train] done M1_riemannian_D30_s4 lr=0.003 loss=0.0738 938s
+2026-09-28 05:32:54,789 [pid42976] INFO [main] 118/140 main/M3_quat_D30_s4: ok  (12715s)
+2026-09-28 05:33:04,507 [pid42976] INFO [main] 119/140 main/M1_riemannian_D30_s4: ok  (12724s)
+2026-09-28 05:35:00,018 [pid47307] INFO [train] done M4_euler_D30_s4 lr=0.0003 loss=0.0900 849s
+2026-09-28 05:35:10,223 [pid42976] INFO [main] 120/140 main/M4_euler_D30_s4: ok  (12850s)
+2026-09-28 05:42:29,042 [pid47374] INFO [train] done M1_riemannian_D60_s4 lr=0.003 loss=0.1167 892s
+2026-09-28 05:42:41,737 [pid42976] INFO [main] 121/140 main/M1_riemannian_D60_s4: ok  (13301s)
+2026-09-28 05:42:57,212 [pid47387] INFO [train] done M2_euclid6d_D60_s4 lr=0.003 loss=0.0194 847s
+2026-09-28 05:43:08,081 [pid42976] INFO [main] 122/140 main/M2_euclid6d_D60_s4: ok  (13328s)
+2026-09-28 05:43:16,165 [pid47404] INFO [train] done M3_quat_D60_s4 lr=0.003 loss=0.0236 783s
+2026-09-28 05:43:26,479 [pid47410] INFO [train] done M4_euler_D60_s4 lr=0.0003 loss=0.1040 780s
+2026-09-28 05:43:26,550 [pid42976] INFO [main] 123/140 main/M3_quat_D60_s4: ok  (13346s)
+2026-09-28 05:43:35,740 [pid42976] INFO [main] 124/140 main/M4_euler_D60_s4: ok  (13355s)
+2026-09-28 05:46:18,735 [pid47437] INFO [train] done M2_euclid6d_D90_s4 lr=0.003 loss=0.0220 802s
+2026-09-28 05:46:29,430 [pid42976] INFO [main] 125/140 main/M2_euclid6d_D90_s4: ok  (13529s)
+2026-09-28 05:46:40,918 [pid47440] INFO [train] done M3_quat_D90_s4 lr=0.003 loss=0.0246 814s
+2026-09-28 05:46:41,455 [pid47458] INFO [train] done M4_euler_D90_s4 lr=0.0003 loss=0.1435 689s
+2026-09-28 05:46:51,979 [pid42976] INFO [main] 126/140 main/M3_quat_D90_s4: ok  (13552s)
+2026-09-28 05:46:52,288 [pid42976] INFO [main] 127/140 main/M4_euler_D90_s4: ok  (13552s)
+2026-09-28 05:48:17,390 [pid47425] INFO [train] done M1_riemannian_D90_s4 lr=0.003 loss=0.0782 966s
+2026-09-28 05:48:29,588 [pid42976] INFO [main] 128/140 main/M1_riemannian_D90_s4: ok  (13649s)
+2026-09-28 05:56:23,671 [pid47539] INFO [train] done M2_euclid6d_D120_s4 lr=0.003 loss=0.0242 793s
+2026-09-28 05:56:34,462 [pid42976] INFO [main] 129/140 main/M2_euclid6d_D120_s4: ok  (14134s)
+2026-09-28 05:56:40,780 [pid47542] INFO [train] done M3_quat_D120_s4 lr=0.003 loss=0.0252 792s
+2026-09-28 05:56:50,941 [pid42976] INFO [main] 130/140 main/M3_quat_D120_s4: ok  (14151s)
+2026-09-28 05:57:42,180 [pid47545] INFO [train] done M4_euler_D120_s4 lr=0.0003 loss=0.2027 844s
+2026-09-28 05:57:52,373 [pid42976] INFO [main] 131/140 main/M4_euler_D120_s4: ok  (14212s)
+2026-09-28 05:58:01,088 [pid47532] INFO [train] done M1_riemannian_D120_s4 lr=0.003 loss=0.0811 917s
+2026-09-28 05:58:13,427 [pid42976] INFO [main] 132/140 main/M1_riemannian_D120_s4: ok  (14233s)
+2026-09-28 06:00:04,878 [pid47573] INFO [train] done M2_euclid6d_D150_s4 lr=0.003 loss=0.0261 791s
+2026-09-28 06:00:15,482 [pid42976] INFO [main] 133/140 main/M2_euclid6d_D150_s4: ok  (14355s)
+2026-09-28 06:00:29,333 [pid47567] INFO [train] done M1_riemannian_D150_s4 lr=0.003 loss=0.0818 837s
+2026-09-28 06:00:39,132 [pid42976] INFO [main] 134/140 main/M1_riemannian_D150_s4: ok  (14379s)
+2026-09-28 06:00:58,913 [pid47594] INFO [train] done M4_euler_D150_s4 lr=0.0003 loss=0.2695 747s
+2026-09-28 06:01:05,890 [pid42976] INFO [main] 135/140 main/M4_euler_D150_s4: ok  (14406s)
+2026-09-28 06:01:42,250 [pid47574] INFO [train] done M3_quat_D150_s4 lr=0.003 loss=0.0346 888s
+2026-09-28 06:01:48,071 [pid42976] INFO [main] 136/140 main/M3_quat_D150_s4: ok  (14448s)
+2026-09-28 06:06:13,624 [pid47672] INFO [train] done M2_euclid6d_D175_s4 lr=0.003 loss=0.0278 560s
+2026-09-28 06:06:18,598 [pid42976] INFO [main] 137/140 main/M2_euclid6d_D175_s4: ok  (14718s)
+2026-09-28 06:06:41,836 [pid47685] INFO [train] done M4_euler_D175_s4 lr=0.0003 loss=0.2952 506s
+2026-09-28 06:06:46,172 [pid42976] INFO [main] 138/140 main/M4_euler_D175_s4: ok  (14746s)
+2026-09-28 06:07:27,029 [pid47681] INFO [train] done M3_quat_D175_s4 lr=0.003 loss=0.0374 572s
+2026-09-28 06:07:28,697 [pid42976] INFO [main] 139/140 main/M3_quat_D175_s4: ok  (14788s)
+2026-09-28 06:07:30,441 [pid47666] INFO [train] done M1_riemannian_D175_s4 lr=0.003 loss=0.0829 654s
+2026-09-28 06:07:32,054 [pid42976] INFO [main] 140/140 main/M1_riemannian_D175_s4: ok  (14792s)
+2026-09-28 06:07:32,072 [pid42976] INFO [main] finished: 140 ok, 0 failed

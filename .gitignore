@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Model weights and checkpoints (regenerable; some exceed GitHub's 100MB limit)
+*.pt
+*.pth
+*.ckpt
+
+# Synthetic datasets (regenerated deterministically by src/make_data.py; *_meta.json is kept)
+results/synthetic/*.npz

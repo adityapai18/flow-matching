@@ -1,0 +1,10 @@
+2026-09-28 00:01:06,920 [pid2607] INFO [diag_capacity] 4 tasks on 4 workers
+2026-09-28 00:02:32,314 [pid2615] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.1750 84s
+2026-09-28 00:02:32,566 [pid2607] INFO [diag_capacity] 1/4 diag_w512/M2_euclid6d_D90_s100: ok  (86s)
+2026-09-28 00:02:33,279 [pid2613] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.2913 85s
+2026-09-28 00:02:33,497 [pid2607] INFO [diag_capacity] 2/4 diag_w512/M4_euler_D90_s100: ok  (87s)
+2026-09-28 00:02:37,885 [pid2614] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.0958 90s
+2026-09-28 00:02:37,984 [pid2607] INFO [diag_capacity] 3/4 diag_w512/M3_quat_D90_s100: ok  (91s)
+2026-09-28 00:02:53,137 [pid2612] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.1262 105s
+2026-09-28 00:02:53,282 [pid2607] INFO [diag_capacity] 4/4 diag_w512/M1_riemannian_D90_s100: ok  (106s)
+2026-09-28 00:02:53,289 [pid2607] INFO [diag_capacity] finished: 4 ok, 0 failed

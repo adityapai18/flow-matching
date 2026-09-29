@@ -1,0 +1,282 @@
+{
+ "steps": 20000,
+ "width": 1024,
+ "depth": 4,
+ "lr_for_diagnostics": 0.001,
+ "rationale": "Spec architecture (4x256) fails for every model at D=90 (M1 at Haar chance 126 deg; M2-M4 33-69 deg; jerk ~2000x ground truth) and does not improve materially from 5k to 30k steps. Capacity diagnostic at 10k steps: width 512 -> 1024 cuts M2/M3/M4 error 45/61/33 -> 13/20/8 deg, so below ~1024 the comparison is decided by network capacity, not representation. Width 1024 chosen for all four models. 20k steps chosen by the overnight wall-clock budget (~32 ms/step under 8-way contention), NOT by demonstrated convergence. M1 entries under pilot_* and diag_w1024 use the superseded direct body-frame output head; diag_w512 and diag_w1024_M1proj use the final tangent-projection head.",
+ "diagnostics": {
+  "pilot_steps5000/M1_riemannian": {
+   "width": 256,
+   "steps": 5000,
+   "n_params": 348608,
+   "val_geo_err_deg": {
+    "mean": 126.3372452444413,
+    "median": 133.03031160982846,
+    "p95": 175.0837293705394,
+    "max": 179.85576002996126,
+    "std": 36.04218428772949
+   },
+   "jerk": 238.52809169549565
+  },
+  "pilot_steps5000/M2_euclid6d": {
+   "width": 256,
+   "steps": 5000,
+   "n_params": 348704,
+   "val_geo_err_deg": {
+    "mean": 67.03931738224114,
+    "median": 62.80630774321014,
+    "p95": 119.6310869369347,
+    "max": 176.21667362337965,
+    "std": 26.782945766928286
+   },
+   "jerk": 270.16189172427215
+  },
+  "pilot_steps5000/M3_quat": {
+   "width": 256,
+   "steps": 5000,
+   "n_params": 315872,
+   "val_geo_err_deg": {
+    "mean": 78.84347759441212,
+    "median": 76.72518192690059,
+    "p95": 132.95500144210226,
+    "max": 175.5364207151966,
+    "std": 30.183106179759164
+   },
+   "jerk": 295.83903086581483
+  },
+  "pilot_steps5000/M4_euler": {
+   "width": 256,
+   "steps": 5000,
+   "n_params": 299456,
+   "val_geo_err_deg": {
+    "mean": 39.30512277849153,
+    "median": 36.145565431275195,
+    "p95": 78.52503853407049,
+    "max": 165.38333306689177,
+    "std": 22.05953414461317
+   },
+   "jerk": 164.88465138185597
+  },
+  "pilot_steps15000/M1_riemannian": {
+   "width": 256,
+   "steps": 15000,
+   "n_params": 348608,
+   "val_geo_err_deg": {
+    "mean": 126.22884399125138,
+    "median": 132.3646982747879,
+    "p95": 173.77581686928642,
+    "max": 179.3181368663612,
+    "std": 35.58244663592179
+   },
+   "jerk": 220.73619455090048
+  },
+  "pilot_steps15000/M2_euclid6d": {
+   "width": 256,
+   "steps": 15000,
+   "n_params": 348704,
+   "val_geo_err_deg": {
+    "mean": 62.65249535865749,
+    "median": 59.96514925309241,
+    "p95": 111.04370275440121,
+    "max": 169.73573981073469,
+    "std": 24.21743105622145
+   },
+   "jerk": 257.8832954256107
+  },
+  "pilot_steps15000/M3_quat": {
+   "width": 256,
+   "steps": 15000,
+   "n_params": 315872,
+   "val_geo_err_deg": {
+    "mean": 72.94645985769566,
+    "median": 69.742085412258,
+    "p95": 126.82910034186668,
+    "max": 166.12287341621519,
+    "std": 28.47547669771204
+   },
+   "jerk": 281.5160673106434
+  },
+  "pilot_steps15000/M4_euler": {
+   "width": 256,
+   "steps": 15000,
+   "n_params": 299456,
+   "val_geo_err_deg": {
+    "mean": 35.99011066249434,
+    "median": 30.96874588913725,
+    "p95": 74.24946636402058,
+    "max": 142.48444197619557,
+    "std": 21.440187788667572
+   },
+   "jerk": 156.72418006575865
+  },
+  "pilot_steps30000/M1_riemannian": {
+   "width": 256,
+   "steps": 30000,
+   "n_params": 348608,
+   "val_geo_err_deg": {
+    "mean": 126.18056641905113,
+    "median": 131.863817550978,
+    "p95": 173.71800168797986,
+    "max": 179.52406181417746,
+    "std": 35.742255739352785
+   },
+   "jerk": 211.655724916232
+  },
+  "pilot_steps30000/M2_euclid6d": {
+   "width": 256,
+   "steps": 30000,
+   "n_params": 348704,
+   "val_geo_err_deg": {
+    "mean": 61.088610482986496,
+    "median": 57.24371030945545,
+    "p95": 107.07355078019827,
+    "max": 171.23588033925705,
+    "std": 24.872700723377392
+   },
+   "jerk": 250.031546689944
+  },
+  "pilot_steps30000/M3_quat": {
+   "width": 256,
+   "steps": 30000,
+   "n_params": 315872,
+   "val_geo_err_deg": {
+    "mean": 69.31750908449617,
+    "median": 65.10577357716927,
+    "p95": 125.31984254565913,
+    "max": 176.94134183290362,
+    "std": 28.621152231183373
+   },
+   "jerk": 272.20739006289585
+  },
+  "pilot_steps30000/M4_euler": {
+   "width": 256,
+   "steps": 30000,
+   "n_params": 299456,
+   "val_geo_err_deg": {
+    "mean": 33.62000865220343,
+    "median": 29.528555415393367,
+    "p95": 71.49688586379348,
+    "max": 133.8256754107531,
+    "std": 20.099107844475142
+   },
+   "jerk": 151.97294840647095
+  },
+  "diag_w512/M1_riemannian": {
+   "width": 512,
+   "steps": 10000,
+   "n_params": 1188736,
+   "val_geo_err_deg": {
+    "mean": 23.722913680567327,
+    "median": 10.642907679674245,
+    "p95": 98.22386075465334,
+    "max": 177.03894555237173,
+    "std": 33.56362704296293
+   },
+   "jerk": 127.99368546679364
+  },
+  "diag_w512/M2_euclid6d": {
+   "width": 512,
+   "steps": 10000,
+   "n_params": 1090336,
+   "val_geo_err_deg": {
+    "mean": 45.07195378020363,
+    "median": 41.7687587487118,
+    "p95": 85.48450775041141,
+    "max": 146.82588542037854,
+    "std": 21.531886518543633
+   },
+   "jerk": 200.49753468116396
+  },
+  "diag_w512/M3_quat": {
+   "width": 512,
+   "steps": 10000,
+   "n_params": 1024736,
+   "val_geo_err_deg": {
+    "mean": 60.64631337029796,
+    "median": 57.47530685849661,
+    "p95": 106.15342000557058,
+    "max": 176.6585565881657,
+    "std": 26.598182462910298
+   },
+   "jerk": 221.3331659597504
+  },
+  "diag_w512/M4_euler": {
+   "width": 512,
+   "steps": 10000,
+   "n_params": 991936,
+   "val_geo_err_deg": {
+    "mean": 33.411150881489505,
+    "median": 30.037490783430083,
+    "p95": 67.09181050424955,
+    "max": 165.9223046578051,
+    "std": 21.914277158939377
+   },
+   "jerk": 148.15256036695612
+  },
+  "diag_w1024/M1_riemannian": {
+   "width": 1024,
+   "steps": 10000,
+   "n_params": 3753152,
+   "val_geo_err_deg": {
+    "mean": 121.79026671492524,
+    "median": 123.81113337554335,
+    "p95": 176.84361539164215,
+    "max": 179.8431103675144,
+    "std": 37.221362900019265
+   },
+   "jerk": 164.36721963606607
+  },
+  "diag_w1024/M2_euclid6d": {
+   "width": 1024,
+   "steps": 10000,
+   "n_params": 3753248,
+   "val_geo_err_deg": {
+    "mean": 13.360909397615837,
+    "median": 12.592545632554845,
+    "p95": 24.619013012255962,
+    "max": 43.1636045667775,
+    "std": 5.988225246958958
+   },
+   "jerk": 39.88558707907281
+  },
+  "diag_w1024/M3_quat": {
+   "width": 1024,
+   "steps": 10000,
+   "n_params": 3622112,
+   "val_geo_err_deg": {
+    "mean": 20.414753854270767,
+    "median": 19.26312187373404,
+    "p95": 40.82273359507515,
+    "max": 54.39356033395542,
+    "std": 11.250073823551984
+   },
+   "jerk": 62.106857002807594
+  },
+  "diag_w1024/M4_euler": {
+   "width": 1024,
+   "steps": 10000,
+   "n_params": 3556544,
+   "val_geo_err_deg": {
+    "mean": 7.557329027787498,
+    "median": 5.512188978327339,
+    "p95": 13.326443620882072,
+    "max": 159.96837188952497,
+    "std": 12.184843439104464
+   },
+   "jerk": 18.599765541897135
+  },
+  "diag_w1024_M1proj/M1_riemannian": {
+   "width": 1024,
+   "steps": 10000,
+   "n_params": 3949952,
+   "val_geo_err_deg": {
+    "mean": 17.804532062910166,
+    "median": 7.270510523966486,
+    "p95": 74.98448136009112,
+    "max": 178.71265694937907,
+    "std": 29.264012364687897
+   },
+   "jerk": 103.04328417495053
+  }
+ }
+}

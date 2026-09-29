@@ -1,0 +1,25 @@
+{
+ "D_deg": 10,
+ "n": 2000,
+ "start_to_target_deg_max_err": 8.881784197001252e-15,
+ "endpoint_matches_target_max_rad": 1.442639264041242e-16,
+ "startpoint_matches_start_max_rad": 0.0,
+ "endpoint_trans_err_max": 2.237726045655905e-16,
+ "orthogonality_residual_max": 8.699300520730562e-16,
+ "path_type_counts": [
+  667,
+  667,
+  666
+ ],
+ "angle_from_identity_deg": {
+  "max": 32.25333137002822,
+  "p95": 28.872399605678233,
+  "endpoint_mean": 24.996338615312794
+ },
+ "frac_traj_with_canonical_quat_sign_flip": 0.0,
+ "frac_traj_endpoint_quat_w_below_0.1": 0.0,
+ "frac_traj_with_euler_jump": 0.0,
+ "frac_traj_with_euler_beta_above_80deg": 0.0,
+ "max_euler_beta_deg": 31.044477517373192,
+ "seed": 1010
+}

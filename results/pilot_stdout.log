@@ -1,0 +1,50 @@
+2026-09-27 23:48:11,297 [pid1805] INFO [pilot] 24 tasks on 8 workers
+2026-09-27 23:50:30,880 [pid1812] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.2282 138s
+2026-09-27 23:50:30,986 [pid1805] INFO [pilot] 1/24 pilot_steps30000/M2_euclid6d_D90_s100: ok  (140s)
+2026-09-27 23:50:31,390 [pid1810] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.2314 139s
+2026-09-27 23:50:31,498 [pid1805] INFO [pilot] 2/24 pilot_steps30000/M2_euclid6d_D150_s100: ok  (140s)
+2026-09-27 23:50:47,006 [pid1814] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.7364 154s
+2026-09-27 23:50:47,102 [pid1805] INFO [pilot] 3/24 pilot_steps30000/M4_euler_D150_s100: ok  (156s)
+2026-09-27 23:50:47,552 [pid1809] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.4826 155s
+2026-09-27 23:50:47,634 [pid1805] INFO [pilot] 4/24 pilot_steps30000/M4_euler_D90_s100: ok  (156s)
+2026-09-27 23:51:00,358 [pid1808] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.1519 168s
+2026-09-27 23:51:00,455 [pid1813] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.1305 168s
+2026-09-27 23:51:00,456 [pid1805] INFO [pilot] 5/24 pilot_steps30000/M3_quat_D150_s100: ok  (169s)
+2026-09-27 23:51:00,557 [pid1805] INFO [pilot] 6/24 pilot_steps30000/M3_quat_D90_s100: ok  (169s)
+2026-09-27 23:51:33,320 [pid1807] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.6179 201s
+2026-09-27 23:51:33,466 [pid1805] INFO [pilot] 7/24 pilot_steps30000/M1_riemannian_D90_s100: ok  (202s)
+2026-09-27 23:51:33,818 [pid1811] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.6671 201s
+2026-09-27 23:51:33,954 [pid1805] INFO [pilot] 8/24 pilot_steps30000/M1_riemannian_D150_s100: ok  (203s)
+2026-09-27 23:51:42,606 [pid1957] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.2454 69s
+2026-09-27 23:51:42,716 [pid1805] INFO [pilot] 9/24 pilot_steps15000/M2_euclid6d_D90_s100: ok  (211s)
+2026-09-27 23:52:06,427 [pid1977] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.5524 77s
+2026-09-27 23:52:06,525 [pid1805] INFO [pilot] 10/24 pilot_steps15000/M4_euler_D90_s100: ok  (235s)
+2026-09-27 23:52:11,024 [pid1987] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.2505 69s
+2026-09-27 23:52:11,125 [pid1805] INFO [pilot] 11/24 pilot_steps15000/M2_euclid6d_D150_s100: ok  (240s)
+2026-09-27 23:52:12,658 [pid1956] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.6617 100s
+2026-09-27 23:52:12,807 [pid1805] INFO [pilot] 12/24 pilot_steps15000/M1_riemannian_D90_s100: ok  (242s)
+2026-09-27 23:52:13,363 [pid1976] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.1476 84s
+2026-09-27 23:52:13,461 [pid1805] INFO [pilot] 13/24 pilot_steps15000/M3_quat_D90_s100: ok  (242s)
+2026-09-27 23:52:17,412 [pid1997] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.7530 33s
+2026-09-27 23:52:17,560 [pid1805] INFO [pilot] 14/24 pilot_steps5000/M1_riemannian_D90_s100: ok  (246s)
+2026-09-27 23:52:31,192 [pid2001] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.2857 23s
+2026-09-27 23:52:31,291 [pid1805] INFO [pilot] 15/24 pilot_steps5000/M2_euclid6d_D90_s100: ok  (260s)
+2026-09-27 23:52:39,982 [pid2003] INFO [train] done M4_euler_D90_s100 lr=0.001 loss=0.6813 25s
+2026-09-27 23:52:40,070 [pid1805] INFO [pilot] 16/24 pilot_steps5000/M4_euler_D90_s100: ok  (269s)
+2026-09-27 23:52:40,474 [pid2002] INFO [train] done M3_quat_D90_s100 lr=0.001 loss=0.1772 28s
+2026-09-27 23:52:40,560 [pid1805] INFO [pilot] 17/24 pilot_steps5000/M3_quat_D90_s100: ok  (269s)
+2026-09-27 23:52:42,178 [pid1986] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.7038 100s
+2026-09-27 23:52:42,305 [pid1805] INFO [pilot] 18/24 pilot_steps15000/M1_riemannian_D150_s100: ok  (271s)
+2026-09-27 23:52:42,342 [pid2016] INFO [train] done M2_euclid6d_D150_s100 lr=0.001 loss=0.2918 23s
+2026-09-27 23:52:42,437 [pid1805] INFO [pilot] 19/24 pilot_steps5000/M2_euclid6d_D150_s100: ok  (271s)
+2026-09-27 23:52:46,948 [pid2005] INFO [train] done M1_riemannian_D150_s100 lr=0.001 loss=0.7899 32s
+2026-09-27 23:52:47,056 [pid1805] INFO [pilot] 20/24 pilot_steps5000/M1_riemannian_D150_s100: ok  (276s)
+2026-09-27 23:52:49,349 [pid1996] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.8145 74s
+2026-09-27 23:52:49,413 [pid1805] INFO [pilot] 21/24 pilot_steps15000/M4_euler_D150_s100: ok  (278s)
+2026-09-27 23:52:52,867 [pid1995] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.1699 78s
+2026-09-27 23:52:52,928 [pid1805] INFO [pilot] 22/24 pilot_steps15000/M3_quat_D150_s100: ok  (282s)
+2026-09-27 23:52:54,303 [pid2019] INFO [train] done M3_quat_D150_s100 lr=0.001 loss=0.1999 21s
+2026-09-27 23:52:54,362 [pid1805] INFO [pilot] 23/24 pilot_steps5000/M3_quat_D150_s100: ok  (283s)
+2026-09-27 23:52:58,038 [pid2020] INFO [train] done M4_euler_D150_s100 lr=0.001 loss=0.9735 16s
+2026-09-27 23:52:58,093 [pid1805] INFO [pilot] 24/24 pilot_steps5000/M4_euler_D150_s100: ok  (287s)
+2026-09-27 23:52:58,101 [pid1805] INFO [pilot] finished: 24 ok, 0 failed

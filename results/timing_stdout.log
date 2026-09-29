@@ -1,0 +1,32 @@
+2026-09-28 06:09:18,808 [pid47862] INFO [train] done tmp1wzwwaqn lr=0.001 loss=1.0469 3s
+2026-09-28 06:09:33,557 [pid47862] INFO [train] done tmp1wzwwaqn lr=0.001 loss=0.2820 15s
+2026-09-28 06:09:36,587 [pid47862] INFO [train] done tmptspt64h4 lr=0.001 loss=1.0519 3s
+2026-09-28 06:09:51,323 [pid47862] INFO [train] done tmptspt64h4 lr=0.001 loss=0.2807 15s
+2026-09-28 06:09:54,326 [pid47862] INFO [train] done tmp78cvsv0n lr=0.001 loss=1.0503 3s
+2026-09-28 06:10:09,282 [pid47862] INFO [train] done tmp78cvsv0n lr=0.001 loss=0.2813 15s
+2026-09-28 06:10:09,284 [pid47862] INFO [timing] train M1_riemannian: 14.81 ms/step
+2026-09-28 06:10:11,862 [pid47862] INFO [train] done tmprzbctuyv lr=0.001 loss=0.7035 3s
+2026-09-28 06:10:24,647 [pid47862] INFO [train] done tmprzbctuyv lr=0.001 loss=0.2546 13s
+2026-09-28 06:10:27,225 [pid47862] INFO [train] done tmps8kw7a_a lr=0.001 loss=0.7028 3s
+2026-09-28 06:10:39,981 [pid47862] INFO [train] done tmps8kw7a_a lr=0.001 loss=0.2548 13s
+2026-09-28 06:10:42,538 [pid47862] INFO [train] done tmpsu7nyef3 lr=0.001 loss=0.7024 3s
+2026-09-28 06:10:55,353 [pid47862] INFO [train] done tmpsu7nyef3 lr=0.001 loss=0.2529 13s
+2026-09-28 06:10:55,356 [pid47862] INFO [timing] train M2_euclid6d: 12.79 ms/step
+2026-09-28 06:10:57,976 [pid47862] INFO [train] done tmp11qbuf6_ lr=0.001 loss=0.6220 3s
+2026-09-28 06:11:10,970 [pid47862] INFO [train] done tmp11qbuf6_ lr=0.001 loss=0.1720 13s
+2026-09-28 06:11:13,648 [pid47862] INFO [train] done tmp_iacghsm lr=0.001 loss=0.6215 3s
+2026-09-28 06:11:26,701 [pid47862] INFO [train] done tmp_iacghsm lr=0.001 loss=0.1729 13s
+2026-09-28 06:11:29,346 [pid47862] INFO [train] done tmppcfcp7qj lr=0.001 loss=0.6219 3s
+2026-09-28 06:11:42,497 [pid47862] INFO [train] done tmppcfcp7qj lr=0.001 loss=0.1719 13s
+2026-09-28 06:11:42,499 [pid47862] INFO [timing] train M3_quat: 13.07 ms/step
+2026-09-28 06:11:45,092 [pid47862] INFO [train] done tmpkrwgcnoa lr=0.001 loss=1.9189 3s
+2026-09-28 06:11:57,891 [pid47862] INFO [train] done tmpkrwgcnoa lr=0.001 loss=0.5299 13s
+2026-09-28 06:12:00,494 [pid47862] INFO [train] done tmpf7dqfll7 lr=0.001 loss=1.9272 3s
+2026-09-28 06:12:13,421 [pid47862] INFO [train] done tmpf7dqfll7 lr=0.001 loss=0.5230 13s
+2026-09-28 06:12:16,025 [pid47862] INFO [train] done tmpochmqaaf lr=0.001 loss=1.9256 3s
+2026-09-28 06:12:28,914 [pid47862] INFO [train] done tmpochmqaaf lr=0.001 loss=0.5235 13s
+2026-09-28 06:12:28,916 [pid47862] INFO [timing] train M4_euler: 12.87 ms/step
+2026-09-28 06:13:05,255 [pid47862] INFO [timing] infer M1_riemannian done
+2026-09-28 06:13:32,186 [pid47862] INFO [timing] infer M2_euclid6d done
+2026-09-28 06:13:57,801 [pid47862] INFO [timing] infer M3_quat done
+2026-09-28 06:14:23,194 [pid47862] INFO [timing] infer M4_euler done
