@@ -795,3 +795,14 @@ TypeError: RNG state must be a torch.ByteTensor
 2026-09-29 09:43:58,277 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s3: ok  (31129s, 7 running)
 /Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-s5padxoo', '/mp-h1wqxxzc', '/mp-9fgqvs9x', '/mp-412qoe0j', '/mp-b2fb3ge3'}
   warnings.warn(
+2026-09-29 11:24:38,169 [pid7197] INFO [n2] scheduler start: 8 cpu workers
+2026-09-29 11:24:39,752 [pid7209] INFO [train] resume M1_riemannian_D10_s4 at step 6000
+2026-09-29 11:24:39,752 [pid7203] INFO [train] resume M3_quat_D10_s4 at step 4000
+2026-09-29 11:24:39,755 [pid7210] INFO [train] resume M4_euler_D175_s3 at step 6000
+2026-09-29 11:24:39,757 [pid7206] INFO [train] resume M3_quat_D175_s3 at step 6000
+2026-09-29 11:24:39,759 [pid7205] INFO [train] resume M2_euclid6d_D175_s3 at step 6000
+2026-09-29 11:24:39,760 [pid7207] INFO [train] resume M2_euclid6d_D10_s4 at step 6000
+2026-09-29 11:24:39,761 [pid7208] INFO [train] resume M4_euler_D10_s4 at step 4000
+2026-09-29 11:24:39,762 [pid7204] INFO [train] resume M1_riemannian_D175_s3 at step 8000
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-togrtoeq', '/mp-tr7qhto3', '/mp-cwmu118z', '/mp-o0dr8q0x', '/mp-2tndylth'}
+  warnings.warn(

@@ -1376,3 +1376,12 @@ TypeError: RNG state must be a torch.ByteTensor
 2026-09-29 09:43:41,909 [pid13265] INFO [train] done M1_riemannian_D150_s3 lr=0.001 loss=0.0477 1054s
 2026-09-29 09:43:55,474 [pid6442] INFO [n2] cpu n2_main_trunc150/M4_euler_D150_s3: ok  (31126s, 7 running)
 2026-09-29 09:43:58,277 [pid6442] INFO [n2] cpu n2_main_trunc150/M1_riemannian_D150_s3: ok  (31129s, 7 running)
+2026-09-29 11:24:38,169 [pid7197] INFO [n2] scheduler start: 8 cpu workers
+2026-09-29 11:24:39,752 [pid7209] INFO [train] resume M1_riemannian_D10_s4 at step 6000
+2026-09-29 11:24:39,752 [pid7203] INFO [train] resume M3_quat_D10_s4 at step 4000
+2026-09-29 11:24:39,755 [pid7210] INFO [train] resume M4_euler_D175_s3 at step 6000
+2026-09-29 11:24:39,757 [pid7206] INFO [train] resume M3_quat_D175_s3 at step 6000
+2026-09-29 11:24:39,759 [pid7205] INFO [train] resume M2_euclid6d_D175_s3 at step 6000
+2026-09-29 11:24:39,760 [pid7207] INFO [train] resume M2_euclid6d_D10_s4 at step 6000
+2026-09-29 11:24:39,761 [pid7208] INFO [train] resume M4_euler_D10_s4 at step 4000
+2026-09-29 11:24:39,762 [pid7204] INFO [train] resume M1_riemannian_D175_s3 at step 8000

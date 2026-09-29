@@ -19,7 +19,6 @@
  "dataset": "D175",
  "done": false,
  "step": 6000,
- "train_seconds": 310.6909167766571,
  "hist": [
   [
    500,
