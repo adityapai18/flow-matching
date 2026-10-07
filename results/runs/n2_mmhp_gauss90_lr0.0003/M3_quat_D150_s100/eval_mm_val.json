@@ -1,0 +1,46 @@
+{
+ "model": "M3_quat",
+ "D": 150,
+ "seed": 100,
+ "split": "val",
+ "k_samples": 30,
+ "prior": {
+  "kind": "gauss",
+  "sigma_deg": 90
+ },
+ "on_mode_deg": 10.0,
+ "by_nfe": {
+  "32": {
+   "nearest_mode_err_deg": {
+    "mean": 59.1206877096771,
+    "median": 55.98877666823114,
+    "p95": 107.35585103635044,
+    "max": 171.75138472333342,
+    "std": 25.257589843110964
+   },
+   "frac_on_mode": 0.004,
+   "coverage_all_modes": 0.0,
+   "modes_hit_mean": 0.115,
+   "mode_props_pooled": [
+    0.5833333333333334,
+    0.20833333333333334,
+    0.20833333333333334
+   ],
+   "mode_props_min_mean": 0.0,
+   "tv_from_uniform_mean": 0.6666666666666666,
+   "w1_deg": {
+    "mean": 63.442134944732025,
+    "median": 62.83084549908588,
+    "p95": 74.99195713388136,
+    "max": 81.2590441103141,
+    "std": 6.5629957621866
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 1.9973199101149306,
+   "infer_seconds_per_traj": 0.00245556644598643
+  }
+ }
+}

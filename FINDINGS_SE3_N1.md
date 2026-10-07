@@ -4,39 +4,56 @@ _Status: complete. 140/140 main runs, 0 failures. Every headline number is mean 
 Headline NFE = 64. Tables: `results/summary_tables.md`; all numbers: `results/summary.json`;
 figures: `results/figures/`._
 
-## The answer
+## The answer — REVISED by night 2 (2026-10-02). Read `FINDINGS_N2.md`.
 
-**Euclidean flow matching with the 6D representation (M2) does not merely match Riemannian flow
-matching (M1). It beats it at every angular displacement from 10° to 175°**, on every error statistic,
-at every NFE:
-- Mean endpoint error: M2 1.2–6.0° vs M1 9.5–18.0°. The seed-paired gap is −6.6 to −14.4°, which is
-  7–19 pooled seed-sd. Holm-adjusted p ≤ 8e-4 at every D.
-- Worst case: M2's max error is ≤ 32°, and ≤ 12.6° for D ≥ 60. M1 produces a > 45° error in 4–10% of
-  samples at every D, with max ≈ 175°.
-- No crossover exists. None of 10,000 seed-bootstrap resamples shows M1 overtaking M2 anywhere on the grid.
+**The night-1 headline below is confounded and its interpretation is withdrawn.** "M2 (Euclidean-6D) beats
+M1 (Riemannian) at every D" was measured under a Haar source distribution. That prior puts ~16% of source
+samples within 15° of the target's cut locus, where M1's geodesic velocity field is discontinuous. M2's
+straight line in 6D has no cut locus, so the prior handicapped exactly one model. Night 2 re-ran the sweep
+under three priors, each with its own LR search:
+- With the cut-locus samples removed (Haar truncated at d0 ≤ 150°, an oracle ablation), **M1 beats M2 at
+  every D ≥ 30**: 0.9–2.4° vs 1.8–3.8° mean error, 3–13 pooled seed-sd. Pooled over D ∈ {30, 90, 150, 175}:
+  1.80° vs 2.89°, 19 sd.
+- Under a deployable start-centered Gaussian prior (σ=90°), M2 still wins on the overall mean, driven by
+  the remaining cut-locus tail. Stratified by d0, M1 wins for d0 < 120°.
 
-**Gate: none of the three pre-registered outcomes occurred as written.** The closest is outcome 1
-(H2 supported strongly), in a stronger form: M2 doesn't track M1 within seed noise, it is clearly better.
-Taken literally, the gate says night 2 should test H2 on real robot data. First, though, read "What broke"
-§1: M1's deficit comes almost entirely from one mechanism (the Haar prior meeting the SO(3) cut locus),
-and a different prior could change the M1 picture. That is a decision for you before night 2.
+The raw night-1 numbers are unchanged and still correct *for the Haar prior*. What is withdrawn is the
+reading that "the manifold buys nothing / H2 supported strongly". Night 2 verdict: **qualified**.
 
-The parameterization flips the conclusion. Against the parameterizations published baselines typically use,
-M1 does win, above a crossover angle:
-- vs **M3 (quaternion): crossover at 54° [95% CI 50–59]**;
-- vs **M4 (XYZ Euler): crossover at 94° [92–98]**, which lines up with the gimbal-lock onset measured in the data.
-
-(Crossovers use a seed-paired bootstrap with 10k resamples and linear interpolation between grid levels,
-`results/crossover.json`. The CI reflects seed variance only. The 30° grid spacing and the linear
-interpolation are the larger, unquantified uncertainty.)
-
-A "Riemannian beats Euclidean" result on large-rotation tasks is therefore reproducible here, but only
-against quaternion or Euler baselines. With 6D the sign reverses. That supports H2 (the published
-advantage is substantially a parameterization artifact).
-
-Scope, stated plainly: this is a synthetic task, a joint-trajectory MLP at width 1024 (not the specified 256;
-see Deviations), a 20k-step budget, and a Haar source distribution. The claims don't extend beyond that
-without night-2 evidence.
+> ### SUPERSEDED — original night-1 headline (kept verbatim; do not cite without the revision above)
+>
+>
+> **Euclidean flow matching with the 6D representation (M2) does not merely match Riemannian flow
+> matching (M1). It beats it at every angular displacement from 10° to 175°**, on every error statistic,
+> at every NFE:
+> - Mean endpoint error: M2 1.2–6.0° vs M1 9.5–18.0°. The seed-paired gap is −6.6 to −14.4°, which is
+>   7–19 pooled seed-sd. Holm-adjusted p ≤ 8e-4 at every D.
+> - Worst case: M2's max error is ≤ 32°, and ≤ 12.6° for D ≥ 60. M1 produces a > 45° error in 4–10% of
+>   samples at every D, with max ≈ 175°.
+> - No crossover exists. None of 10,000 seed-bootstrap resamples shows M1 overtaking M2 anywhere on the grid.
+>
+> **Gate: none of the three pre-registered outcomes occurred as written.** The closest is outcome 1
+> (H2 supported strongly), in a stronger form: M2 doesn't track M1 within seed noise, it is clearly better.
+> Taken literally, the gate says night 2 should test H2 on real robot data. First, though, read "What broke"
+> §1: M1's deficit comes almost entirely from one mechanism (the Haar prior meeting the SO(3) cut locus),
+> and a different prior could change the M1 picture. That is a decision for you before night 2.
+>
+> The parameterization flips the conclusion. Against the parameterizations published baselines typically use,
+> M1 does win, above a crossover angle:
+> - vs **M3 (quaternion): crossover at 54° [95% CI 50–59]**;
+> - vs **M4 (XYZ Euler): crossover at 94° [92–98]**, which lines up with the gimbal-lock onset measured in the data.
+>
+> (Crossovers use a seed-paired bootstrap with 10k resamples and linear interpolation between grid levels,
+> `results/crossover.json`. The CI reflects seed variance only. The 30° grid spacing and the linear
+> interpolation are the larger, unquantified uncertainty.)
+>
+> A "Riemannian beats Euclidean" result on large-rotation tasks is therefore reproducible here, but only
+> against quaternion or Euler baselines. With 6D the sign reverses. That supports H2 (the published
+> advantage is substantially a parameterization artifact).
+>
+> Scope, stated plainly: this is a synthetic task, a joint-trajectory MLP at width 1024 (not the specified 256;
+> see Deviations), a 20k-step budget, and a Haar source distribution. The claims don't extend beyond that
+> without night-2 evidence.
 
 ## DEVIATIONS FROM THE NIGHT-1 SPEC (read first)
 

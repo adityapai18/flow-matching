@@ -236,7 +236,8 @@ def lr_tables():
     best = read_json(N2 / "best_prior.json")
     if best:
         L.append(f"\nBest legal prior (pre-registered rule: geometric mean over models of selected-LR val score): "
-                 + ", ".join(f"{k} {v:.2f}" for k, v in best["geomean"].items()) + f" → **{best['best']}**\n")
+                 + ", ".join(f"{k} {v:.2f}" for k, v in best["geomean"].items()) + f" → **{best['best']}**"
+                 + (f". **Deviation:** used **{best['used']}** for Phases B1/C ({best['deviation']}).\n" if best.get("used") else "\n"))
     return L
 
 
@@ -247,7 +248,7 @@ def phase_b(summary, L):
     L.append("\n## Phase B — budget stability\n")
     summary["B"] = {}
     if best:
-        bn = best["best"]
+        bn = best.get("used", best["best"])
         L.append(f"\n### B1 step sweep (prior {bn}, seeds {B1_SEEDS}, NFE {HEAD}; 20k = Phase-A main runs)\n")
         L.append("| steps | D | " + " | ".join(SHORT[m] for m in MODELS) + " | M2 − M1 (paired) | final loss M1 / M2 |")
         L.append("|---|---|" + "---|" * 4 + "---|---|")
@@ -386,7 +387,7 @@ def phase_c(summary, L):
     L.append("\n## Phase C — multimodal target\n")
     if not best:
         return
-    tag = f"n2_mm_{best['best']}"
+    tag = f"n2_mm_{best.get('used', best['best'])}"
     summary["C"] = {"tag": tag}
     for nfe in ("64", "8"):
         L.append(f"\n**{tag}, test (200 starts × 30 samples), NFE={nfe}, mean ± sd over seeds**\n")

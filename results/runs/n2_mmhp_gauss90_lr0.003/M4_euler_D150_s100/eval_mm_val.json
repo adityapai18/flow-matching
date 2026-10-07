@@ -1,0 +1,46 @@
+{
+ "model": "M4_euler",
+ "D": 150,
+ "seed": 100,
+ "split": "val",
+ "k_samples": 30,
+ "prior": {
+  "kind": "gauss",
+  "sigma_deg": 90
+ },
+ "on_mode_deg": 10.0,
+ "by_nfe": {
+  "32": {
+   "nearest_mode_err_deg": {
+    "mean": 44.44752491004065,
+    "median": 40.67466138318101,
+    "p95": 95.82829290818712,
+    "max": 167.66590341569503,
+    "std": 25.597972772399128
+   },
+   "frac_on_mode": 0.030166666666666668,
+   "coverage_all_modes": 0.0,
+   "modes_hit_mean": 0.475,
+   "mode_props_pooled": [
+    0.18232044198895028,
+    0.425414364640884,
+    0.39226519337016574
+   ],
+   "mode_props_min_mean": 0.0,
+   "tv_from_uniform_mean": 0.6466916354556805,
+   "w1_deg": {
+    "mean": 72.45472458247545,
+    "median": 72.53826736987051,
+    "p95": 89.92864946336717,
+    "max": 117.19594145809648,
+    "std": 11.865329824575678
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 2.2553052334426433e-16,
+   "infer_seconds_per_traj": 0.002150043209393819
+  }
+ }
+}

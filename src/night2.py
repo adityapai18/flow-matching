@@ -48,7 +48,8 @@ STEPS = 20000
 SIGMAS = [30, 60, 90]
 P3 = {"kind": "haar_trunc", "max_deg": 150}
 HAAR = {"kind": "haar"}
-B1_D, B1_SEEDS, B1_STEPS = [30, 150], [0, 1, 2], [80000, 40000]
+B1_D, B1_SEEDS, B1_STEPS = [30, 150], [0, 1, 2], [40000, 80000]
+B1_MODELS = ["M1_riemannian", "M2_euclid6d"]   # the B1 question is the M1-vs-M2 sign; halves a ~5 h phase
 MM_D, MM_K, MM_NFES, MM_TUNE_NFES = [30, 150], 30, [8, 32, 64], [32]
 VAL_EVAL = ("uni", "val", NFES, 2, "eval_val.json", None)
 TEST_EVAL = ("uni", "test", NFES, 5, "eval_test.json", 64)
@@ -255,18 +256,35 @@ def ready_tasks():
                     chosen_lr=hp[name]["chosen_lr"])
         write_json(N2 / "best_prior.json", best)
         log.info(f"[n2] best prior: {gm} -> {name}")
+    if best and "used" not in best and best["best"] == "haar" and "gauss90" in hp:
+        # DEVIATION from the pre-registered rule (night 2, session 2): the rule picked Haar on a 0.5%
+        # geomean margin (8.107 vs 8.151, one tuning seed = a tie). Haar is the prior Phase A exists to
+        # remove: it produces M1's cut-locus tail (M1 tuning score 12.9 deg under Haar vs 1.45 under
+        # trunc150, while M2 moves 2.1 -> 2.6). Running B1/C under it would be equal in form, unequal
+        # in effect. Tie broken toward the legal prior WITHOUT a known single-model pathology.
+        best.update(prereg_choice="haar", used="gauss90", prior=gauss(sig["sigma_star"]),
+                    chosen_lr=hp["gauss90"]["chosen_lr"],
+                    deviation="tie (0.5%) broken away from Haar: Haar handicaps M1 only (cut locus)")
+        write_json(N2 / "best_prior.json", best)
     if best:
-        bp = best["prior"]
-        out += [task(f"n2_b1_{best['best']}_steps{S}", m, D, s, best["chosen_lr"][m], S, "cpu",
+        bp, bname = best["prior"], best.get("used", best["best"])
+        out += [task(f"n2_b1_{bname}_steps{S}", m, D, s, best["chosen_lr"][m], S, "cpu",
                      5 + B1_STEPS.index(S) * 0.1 + 0.01 * s, [TEST_EVAL], prior=bp)
-                for S in B1_STEPS for s in B1_SEEDS for D in B1_D for m in MODELS]
-        miss, hpc = lr_search(f"mm_{best['best']}", mm_tune_tasks(bp, "cpu", 6), MM_D, score_mm,
-                              N2 / f"hparams_mm_{best['best']}.json")
+                for S in B1_STEPS for s in B1_SEEDS for D in B1_D for m in B1_MODELS]
+        miss, hpc = lr_search(f"mm_{bname}", mm_tune_tasks(bp, "cpu", 6), MM_D, score_mm,
+                              N2 / f"hparams_mm_{bname}.json")
         out += miss
         if hpc:
-            out += [task(f"n2_mm_{best['best']}", m, D, s, hpc["chosen_lr"][m], STEPS, "cpu", 7 + 0.01 * s,
+            out += [task(f"n2_mm_{bname}", m, D, s, hpc["chosen_lr"][m], STEPS, "cpu", 7 + 0.01 * s,
                          [("mm", "test", MM_NFES, MM_K, "eval_mm_test.json", 64)], prior=bp, dataset=f"MM_D{D}")
                     for s in EVAL_SEEDS for D in MM_D for m in MODELS]
+    # --- B1 extension (session 2, added after B1 under gauss90 showed M1's d0<120 advantage was not
+    #     budget-stable): does the P3 (cut-locus-free) M1 win survive 4x the steps? Oracle prior, M1/M2,
+    #     80k only, own (P3) selected LRs. Priority below Phase C.
+    if hp3:
+        out += [task("n2_b1x_trunc150_steps80000", m, D, s, hp3["chosen_lr"][m], 80000, "cpu", 7.5 + 0.01 * s,
+                     [TEST_EVAL], prior=P3)
+                for s in B1_SEEDS for D in B1_D for m in B1_MODELS]
     # --- sensitivity arm (NOT part of the pre-registered selection; lowest priority, leftover compute only):
     #     the sigma pilot showed sigma=30 favors M1 (1.6 vs M2 13.8 deg, untuned) while the pre-registered
     #     rule picked sigma*=90. Run sigma=30 through the identical LR protocol + main grid so the headline

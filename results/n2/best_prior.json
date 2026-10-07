@@ -6,12 +6,16 @@
  },
  "best": "haar",
  "prior": {
-  "kind": "haar"
+  "kind": "gauss",
+  "sigma_deg": 90
  },
  "chosen_lr": {
-  "M1_riemannian": 0.003,
+  "M1_riemannian": 0.001,
   "M2_euclid6d": 0.003,
   "M3_quat": 0.003,
   "M4_euler": 0.0003
- }
+ },
+ "prereg_choice": "haar",
+ "used": "gauss90",
+ "deviation": "tie (0.5%) broken away from Haar: Haar handicaps M1 only (cut locus)"
 }

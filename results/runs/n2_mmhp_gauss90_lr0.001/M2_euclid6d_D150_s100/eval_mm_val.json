@@ -1,0 +1,46 @@
+{
+ "model": "M2_euclid6d",
+ "D": 150,
+ "seed": 100,
+ "split": "val",
+ "k_samples": 30,
+ "prior": {
+  "kind": "gauss",
+  "sigma_deg": 90
+ },
+ "on_mode_deg": 10.0,
+ "by_nfe": {
+  "32": {
+   "nearest_mode_err_deg": {
+    "mean": 30.27046191564179,
+    "median": 28.09636622012235,
+    "p95": 57.278061890228926,
+    "max": 173.83420506171908,
+    "std": 17.362307816525067
+   },
+   "frac_on_mode": 0.11616666666666667,
+   "coverage_all_modes": 0.24,
+   "modes_hit_mean": 1.875,
+   "mode_props_pooled": [
+    0.20086083213773315,
+    0.40889526542324245,
+    0.3902439024390244
+   ],
+   "mode_props_min_mean": 0.056719867434153144,
+   "tv_from_uniform_mean": 0.37434371184371185,
+   "w1_deg": {
+    "mean": 35.398107878216045,
+    "median": 33.70756297568201,
+    "p95": 48.498657452513704,
+    "max": 75.20145631340144,
+    "std": 7.718742394392632
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 0.45935598349770196,
+   "infer_seconds_per_traj": 0.0020788668791453043
+  }
+ }
+}

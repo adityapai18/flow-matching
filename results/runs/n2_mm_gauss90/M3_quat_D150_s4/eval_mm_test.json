@@ -1,0 +1,110 @@
+{
+ "model": "M3_quat",
+ "D": 150,
+ "seed": 4,
+ "split": "test",
+ "k_samples": 30,
+ "prior": {
+  "kind": "gauss",
+  "sigma_deg": 90
+ },
+ "on_mode_deg": 10.0,
+ "by_nfe": {
+  "8": {
+   "nearest_mode_err_deg": {
+    "mean": 41.325256816068666,
+    "median": 41.126966812606845,
+    "p95": 68.78764192681987,
+    "max": 155.28746344790804,
+    "std": 17.580036068271088
+   },
+   "frac_on_mode": 0.023666666666666666,
+   "coverage_all_modes": 0.005,
+   "modes_hit_mean": 0.61,
+   "mode_props_pooled": [
+    0.23943661971830985,
+    0.3591549295774648,
+    0.4014084507042254
+   ],
+   "mode_props_min_mean": 0.003144654088050314,
+   "tv_from_uniform_mean": 0.6163522012578617,
+   "w1_deg": {
+    "mean": 46.76547270145715,
+    "median": 45.050607629026445,
+    "p95": 63.56053443175506,
+    "max": 79.85106375461208,
+    "std": 7.973192284554118
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 0.45410539806086436,
+   "infer_seconds_per_traj": 0.0007066423495610555
+  },
+  "32": {
+   "nearest_mode_err_deg": {
+    "mean": 40.540589133871066,
+    "median": 39.77507749882739,
+    "p95": 68.262725487916,
+    "max": 160.80245981118634,
+    "std": 17.742509608948684
+   },
+   "frac_on_mode": 0.021166666666666667,
+   "coverage_all_modes": 0.0,
+   "modes_hit_mean": 0.57,
+   "mode_props_pooled": [
+    0.1889763779527559,
+    0.3779527559055118,
+    0.4330708661417323
+   ],
+   "mode_props_min_mean": 0.0,
+   "tv_from_uniform_mean": 0.62,
+   "w1_deg": {
+    "mean": 45.87485342432723,
+    "median": 44.18316661411885,
+    "p95": 63.51160195869707,
+    "max": 79.7512361113782,
+    "std": 8.08653158904178
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 0.4565974485746793,
+   "infer_seconds_per_traj": 0.002558008670806885
+  },
+  "64": {
+   "nearest_mode_err_deg": {
+    "mean": 40.41396387773983,
+    "median": 39.55949220770984,
+    "p95": 68.34843150080454,
+    "max": 161.85455857121636,
+    "std": 17.770436509683275
+   },
+   "frac_on_mode": 0.020833333333333332,
+   "coverage_all_modes": 0.0,
+   "modes_hit_mean": 0.56,
+   "mode_props_pooled": [
+    0.184,
+    0.368,
+    0.448
+   ],
+   "mode_props_min_mean": 0.0,
+   "tv_from_uniform_mean": 0.6303630363036304,
+   "w1_deg": {
+    "mean": 45.78346674460477,
+    "median": 44.08546619559511,
+    "p95": 63.463981920361206,
+    "max": 79.78645050704544,
+    "std": 8.098399271762498
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 0.45936463137455485,
+   "infer_seconds_per_traj": 0.005027076363563538
+  }
+ }
+}

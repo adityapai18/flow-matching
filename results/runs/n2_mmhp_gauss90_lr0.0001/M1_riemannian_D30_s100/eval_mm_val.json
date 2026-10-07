@@ -1,0 +1,46 @@
+{
+ "model": "M1_riemannian",
+ "D": 30,
+ "seed": 100,
+ "split": "val",
+ "k_samples": 30,
+ "prior": {
+  "kind": "gauss",
+  "sigma_deg": 90
+ },
+ "on_mode_deg": 10.0,
+ "by_nfe": {
+  "32": {
+   "nearest_mode_err_deg": {
+    "mean": 29.641651917913133,
+    "median": 17.3328982214155,
+    "p95": 111.06147018076797,
+    "max": 174.20816305546086,
+    "std": 31.97140559167747
+   },
+   "frac_on_mode": 0.162,
+   "coverage_all_modes": 0.29,
+   "modes_hit_mean": 2.08,
+   "mode_props_pooled": [
+    0.6162551440329218,
+    0.19753086419753085,
+    0.18621399176954734
+   ],
+   "mode_props_min_mean": 0.0596230616535185,
+   "tv_from_uniform_mean": 0.3880664879395843,
+   "w1_deg": {
+    "mean": 30.41365050831475,
+    "median": 29.684914075230346,
+    "p95": 40.70379698080584,
+    "max": 45.02180921901023,
+    "std": 5.664587379023774
+   },
+   "n_nonfinite": 0,
+   "n": 6000,
+   "n_starts": 200,
+   "k": 30,
+   "orth_residual_endpoint_mean": 1.2894374068037371e-15,
+   "infer_seconds_per_traj": 0.0028509196440378824
+  }
+ }
+}
