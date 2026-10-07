@@ -1,5 +1,9 @@
 # FINDINGS — SE(3) flow matching, Night 1
 
+> **Night 3 (2026-10-07):** the truncated-prior advantage cited in the revision below is a convergence-rate
+> effect. At matched LR the gap crosses zero at ~275k steps. See `FINDINGS_N3.md`.
+
+
 _Status: complete. 140/140 main runs, 0 failures. Every headline number is mean ± sd over 5 seeds (0–4).
 Headline NFE = 64. Tables: `results/summary_tables.md`; all numbers: `results/summary.json`;
 figures: `results/figures/`._

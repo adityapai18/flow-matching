@@ -1,0 +1,36 @@
+{
+ "written": "2026-10-07 00:12:39",
+ "written_before": "any 160k or 320k run was started",
+ "phase": "night-3 Phase A: asymptotic vs convergence-rate",
+ "grid": "M1, M2; priors P3 trunc150 (primary) and P2 gauss90 (secondary); D=150; steps 20k/40k/80k (existing, n2_main_* / n2_b1_* / n2_b1x_*) + 160k/320k (new, trained fresh: stretched cosine changes the LR at every step after warmup, and completed runs keep no optimizer/RNG state); seeds 0,1,2; each model's night-2 prior-selected LR (P3: M1 1e-3, M2 3e-3; P2: M1 1e-3, M2 3e-3).",
+ "gap_definition": "g(S) = mean_seeds[ err_M2 - err_M1 ], mean endpoint geodesic error (deg), test split, NFE 64, seed-paired. Positive = M1 better. Under P3 g>0 so far; under P2 g<0 so far.",
+ "reported_fits": [
+  "brief's fit: g vs log2(steps), OLS over 5 budgets x 3 seeds; slope with t-CI and seed-bootstrap CI; extrapolated g at 1M",
+  "per-doubling ratio r(S) = g(2S)/g(S) for S in {20k,40k,80k,160k}, seed-bootstrap 95% CI (resample seed indices jointly across budgets)",
+  "each model's own err vs log2(steps), OLS; intersection step with seed-bootstrap CI; reported as 'never meet' when slopes do not imply a crossing in the forward direction",
+  "train loss at the end of each run, relative loss drop over the last quarter (night-2 metric; includes cosine LR decay), d0-stratified error"
+ ],
+ "decision_rule_primary_P3": {
+  "(a) ASYMPTOTIC": "r(160k) 95% CI lower bound > 0.75 (gap shrinks < 25% per doubling at the last doubling) AND g(320k) 95% CI excludes 0 with g>0",
+  "(b) CONVERGENCE-RATE": "r(80k) and r(160k) both have point estimate <= 0.6 AND r(160k) 95% CI upper bound < 0.75; OR g(320k) 95% CI includes 0 or is negative while g(20k..80k) were positive",
+  "(c) UNDECIDABLE": "anything else (CIs straddle the 0.75 boundary, or r(80k) and r(160k) disagree in class)",
+  "note": "a linear fit in log(steps) cannot represent a plateau (any negative slope reaches 0); it is reported because the brief asks for it, but the per-doubling ratios decide."
+ },
+ "secondary_P2": "same quantities and same classification applied to |g| (M2 ahead), reported, not used for the gate.",
+ "divergence_policy": "a diverged run (final loss > 5x the median of its cell, as in night 2) is reported and shown; the gate is computed both with and without it and both are reported.",
+ "prior_expectation": "from night-2 B1 (P3, D=150): g = 1.29 (20k), 0.48 (80k) -> implied per-doubling ratio ~0.61; i.e. prior data lean (b). Recorded so the outcome can be checked against it.",
+ "extrapolations_from_20k_80k_recorded_before_160k_320k": {
+  "recorded": "2026-10-07 00:18:26",
+  "trunc150": "linear gap vs log2(steps) from 20k & 80k only: slope -0.40 deg/doubling, zero crossing at ~184k steps (M2 would catch M1 by ~184k). Pure power law on |g|: ratio 0.61/doubling.",
+  "gauss90": "linear gap vs log2(steps) from 20k/40k/80k: slope +1.65 deg/doubling (M2 lead shrinking), zero crossing ~390k [boot 290k-580k] (M1 would overtake M2 near 390k); per-doubling ratios 0.81 (20->40k), 0.65 (40->80k)."
+ },
+ "addendum_1": {
+  "written": "2026-10-07 05:23:42",
+  "written_before": "any run of the matched-LR arm started",
+  "trigger": "At 320k, M2 at its protocol LR (3e-3) diverged or degraded in 2 of 3 P3 seeds (s0 diverged at 36k: loss spike to 1580, then flat at 0.736 trivial level; s1: 26 spikes from 109k, 26.9 deg error, 5 non-finite) and P2 seed 2 spiked to 30.7 at 61k. Zero spikes in any run at <= 80k. LRs were tuned at 20k; the stretched cosine keeps LR near peak much longer.",
+  "divergence_rule_deviation": "The pre-registered rule (final loss > 5x the cell median) fails when >= 2 of 3 seeds in a cell are pathological (the median is itself pathological). Reference replaced by: 5x the final loss of the SAME model/prior at 80k (healthy, zero-spike runs). Deviation from the letter of the prereg, forced by the rule's implicit assumption of <= 1 divergence per cell.",
+  "gate_reporting": "(i) PROTOCOL gate: pre-registered LRs, decision rule unchanged, reported WITH and WITHOUT diverged runs. Expected caveat: 'with diverged' yields a spurious (a) driven by M2 collapse. (ii) MATCHED-LR SENSITIVITY (post-hoc, labeled as such): M2 at 1e-3 under P3, all five budgets 20k/40k/80k/160k/320k, seeds 0-2, gap vs the protocol M1 (already 1e-3), same decision rule. The arm never replaces (i) as 'the' gate.",
+  "arm_direction": "Lowering M2's LR can only help M2, i.e. it works against the standing P3 result (M1 ahead). M1's LR is not touched (its spikes recover and its final losses are normal).",
+  "not_run": "P2 matched-LR arm (P2 is secondary); P2 is reported with/without its diverged seed."
+ }
+}

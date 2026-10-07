@@ -1,0 +1,94 @@
+/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/analyze_n3_a.py:115: RuntimeWarning: Mean of empty slice
+  Gb = np.nanmean(G[:, idx], -1)                                            # budget x boot
+/Users/aditya/Desktop/projects/auto/se3-flow-matching/src/analyze_n3_a.py:170: RuntimeWarning: Mean of empty slice
+  y1, y2 = np.nanmean(E["M1_riemannian"][:, idx[i]], -1), np.nanmean(E["M2_euclid6d"][:, idx[i]], -1)
+
+== trunc150  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [0, 1, 2], 320000: [0, 1, 2]}
+    20k n=3 M1  2.283  M2  3.572  gap +1.290 [0.8300628880291336, 1.7490278250913405]  lossdrop M1 0.241 M2 0.402
+    40k n=3 M1  1.764  M2  2.428  gap +0.663 [0.47902591911016645, 0.8478978394300409]  lossdrop M1 0.260 M2 0.423
+    80k n=3 M1  1.499  M2  1.982  gap +0.484 [0.37033195829727744, 0.5975547459063315]  lossdrop M1 0.296 M2 0.434
+   160k n=3 M1  1.340  M2 35.375  gap +34.035 [-111.76199311957967, 179.8316903145641]  lossdrop M1 0.375 M2 0.312
+   320k n=3 M1  1.207  M2 77.731  gap +76.524 [-32.88559918200474, 185.93332330097397]  lossdrop M1 0.372 M2 0.235
+  ratio 20k->40k: 0.514 [0.494, 0.530]
+  ratio 40k->80k: 0.729 [0.711, 0.754]
+  ratio 80k->160k: 70.328 [0.311, 191.252]
+  ratio 160k->320k: 2.248 [1.002, 743.171]
+  gap fit: slope/doubling +18.384 t-CI [5.431550023396795, 31.336454001417373] boot [4.828877178544683, 30.20786392728531]; gap@1M +89.588 [23.245137129817365, 151.3816623082703]; zero crossing None
+  own curves: {'M1': {'intercept': 3.247374608776382, 'slope_per_doubling': -0.2576554919537573, 'slope_ci': [-0.30583305327585353, -0.2094779306316611]}, 'M2': {'intercept': -90.37583196094394, 'slope_per_doubling': 18.12634652045333, 'slope_ci': [5.145873097388671, 31.106819943517984]}, 'meet_steps': None, 'frac_boot_meeting_ahead': 0.0, 'meet_steps_ci': None}
+  |g| power law: {'exponent_per_doubling': 1.210429462944191, 'ratio_per_doubling': 3.354925159241189, 'ratio_ci_t': [0.6752370233839089, 16.6689953813598]}
+  observed crossing: {'steps': None, 'frac_boot_with_crossing': 0.0, 'ci': None}
+
+== gauss90  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [0, 1, 2], 320000: [0, 1, 2]}
+    20k n=3 M1 10.447  M2  3.467  gap -6.980 [-7.916267955522204, -6.0427969197462135]  lossdrop M1 0.170 M2 0.384
+    40k n=3 M1  8.079  M2  2.415  gap -5.664 [-6.40026680080896, -4.927238912315686]  lossdrop M1 0.198 M2 0.411
+    80k n=3 M1  5.682  M2  2.010  gap -3.671 [-4.391173033936893, -2.9518263476392117]  lossdrop M1 0.229 M2 0.429
+   160k n=3 M1  4.576  M2  1.744  gap -2.831 [-3.2883218450565592, -2.3746468835518484]  lossdrop M1 0.234 M2 0.499
+   320k n=3 M1  2.254  M2 42.545  gap +40.291 [-135.76755485953336, 216.34910210684436]  lossdrop M1 0.290 M2 0.423
+  ratio 20k->40k: 0.811 [0.782, 0.834]
+  ratio 40k->80k: 0.648 [0.607, 0.699]
+  ratio 80k->160k: 0.771 [0.747, 0.789]
+  ratio 160k->320k: -14.230 [-46.383, 0.245]
+  gap fit: slope/doubling +9.737 t-CI [-2.301514710906412, 21.776090833873916] boot [1.474517182850167, 26.11647066213328]; gap@1M +39.710 [1.5134034973350534, 115.89255620507257]; zero crossing None
+  own curves: {'M1': {'intercept': 18.780014365208444, 'slope_per_doubling': -1.988718145487371, 'slope_ci': [-2.145691560786634, -1.8317447301881082]}, 'M2': {'intercept': -38.54951974382362, 'slope_per_doubling': 7.748569915996383, 'slope_ci': [-4.303260879075182, 19.800400711067947]}, 'meet_steps': None, 'frac_boot_meeting_ahead': 0.298, 'meet_steps_ci': [478311.73702998506, 490943.1110785408]}
+  |g| power law: None
+  observed crossing: {'steps': 167450.38447186758, 'frac_boot_with_crossing': 0.702, 'ci': [162357.78033304127, 167572.62406307016]}
+
+== trunc150_matchedLR  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [0, 1, 2], 320000: [0, 1, 2]}
+    20k n=3 M1  2.283  M2  7.035  gap +4.752 [3.871204400790786, 5.632839841419884]  lossdrop M1 0.241 M2 0.220
+    40k n=3 M1  1.764  M2  3.891  gap +2.127 [1.8155836838026143, 2.438395952145656]  lossdrop M1 0.260 M2 0.250
+    80k n=3 M1  1.499  M2  2.484  gap +0.985 [0.7034867140026273, 1.2667030989782222]  lossdrop M1 0.296 M2 0.277
+   160k n=3 M1  1.340  M2  1.592  gap +0.252 [0.04707480919938717, 0.45744638714394076]  lossdrop M1 0.375 M2 0.303
+   320k n=3 M1  1.207  M2  1.137  gap -0.070 [-0.16140759880027572, 0.02082817479340708]  lossdrop M1 0.372 M2 0.373
+  ratio 20k->40k: 0.448 [0.438, 0.456]
+  ratio 40k->80k: 0.463 [0.429, 0.479]
+  ratio 80k->160k: 0.256 [0.183, 0.294]
+  ratio 160k->320k: -0.279 [-0.600, -0.093]
+  gap fit: slope/doubling -1.152 t-CI [-1.422275089281209, -0.8815954879227945] boot [-1.2398181663388208, -1.090323716301029]; gap@1M -2.588 [-2.784128276131156, -2.478641167961996]; zero crossing None
+  own curves: {'M1': {'intercept': 3.247374608776382, 'slope_per_doubling': -0.2576554919537573, 'slope_ci': [-0.30583305327585353, -0.2094779306316611]}, 'M2': {'intercept': 12.139042219629182, 'slope_per_doubling': -1.4095907805557593, 'slope_ci': [-1.7248806386103, -1.0943009225012186]}, 'meet_steps': None, 'frac_boot_meeting_ahead': 0.0, 'meet_steps_ci': None}
+  |g| power law: None
+  observed crossing: {'steps': 275137.5990346219, 'frac_boot_with_crossing': 1.0, 'ci': [246734.74780835185, 301632.85082123434]}
+
+== trunc150__without_diverged  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [1, 2], 320000: []}
+    20k n=3 M1  2.283  M2  3.572  gap +1.290 [0.8300628880291336, 1.7490278250913405]  lossdrop M1 0.241 M2 0.402
+    40k n=3 M1  1.764  M2  2.428  gap +0.663 [0.47902591911016645, 0.8478978394300409]  lossdrop M1 0.260 M2 0.423
+    80k n=3 M1  1.499  M2  1.982  gap +0.484 [0.37033195829727744, 0.5975547459063315]  lossdrop M1 0.296 M2 0.434
+   160k n=2 M1  1.304  M2  1.454  gap +0.150 [-0.007709690516946116, 0.30673254366336467]  lossdrop M1 0.375 M2 0.469
+   320k n=0  no usable seed pairs (all diverged)
+
+== gauss90__without_diverged  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [0, 1, 2], 320000: [0, 1]}
+    20k n=3 M1 10.447  M2  3.467  gap -6.980 [-7.916267955522204, -6.0427969197462135]  lossdrop M1 0.170 M2 0.384
+    40k n=3 M1  8.079  M2  2.415  gap -5.664 [-6.40026680080896, -4.927238912315686]  lossdrop M1 0.198 M2 0.411
+    80k n=3 M1  5.682  M2  2.010  gap -3.671 [-4.391173033936893, -2.9518263476392117]  lossdrop M1 0.229 M2 0.429
+   160k n=3 M1  4.576  M2  1.744  gap -2.831 [-3.2883218450565592, -2.3746468835518484]  lossdrop M1 0.234 M2 0.499
+   320k n=2 M1  2.212  M2  1.584  gap -0.628 [-1.966593753882334, 0.7111232544988048]  lossdrop M1 0.279 M2 0.635
+  ratio 20k->40k: 0.811 [0.782, 0.834]
+  ratio 40k->80k: 0.648 [0.607, 0.699]
+  ratio 80k->160k: 0.771 [0.747, 0.789]
+  ratio 160k->320k: 0.222 [nan, nan]
+  gap fit: slope/doubling +1.535 t-CI [1.3739455426541323, 1.6965781815618448] boot [1.474517182850167, 1.6208763394677819]; gap@1M +1.621 [1.5134034973350534, 1.8235470478912834]; zero crossing 480982.93046458793
+  own curves: {'M1': {'intercept': 18.828653918149882, 'slope_per_doubling': -1.997857606238103, 'slope_ci': [-2.1751871699177094, -1.8205280425584967]}, 'M2': {'intercept': 5.149713474577888, 'slope_per_doubling': -0.4625957441301151, 'slope_ci': [-0.5813275274649987, -0.34386396079523146]}, 'meet_steps': 480982.93046458793, 'frac_boot_meeting_ahead': 1.0, 'meet_steps_ci': [442226.9473592324, 490943.1110785408]}
+  |g| power law: {'exponent_per_doubling': -0.5510523050544878, 'ratio_per_doubling': 0.5763430025083286, 'ratio_ci_t': [0.37160795122207607, 0.8938755358918755]}
+  observed crossing: {'steps': None, 'frac_boot_with_crossing': 0.0345, 'ci': [nan, nan]}
+
+== trunc150_matchedLR__without_diverged  seeds used: {20000: [0, 1, 2], 40000: [0, 1, 2], 80000: [0, 1, 2], 160000: [0, 1, 2], 320000: [0, 1, 2]}
+    20k n=3 M1  2.283  M2  7.035  gap +4.752 [3.871204400790786, 5.632839841419884]  lossdrop M1 0.241 M2 0.220
+    40k n=3 M1  1.764  M2  3.891  gap +2.127 [1.8155836838026143, 2.438395952145656]  lossdrop M1 0.260 M2 0.250
+    80k n=3 M1  1.499  M2  2.484  gap +0.985 [0.7034867140026273, 1.2667030989782222]  lossdrop M1 0.296 M2 0.277
+   160k n=3 M1  1.340  M2  1.592  gap +0.252 [0.04707480919938717, 0.45744638714394076]  lossdrop M1 0.375 M2 0.303
+   320k n=3 M1  1.207  M2  1.137  gap -0.070 [-0.16140759880027572, 0.02082817479340708]  lossdrop M1 0.372 M2 0.373
+  ratio 20k->40k: 0.448 [0.438, 0.456]
+  ratio 40k->80k: 0.463 [0.429, 0.479]
+  ratio 80k->160k: 0.256 [0.183, 0.294]
+  ratio 160k->320k: -0.279 [-0.600, -0.093]
+  gap fit: slope/doubling -1.152 t-CI [-1.422275089281209, -0.8815954879227945] boot [-1.2398181663388208, -1.090323716301029]; gap@1M -2.588 [-2.784128276131156, -2.478641167961996]; zero crossing None
+  own curves: {'M1': {'intercept': 3.247374608776382, 'slope_per_doubling': -0.2576554919537573, 'slope_ci': [-0.30583305327585353, -0.2094779306316611]}, 'M2': {'intercept': 12.139042219629182, 'slope_per_doubling': -1.4095907805557593, 'slope_ci': [-1.7248806386103, -1.0943009225012186]}, 'meet_steps': None, 'frac_boot_meeting_ahead': 0.0, 'meet_steps_ci': None}
+  |g| power law: None
+  observed crossing: {'steps': 275137.5990346219, 'frac_boot_with_crossing': 1.0, 'ci': [246734.74780835185, 301632.85082123434]}
+
+GATE:
+  (i) protocol P3, WITH diverged runs: (b) CONVERGENCE-RATE
+  (i) protocol P3, WITHOUT diverged runs: (c) UNDECIDABLE (no usable seed pairs at 320k: every M2 run diverged)
+  (ii) matched-LR P3 (post-hoc sensitivity), WITH diverged: (b) CONVERGENCE-RATE
+  (ii) matched-LR P3 (post-hoc sensitivity), WITHOUT diverged: (b) CONVERGENCE-RATE
+  secondary P2, WITH diverged: (c) UNDECIDABLE
+  secondary P2, WITHOUT diverged: (c) UNDECIDABLE

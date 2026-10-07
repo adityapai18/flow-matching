@@ -1,5 +1,10 @@
 # FINDINGS — SE(3) flow matching, Night 2: does night 1's headline survive a fair comparison?
 
+> **Night 3 (2026-10-07):** the M1 advantages reported here are 20k-step results. Under the truncated prior,
+> at matched LR, the gap crosses zero at ~275k steps (a convergence-rate effect), and M1's cut-locus tail
+> under Gaussian σ=90 shrinks from 42.6° to 5.3° by 320k. See `FINDINGS_N3.md`. No numbers below were changed.
+
+
 ## Verdict on night 1: **QUALIFIED** (its interpretation is withdrawn)
 
 Night 1 found that M2 (Euclidean-6D) beats M1 (Riemannian) at every D. Those numbers are reproducible and

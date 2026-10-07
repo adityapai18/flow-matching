@@ -1,0 +1,10 @@
+{
+ "written": "2026-10-07 00:12:48",
+ "written_before": "the d0 mechanism table was computed and before any Phase-B model trained",
+ "prediction_verbatim": "For a start-centered prior, the source sits ~sigma from R0 and the target sits D from R0, so d0 ~= D. Cut-locus exposure is therefore set by the TASK, not by sigma. Prediction: tightening sigma helps M1 substantially at D=30, less at D=90, and NOT AT ALL at D=175, where d0 ~= 175 for every sigma. If true, no start-centered prior rescues M1 at large displacement, and that is a structural limit of geodesic FM rather than a tuning failure.",
+ "operationalized": {
+  "mechanism_table (no training)": "per (sigma in {15,30,60,90}, D in {30,90,175}): mean d0 and share of d0>150, d0>165; d0 = geodesic distance from the ENDPOINT-waypoint source sample to the target endpoint (same as night 2). Prediction holds if mean d0 ~= D for every sigma and the >165 share at D=175 does not fall as sigma shrinks.",
+  "trained (M1, M2; 3 seeds; 20k)": "gap g = err_M2 - err_M1 (positive = M1 better). Prediction holds if dg/d(-sigma) is clearly positive at D=30, smaller at D=90, and ~0 (CI includes 0 for every sigma-to-sigma difference) at D=175."
+ },
+ "known_risk_written_in_advance": "a tight sigma concentrates sources near R0, so at D=175 it may put MORE of them past 165 deg than a wide sigma; if so the 'not at all' clause fails in the harmful direction, and that will be reported as a failed prediction."
+}

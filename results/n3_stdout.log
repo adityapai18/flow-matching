@@ -1,0 +1,305 @@
+2026-10-07 00:13:30,111 [pid12306] INFO [n2] scheduler start: 8 cpu workers
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-8wcd3jbd', '/mp-ndrdwkva', '/mp-p2zo8d7i', '/mp-m4360bll', '/mp-aw4gh3j1'}
+  warnings.warn(
+2026-10-07 00:17:00,394 [pid12463] INFO [n2] scheduler start: 8 cpu workers
+2026-10-07 00:17:01,561 [pid12467] INFO [train] resume M1_riemannian_D150_s0 at step 2000
+2026-10-07 00:17:01,609 [pid12470] INFO [train] resume M1_riemannian_D150_s0 at step 4000
+2026-10-07 00:17:01,611 [pid12466] INFO [train] resume M2_euclid6d_D150_s0 at step 4000
+2026-10-07 00:17:01,627 [pid12471] INFO [train] resume M2_euclid6d_D150_s1 at step 4000
+2026-10-07 00:17:01,630 [pid12472] INFO [train] resume M2_euclid6d_D150_s0 at step 2000
+2026-10-07 00:17:01,630 [pid12473] INFO [train] resume M1_riemannian_D150_s1 at step 4000
+2026-10-07 00:17:01,640 [pid12468] INFO [train] resume M2_euclid6d_D150_s1 at step 2000
+2026-10-07 00:17:01,642 [pid12469] INFO [train] resume M1_riemannian_D150_s1 at step 2000
+2026-10-07 03:29:08,807 [pid12471] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0061 11695s
+2026-10-07 03:29:23,088 [pid12463] INFO [n2] cpu n3_A_gauss90_steps320000/M2_euclid6d_D150_s1: ok  (11543s, 7 running)
+2026-10-07 03:44:41,024 [pid12466] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0057 12625s
+2026-10-07 03:44:54,982 [pid12463] INFO [n2] cpu n3_A_gauss90_steps320000/M2_euclid6d_D150_s0: ok  (12475s, 7 running)
+2026-10-07 03:54:48,858 [pid12470] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0336 13231s
+2026-10-07 03:55:04,588 [pid12463] INFO [n2] cpu n3_A_gauss90_steps320000/M1_riemannian_D150_s0: ok  (13084s, 7 running)
+2026-10-07 04:13:55,830 [pid12473] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0334 14394s
+2026-10-07 04:14:12,178 [pid12463] INFO [n2] cpu n3_A_gauss90_steps320000/M1_riemannian_D150_s1: ok  (14232s, 7 running)
+2026-10-07 04:54:10,798 [pid12468] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0832 16757s
+2026-10-07 04:54:25,621 [pid12463] INFO [n2] cpu n3_A_trunc150_steps320000/M2_euclid6d_D150_s1: ok  (16645s, 7 running)
+2026-10-07 05:05:36,334 [pid12472] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.7362 17425s
+2026-10-07 05:05:51,507 [pid12463] INFO [n2] cpu n3_A_trunc150_steps320000/M2_euclid6d_D150_s0: ok  (17331s, 7 running)
+2026-10-07 05:07:53,355 [pid12469] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0152 17583s
+2026-10-07 05:08:11,448 [pid12463] INFO [n2] cpu n3_A_trunc150_steps320000/M1_riemannian_D150_s1: ok  (17471s, 7 running)
+2026-10-07 05:21:47,138 [pid12467] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0147 18407s
+2026-10-07 05:22:04,960 [pid12463] INFO [n2] cpu n3_A_trunc150_steps320000/M1_riemannian_D150_s0: ok  (18305s, 7 running)
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-mo3p1hq9', '/mp-9_ce1nor', '/mp-z2p53e0l', '/mp-wpsexxmw', '/mp-3653wxbk'}
+  warnings.warn(
+2026-10-07 05:23:55,157 [pid15347] INFO [n2] scheduler start: 8 cpu workers
+2026-10-07 05:23:56,334 [pid15352] INFO [train] resume M2_euclid6d_D150_s2 at step 124000
+2026-10-07 05:23:56,365 [pid15354] INFO [train] resume M1_riemannian_D150_s0 at step 22000
+2026-10-07 05:23:56,369 [pid15356] INFO [train] resume M1_riemannian_D150_s0 at step 32000
+2026-10-07 05:23:56,376 [pid15350] INFO [train] resume M1_riemannian_D150_s2 at step 124000
+2026-10-07 05:23:56,381 [pid15353] INFO [train] resume M1_riemannian_D150_s2 at step 132000
+2026-10-07 05:23:56,382 [pid15351] INFO [train] resume M2_euclid6d_D150_s0 at step 20000
+2026-10-07 05:23:56,399 [pid15355] INFO [train] resume M2_euclid6d_D150_s2 at step 110000
+/Users/aditya/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-kdq1vx3z', '/mp-jwj6tmf7', '/mp-gqq81xkx', '/mp-s1s5j5du', '/mp-c37rj5lj'}
+  warnings.warn(
+2026-10-07 05:56:29,954 [pid15901] INFO [n2] scheduler start: 8 cpu workers
+2026-10-07 05:56:31,107 [pid15907] INFO [train] resume M2_euclid6d_D150_s2 at step 178000
+2026-10-07 05:56:31,135 [pid15909] INFO [train] resume M1_riemannian_D150_s2 at step 180000
+2026-10-07 05:56:31,150 [pid15904] INFO [train] resume M2_euclid6d_D150_s2 at step 144000
+2026-10-07 05:56:31,151 [pid15905] INFO [train] resume M1_riemannian_D150_s2 at step 156000
+2026-10-07 06:31:02,938 [pid15908] INFO [train] done M2_euclid6d_D150_s0 lr=0.001 loss=0.0303 2072s
+2026-10-07 06:31:17,129 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps40000/M2_euclid6d_D150_s0: ok  (2087s, 7 running)
+2026-10-07 06:52:14,508 [pid16259] INFO [train] done M2_euclid6d_D150_s0 lr=0.001 loss=0.0409 1256s
+2026-10-07 06:52:28,956 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps20000/M2_euclid6d_D150_s0: ok  (3359s, 7 running)
+2026-10-07 06:58:16,281 [pid15906] INFO [train] done M2_euclid6d_D150_s0 lr=0.001 loss=0.0227 3705s
+2026-10-07 06:58:30,617 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps80000/M2_euclid6d_D150_s0: ok  (3721s, 7 running)
+2026-10-07 07:16:13,812 [pid15907] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.7781 10780s
+2026-10-07 07:16:28,119 [pid15901] INFO [n2] cpu n3_A_gauss90_steps320000/M2_euclid6d_D150_s2: ok  (4798s, 7 running)
+2026-10-07 07:26:22,787 [pid15909] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0340 12607s
+2026-10-07 07:26:38,723 [pid15901] INFO [n2] cpu n3_A_gauss90_steps320000/M1_riemannian_D150_s2: ok  (5409s, 7 running)
+2026-10-07 07:55:20,790 [pid16722] INFO [train] done M2_euclid6d_D150_s1 lr=0.001 loss=0.0308 1720s
+2026-10-07 07:55:35,180 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps40000/M2_euclid6d_D150_s1: ok  (7145s, 7 running)
+2026-10-07 07:59:23,628 [pid15910] INFO [train] done M2_euclid6d_D150_s0 lr=0.001 loss=0.0165 7372s
+2026-10-07 07:59:37,794 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps160000/M2_euclid6d_D150_s0: ok  (7388s, 7 running)
+2026-10-07 08:08:58,868 [pid16962] INFO [train] done M2_euclid6d_D150_s1 lr=0.001 loss=0.0413 802s
+2026-10-07 08:09:13,054 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps20000/M2_euclid6d_D150_s1: ok  (7963s, 7 running)
+2026-10-07 08:10:23,951 [pid15905] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0154 16765s
+2026-10-07 08:10:40,042 [pid15901] INFO [n2] cpu n3_A_trunc150_steps320000/M1_riemannian_D150_s2: ok  (8050s, 7 running)
+2026-10-07 08:17:27,177 [pid16636] INFO [train] done M2_euclid6d_D150_s1 lr=0.001 loss=0.0230 3657s
+2026-10-07 08:17:41,521 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps80000/M2_euclid6d_D150_s1: ok  (8472s, 7 running)
+2026-10-07 08:21:19,721 [pid15904] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.7365 16428s
+2026-10-07 08:21:34,142 [pid15901] INFO [n2] cpu n3_A_trunc150_steps320000/M2_euclid6d_D150_s2: ok  (8704s, 7 running)
+2026-10-07 08:37:10,137 [pid17256] INFO [train] done M2_euclid6d_D150_s2 lr=0.001 loss=0.0411 934s
+2026-10-07 08:37:24,230 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps20000/M2_euclid6d_D150_s2: ok  (9654s, 7 running)
+2026-10-07 08:37:25,826 [pid17493] INFO [train] resume M1_riemannian_D150_s0 at step 66000
+2026-10-07 08:47:58,253 [pid17215] INFO [train] done M2_euclid6d_D150_s2 lr=0.001 loss=0.0304 1815s
+2026-10-07 08:48:12,361 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps40000/M2_euclid6d_D150_s2: ok  (10302s, 7 running)
+2026-10-07 08:48:13,890 [pid17614] INFO [train] resume M2_euclid6d_D150_s0 at step 56000
+2026-10-07 09:09:02,295 [pid16505] INFO [train] done M2_euclid6d_D150_s1 lr=0.001 loss=0.0167 7830s
+2026-10-07 09:09:16,543 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps160000/M2_euclid6d_D150_s1: ok  (11567s, 7 running)
+2026-10-07 09:09:18,153 [pid17817] INFO [train] resume M1_riemannian_D150_s0 at step 70000
+2026-10-07 09:10:16,293 [pid17157] INFO [train] done M2_euclid6d_D150_s2 lr=0.001 loss=0.0227 3575s
+2026-10-07 09:10:31,186 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps80000/M2_euclid6d_D150_s2: ok  (11641s, 7 running)
+2026-10-07 09:10:32,746 [pid17821] INFO [train] resume M2_euclid6d_D150_s0 at step 56000
+2026-10-07 09:55:28,676 [pid17493] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0194 8320s
+2026-10-07 09:55:46,893 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M1_riemannian_D150_s0: ok  (14357s, 7 running)
+2026-10-07 10:06:12,824 [pid17821] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0127 5244s
+2026-10-07 10:06:26,915 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M2_euclid6d_D150_s0: ok  (14997s, 7 running)
+2026-10-07 10:08:25,767 [pid17817] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0452 6345s
+2026-10-07 10:08:42,230 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M1_riemannian_D150_s0: ok  (15132s, 7 running)
+2026-10-07 10:15:59,651 [pid17614] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.7361 8146s
+2026-10-07 10:16:11,952 [pid15911] INFO [train] done M2_euclid6d_D150_s0 lr=0.001 loss=0.0109 15581s
+2026-10-07 10:16:13,964 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M2_euclid6d_D150_s0: ok  (15584s, 7 running)
+2026-10-07 10:16:26,521 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps320000/M2_euclid6d_D150_s0: ok  (15597s, 7 running)
+2026-10-07 10:21:10,310 [pid17123] INFO [train] done M2_euclid6d_D150_s2 lr=0.001 loss=0.0167 7916s
+2026-10-07 10:21:25,314 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps160000/M2_euclid6d_D150_s2: ok  (15895s, 7 running)
+2026-10-07 11:19:41,505 [pid16417] INFO [train] done M2_euclid6d_D150_s1 lr=0.001 loss=0.0109 16031s
+2026-10-07 11:19:56,413 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps320000/M2_euclid6d_D150_s1: ok  (19406s, 7 running)
+2026-10-07 11:52:13,431 [pid18469] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0126 5758s
+2026-10-07 11:52:27,600 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M2_euclid6d_D150_s1: ok  (21358s, 7 running)
+2026-10-07 11:55:26,493 [pid18399] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0446 6403s
+2026-10-07 11:55:43,709 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M1_riemannian_D150_s1: ok  (21554s, 7 running)
+2026-10-07 12:09:49,330 [pid17020] INFO [train] done M2_euclid6d_D150_s2 lr=0.001 loss=0.0113 15010s
+2026-10-07 12:10:04,349 [pid15901] INFO [n2] cpu n3_A_trunc150_M2lr1e-3_steps320000/M2_euclid6d_D150_s2: ok  (22414s, 7 running)
+2026-10-07 12:16:56,345 [pid18370] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0133 7828s
+2026-10-07 12:17:10,406 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M2_euclid6d_D150_s1: ok  (22840s, 7 running)
+2026-10-07 12:23:56,127 [pid18275] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0197 8888s
+2026-10-07 12:24:13,481 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M1_riemannian_D150_s1: ok  (23264s, 7 running)
+2026-10-07 12:32:01,823 [pid19378] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0386 2176s
+2026-10-07 12:32:18,804 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M1_riemannian_D150_s0: ok  (23749s, 7 running)
+2026-10-07 12:35:37,594 [pid18519] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0132 8051s
+2026-10-07 12:35:53,358 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M2_euclid6d_D150_s2: ok  (23963s, 7 running)
+2026-10-07 12:42:22,275 [pid19509] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0184 1936s
+2026-10-07 12:42:36,595 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M2_euclid6d_D150_s0: ok  (24367s, 7 running)
+2026-10-07 12:44:02,903 [pid18472] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0191 8854s
+2026-10-07 12:44:20,707 [pid15901] INFO [n2] cpu n3_A_trunc150_steps160000/M1_riemannian_D150_s2: ok  (24471s, 7 running)
+2026-10-07 12:56:49,122 [pid19582] INFO [train] done M1_riemannian_D150_s1 lr=0.001 loss=0.0391 2377s
+2026-10-07 12:57:15,758 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M1_riemannian_D150_s1: ok  (25246s, 7 running)
+2026-10-07 13:38:55,948 [pid19675] INFO [train] done M2_euclid6d_D150_s1 lr=0.003 loss=0.0186 4481s
+2026-10-07 13:39:10,830 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M2_euclid6d_D150_s1: ok  (27761s, 7 running)
+2026-10-07 13:40:03,419 [pid19846] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.0304 3445s
+2026-10-07 13:40:05,006 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.0003/M1_riemannian_D90_s100: ok  (27815s, 7 running)
+2026-10-07 13:40:21,123 [pid19874] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0353 3359s
+2026-10-07 13:40:22,635 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.0003/M2_euclid6d_D90_s100: ok  (27833s, 7 running)
+2026-10-07 13:47:49,401 [pid19071] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0451 8871s
+2026-10-07 13:48:07,042 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M1_riemannian_D150_s2: ok  (28297s, 7 running)
+2026-10-07 13:49:03,275 [pid20005] INFO [train] done M1_riemannian_D90_s100 lr=0.001 loss=0.0174 3105s
+2026-10-07 13:49:05,077 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.001/M1_riemannian_D90_s100: ok  (28355s, 7 running)
+2026-10-07 13:51:52,348 [pid20303] INFO [train] done M2_euclid6d_D90_s100 lr=0.001 loss=0.0366 760s
+2026-10-07 13:51:53,806 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.001/M2_euclid6d_D90_s100: ok  (28524s, 7 running)
+2026-10-07 13:52:52,348 [pid19749] INFO [train] done M1_riemannian_D150_s2 lr=0.001 loss=0.0391 4832s
+2026-10-07 13:53:11,531 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M1_riemannian_D150_s2: ok  (28602s, 7 running)
+2026-10-07 13:53:11,835 [pid20329] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0146 785s
+2026-10-07 13:53:12,477 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.003/M1_riemannian_D90_s100: ok  (28603s, 7 running)
+2026-10-07 13:53:42,025 [pid20331] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0341 797s
+2026-10-07 13:53:43,604 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.003/M2_euclid6d_D90_s100: ok  (28634s, 7 running)
+2026-10-07 13:53:53,171 [pid19791] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0187 4678s
+2026-10-07 13:54:09,890 [pid15901] INFO [n2] cpu n3_A_trunc150_steps40000/M2_euclid6d_D150_s2: ok  (28660s, 7 running)
+2026-10-07 14:02:55,127 [pid20398] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0481 828s
+2026-10-07 14:02:56,777 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.0003/M2_euclid6d_D90_s100: ok  (29187s, 7 running)
+2026-10-07 14:04:55,627 [pid20394] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.0394 1007s
+2026-10-07 14:04:57,441 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.0003/M1_riemannian_D90_s100: ok  (29307s, 7 running)
+2026-10-07 14:06:14,351 [pid20440] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0210 859s
+2026-10-07 14:06:16,124 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.003/M1_riemannian_D90_s100: ok  (29386s, 7 running)
+2026-10-07 14:06:50,629 [pid20443] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0425 817s
+2026-10-07 14:06:51,046 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.003/M2_euclid6d_D90_s100: ok  (29421s, 7 running)
+2026-10-07 14:07:58,147 [pid20444] INFO [train] done M1_riemannian_D90_s100 lr=0.0003 loss=0.0830 884s
+2026-10-07 14:07:59,971 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.0003/M1_riemannian_D90_s100: ok  (29490s, 7 running)
+2026-10-07 14:08:14,468 [pid20473] INFO [train] done M2_euclid6d_D90_s100 lr=0.01 loss=0.5264 843s
+2026-10-07 14:08:14,880 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.01/M2_euclid6d_D90_s100: ok  (29505s, 7 running)
+2026-10-07 14:09:36,388 [pid20472] INFO [train] done M1_riemannian_D90_s100 lr=0.01 loss=0.1131 951s
+2026-10-07 14:09:38,188 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.01/M1_riemannian_D90_s100: ok  (29588s, 7 running)
+2026-10-07 14:16:16,484 [pid20709] INFO [train] done M1_riemannian_D90_s100 lr=0.0001 loss=0.0470 798s
+2026-10-07 14:16:18,302 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.0001/M1_riemannian_D90_s100: ok  (29988s, 7 running)
+2026-10-07 14:17:00,070 [pid19329] INFO [train] done M2_euclid6d_D150_s2 lr=0.003 loss=0.0121 8671s
+2026-10-07 14:17:16,727 [pid15901] INFO [n2] cpu n3_A_gauss90_steps160000/M2_euclid6d_D150_s2: ok  (30047s, 7 running)
+2026-10-07 14:17:38,645 [pid20743] INFO [train] done M2_euclid6d_D90_s100 lr=0.0001 loss=0.0536 759s
+2026-10-07 14:17:40,249 [pid15901] INFO [n2] cpu n3_hp_gauss15_lr0.0001/M2_euclid6d_D90_s100: ok  (30070s, 7 running)
+2026-10-07 14:17:40,262 [pid15901] INFO [n3] LR search gauss15 final: {'M1_riemannian': 0.003, 'M2_euclid6d': 0.0003}  grid [0.0001, 0.0003, 0.001, 0.003, 0.01]
+2026-10-07 14:19:52,797 [pid20753] INFO [train] done M2_euclid6d_D90_s100 lr=0.0003 loss=0.0700 815s
+2026-10-07 14:19:54,410 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.0003/M2_euclid6d_D90_s100: ok  (30204s, 7 running)
+2026-10-07 14:21:43,569 [pid20771] INFO [train] done M2_euclid6d_D90_s100 lr=0.01 loss=0.6005 821s
+2026-10-07 14:21:45,179 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.01/M2_euclid6d_D90_s100: ok  (30315s, 7 running)
+2026-10-07 14:23:31,035 [pid20769] INFO [train] done M1_riemannian_D90_s100 lr=0.01 loss=0.8613 998s
+2026-10-07 14:23:32,878 [pid15901] INFO [n2] cpu n3_hp_gauss30_lr0.01/M1_riemannian_D90_s100: ok  (30423s, 7 running)
+2026-10-07 14:23:32,884 [pid15901] INFO [n3] LR search gauss30 final: {'M1_riemannian': 0.003, 'M2_euclid6d': 0.001}  grid [0.0003, 0.001, 0.003, 0.01]
+2026-10-07 14:24:38,551 [pid20775] INFO [train] done M1_riemannian_D90_s100 lr=0.003 loss=0.0582 982s
+2026-10-07 14:24:40,318 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.003/M1_riemannian_D90_s100: ok  (30490s, 7 running)
+2026-10-07 14:24:55,375 [pid20788] INFO [train] done M2_euclid6d_D90_s100 lr=0.003 loss=0.0372 915s
+2026-10-07 14:24:56,991 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.003/M2_euclid6d_D90_s100: ok  (30507s, 7 running)
+2026-10-07 14:31:21,988 [pid20876] INFO [train] done M1_riemannian_D90_s0 lr=0.0003 loss=0.1068 844s
+2026-10-07 14:31:26,619 [pid20879] INFO [train] done M1_riemannian_D30_s0 lr=0.003 loss=0.0128 824s
+2026-10-07 14:31:41,153 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D90_s0: ok  (30911s, 7 running)
+2026-10-07 14:31:44,423 [pid20933] INFO [train] done M2_euclid6d_D30_s0 lr=0.0003 loss=0.0334 708s
+2026-10-07 14:31:45,328 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D30_s0: ok  (30915s, 7 running)
+2026-10-07 14:32:00,474 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D30_s0: ok  (30931s, 7 running)
+2026-10-07 14:32:33,832 [pid20862] INFO [train] done M1_riemannian_D30_s0 lr=0.0003 loss=0.0965 974s
+2026-10-07 14:32:52,718 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D30_s0: ok  (30983s, 7 running)
+2026-10-07 14:36:38,644 [pid20950] INFO [train] done M1_riemannian_D90_s0 lr=0.003 loss=0.0150 892s
+2026-10-07 14:36:57,748 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D90_s0: ok  (31228s, 7 running)
+2026-10-07 14:38:53,308 [pid20967] INFO [train] done M2_euclid6d_D90_s0 lr=0.0003 loss=0.0353 919s
+2026-10-07 14:38:58,479 [pid20983] INFO [train] done M1_riemannian_D90_s100 lr=0.01 loss=1.1281 839s
+2026-10-07 14:38:58,903 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.01/M1_riemannian_D90_s100: ok  (31349s, 7 running)
+2026-10-07 14:39:08,705 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D90_s0: ok  (31359s, 7 running)
+2026-10-07 14:42:34,504 [pid20971] INFO [train] done M1_riemannian_D175_s0 lr=0.003 loss=0.0425 1073s
+2026-10-07 14:42:53,749 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D175_s0: ok  (31584s, 7 running)
+2026-10-07 14:44:32,916 [pid21152] INFO [train] done M1_riemannian_D30_s0 lr=0.003 loss=0.0159 751s
+2026-10-07 14:44:51,976 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D30_s0: ok  (31702s, 7 running)
+2026-10-07 14:45:54,519 [pid21148] INFO [train] done M2_euclid6d_D90_s100 lr=0.01 loss=0.7294 852s
+2026-10-07 14:45:56,149 [pid15901] INFO [n2] cpu n3_hp_gauss60_lr0.01/M2_euclid6d_D90_s100: ok  (31766s, 7 running)
+2026-10-07 14:45:56,154 [pid15901] INFO [n3] LR search gauss60 final: {'M1_riemannian': 0.003, 'M2_euclid6d': 0.001}  grid [0.0003, 0.001, 0.003, 0.01]
+2026-10-07 14:46:23,875 [pid21154] INFO [train] done M2_euclid6d_D30_s0 lr=0.001 loss=0.0322 810s
+2026-10-07 14:46:24,461 [pid21151] INFO [train] done M2_euclid6d_D175_s0 lr=0.0003 loss=0.0375 877s
+2026-10-07 14:46:42,016 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D30_s0: ok  (31812s, 7 running)
+2026-10-07 14:46:42,709 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D175_s0: ok  (31813s, 7 running)
+2026-10-07 14:51:29,054 [pid21196] INFO [train] done M1_riemannian_D90_s0 lr=0.003 loss=0.0210 870s
+2026-10-07 14:51:47,975 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D90_s0: ok  (32118s, 7 running)
+2026-10-07 14:52:36,425 [pid21210] INFO [train] done M2_euclid6d_D90_s0 lr=0.001 loss=0.0353 816s
+2026-10-07 14:52:53,215 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D90_s0: ok  (32183s, 7 running)
+2026-10-07 14:53:25,556 [pid21216] INFO [train] done M1_riemannian_D175_s0 lr=0.003 loss=0.0556 855s
+2026-10-07 14:53:44,571 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D175_s0: ok  (32235s, 7 running)
+2026-10-07 14:56:20,925 [pid21253] INFO [train] done M2_euclid6d_D175_s0 lr=0.001 loss=0.0400 806s
+2026-10-07 14:56:37,404 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D175_s0: ok  (32407s, 7 running)
+2026-10-07 14:58:22,234 [pid21303] INFO [train] done M2_euclid6d_D30_s0 lr=0.001 loss=0.0355 699s
+2026-10-07 14:58:38,601 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D30_s0: ok  (32529s, 7 running)
+2026-10-07 14:59:23,404 [pid21291] INFO [train] done M1_riemannian_D175_s0 lr=0.0003 loss=0.1217 870s
+2026-10-07 14:59:41,910 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D175_s0: ok  (32592s, 7 running)
+2026-10-07 15:00:45,729 [pid21300] INFO [train] done M1_riemannian_D30_s0 lr=0.003 loss=0.0526 888s
+2026-10-07 15:01:04,770 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D30_s0: ok  (32675s, 7 running)
+2026-10-07 15:01:40,468 [pid21304] INFO [train] done M1_riemannian_D90_s0 lr=0.003 loss=0.0582 896s
+2026-10-07 15:01:59,661 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D90_s0: ok  (32730s, 7 running)
+2026-10-07 15:06:43,339 [pid21346] INFO [train] done M2_euclid6d_D90_s0 lr=0.001 loss=0.0425 894s
+2026-10-07 15:06:59,724 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D90_s0: ok  (33030s, 7 running)
+2026-10-07 15:07:26,713 [pid21352] INFO [train] done M1_riemannian_D175_s0 lr=0.003 loss=0.0730 872s
+2026-10-07 15:07:45,795 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D175_s0: ok  (33076s, 7 running)
+2026-10-07 15:08:41,626 [pid21356] INFO [train] done M2_euclid6d_D175_s0 lr=0.001 loss=0.0508 895s
+2026-10-07 15:08:58,095 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D175_s0: ok  (33148s, 7 running)
+2026-10-07 15:11:56,523 [pid21390] INFO [train] done M1_riemannian_D30_s1 lr=0.003 loss=0.0126 918s
+2026-10-07 15:12:15,224 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D30_s1: ok  (33345s, 7 running)
+2026-10-07 15:12:16,057 [pid21397] INFO [train] done M2_euclid6d_D30_s1 lr=0.0003 loss=0.0333 816s
+2026-10-07 15:12:32,046 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D30_s1: ok  (33362s, 7 running)
+2026-10-07 15:14:37,778 [pid21430] INFO [train] done M1_riemannian_D90_s1 lr=0.003 loss=0.0147 894s
+2026-10-07 15:14:56,800 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D90_s1: ok  (33507s, 7 running)
+2026-10-07 15:15:57,708 [pid21441] INFO [train] done M2_euclid6d_D90_s1 lr=0.0003 loss=0.0351 891s
+2026-10-07 15:16:14,367 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D90_s1: ok  (33584s, 7 running)
+2026-10-07 15:16:49,903 [pid21446] INFO [train] done M1_riemannian_D175_s1 lr=0.003 loss=0.0424 889s
+2026-10-07 15:17:09,230 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D175_s1: ok  (33639s, 7 running)
+2026-10-07 15:20:29,392 [pid21462] INFO [train] done M2_euclid6d_D175_s1 lr=0.0003 loss=0.0375 808s
+2026-10-07 15:20:45,977 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D175_s1: ok  (33856s, 7 running)
+2026-10-07 15:21:16,703 [pid21465] INFO [train] done M1_riemannian_D30_s1 lr=0.003 loss=0.0157 809s
+2026-10-07 15:21:36,148 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D30_s1: ok  (33906s, 7 running)
+2026-10-07 15:22:36,715 [pid21469] INFO [train] done M2_euclid6d_D30_s1 lr=0.001 loss=0.0318 817s
+2026-10-07 15:22:53,203 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D30_s1: ok  (33983s, 7 running)
+2026-10-07 15:25:30,528 [pid21498] INFO [train] done M1_riemannian_D90_s1 lr=0.003 loss=0.0212 794s
+2026-10-07 15:25:49,444 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D90_s1: ok  (34159s, 7 running)
+2026-10-07 15:26:23,738 [pid21502] INFO [train] done M2_euclid6d_D90_s1 lr=0.001 loss=0.0352 830s
+2026-10-07 15:26:40,407 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D90_s1: ok  (34210s, 7 running)
+2026-10-07 15:28:51,586 [pid21508] INFO [train] done M1_riemannian_D175_s1 lr=0.003 loss=0.0542 833s
+2026-10-07 15:29:10,794 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D175_s1: ok  (34361s, 7 running)
+2026-10-07 15:29:15,398 [pid21516] INFO [train] done M2_euclid6d_D175_s1 lr=0.001 loss=0.0409 779s
+2026-10-07 15:29:32,058 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D175_s1: ok  (34382s, 7 running)
+2026-10-07 15:34:39,112 [pid21518] INFO [train] done M1_riemannian_D30_s1 lr=0.003 loss=0.0450 1048s
+2026-10-07 15:34:51,480 [pid21554] INFO [train] done M1_riemannian_D90_s1 lr=0.003 loss=0.0580 794s
+2026-10-07 15:34:58,550 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D30_s1: ok  (34709s, 7 running)
+2026-10-07 15:35:09,914 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D90_s1: ok  (34720s, 7 running)
+2026-10-07 15:35:32,713 [pid21548] INFO [train] done M2_euclid6d_D30_s1 lr=0.001 loss=0.0353 885s
+2026-10-07 15:35:49,249 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D30_s1: ok  (34759s, 7 running)
+2026-10-07 15:37:27,440 [pid21558] INFO [train] done M2_euclid6d_D90_s1 lr=0.001 loss=0.0431 873s
+2026-10-07 15:37:43,698 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D90_s1: ok  (34874s, 7 running)
+2026-10-07 15:39:50,052 [pid21570] INFO [train] done M1_riemannian_D175_s1 lr=0.003 loss=0.0736 839s
+2026-10-07 15:40:08,378 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D175_s1: ok  (35018s, 7 running)
+2026-10-07 15:41:40,401 [pid21573] INFO [train] done M2_euclid6d_D175_s1 lr=0.001 loss=0.0519 898s
+2026-10-07 15:41:56,883 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D175_s1: ok  (35127s, 7 running)
+2026-10-07 15:44:01,061 [pid21582] INFO [train] done M1_riemannian_D30_s1 lr=0.0003 loss=0.0964 889s
+2026-10-07 15:44:20,154 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D30_s1: ok  (35270s, 7 running)
+2026-10-07 15:44:53,410 [pid21586] INFO [train] done M1_riemannian_D90_s1 lr=0.0003 loss=0.1063 920s
+2026-10-07 15:45:12,200 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D90_s1: ok  (35322s, 7 running)
+2026-10-07 15:48:05,846 [pid21630] INFO [train] done M1_riemannian_D30_s2 lr=0.003 loss=0.0129 774s
+2026-10-07 15:48:24,620 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D30_s2: ok  (35515s, 7 running)
+2026-10-07 15:49:45,371 [pid21628] INFO [train] done M1_riemannian_D175_s1 lr=0.0003 loss=0.1236 885s
+2026-10-07 15:50:02,841 [pid21635] INFO [train] done M2_euclid6d_D30_s2 lr=0.0003 loss=0.0336 852s
+2026-10-07 15:50:04,431 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D175_s1: ok  (35614s, 7 running)
+2026-10-07 15:50:18,509 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D30_s2: ok  (35629s, 7 running)
+2026-10-07 15:52:06,754 [pid21640] INFO [train] done M1_riemannian_D90_s2 lr=0.003 loss=0.0148 861s
+2026-10-07 15:52:25,860 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D90_s2: ok  (35756s, 7 running)
+2026-10-07 15:53:05,382 [pid21669] INFO [train] done M2_euclid6d_D90_s2 lr=0.0003 loss=0.0351 775s
+2026-10-07 15:53:22,137 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D90_s2: ok  (35812s, 7 running)
+2026-10-07 15:56:56,276 [pid21678] INFO [train] done M1_riemannian_D175_s2 lr=0.003 loss=0.0420 898s
+2026-10-07 15:57:15,217 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.003/M1_riemannian_D175_s2: ok  (36045s, 7 running)
+2026-10-07 15:59:27,432 [pid21682] INFO [train] done M2_euclid6d_D175_s2 lr=0.0003 loss=0.0369 906s
+2026-10-07 15:59:43,923 [pid15901] INFO [n2] cpu n3_B_gauss15_lr0.0003/M2_euclid6d_D175_s2: ok  (36194s, 7 running)
+2026-10-07 16:00:14,138 [pid21686] INFO [train] done M1_riemannian_D30_s2 lr=0.003 loss=0.0160 900s
+2026-10-07 16:00:33,414 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D30_s2: ok  (36243s, 7 running)
+2026-10-07 16:02:00,510 [pid21696] INFO [train] done M2_euclid6d_D30_s2 lr=0.001 loss=0.0317 814s
+2026-10-07 16:02:17,187 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D30_s2: ok  (36347s, 7 running)
+2026-10-07 16:03:10,273 [pid21724] INFO [train] done M2_euclid6d_D90_s2 lr=0.001 loss=0.0357 770s
+2026-10-07 16:03:26,796 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D90_s2: ok  (36417s, 7 running)
+2026-10-07 16:05:46,024 [pid21722] INFO [train] done M1_riemannian_D90_s2 lr=0.003 loss=0.0208 940s
+2026-10-07 16:06:04,481 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D90_s2: ok  (36575s, 7 running)
+2026-10-07 16:06:21,795 [pid21730] INFO [train] done M1_riemannian_D175_s2 lr=0.003 loss=0.0542 834s
+2026-10-07 16:06:29,178 [pid21734] INFO [train] done M2_euclid6d_D175_s2 lr=0.001 loss=0.0408 785s
+2026-10-07 16:06:41,688 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.003/M1_riemannian_D175_s2: ok  (36612s, 7 running)
+2026-10-07 16:06:45,673 [pid15901] INFO [n2] cpu n3_B_gauss30_lr0.001/M2_euclid6d_D175_s2: ok  (36616s, 7 running)
+2026-10-07 16:13:41,211 [pid21754] INFO [train] done M2_euclid6d_D30_s2 lr=0.001 loss=0.0346 836s
+2026-10-07 16:13:53,801 [pid21747] INFO [train] done M1_riemannian_D30_s2 lr=0.003 loss=0.0448 997s
+2026-10-07 16:13:57,987 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D30_s2: ok  (37048s, 7 running)
+2026-10-07 16:14:10,771 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D30_s2: ok  (37061s, 7 running)
+2026-10-07 16:14:36,313 [pid21788] INFO [train] done M1_riemannian_D90_s2 lr=0.003 loss=0.0582 841s
+2026-10-07 16:14:55,957 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D90_s2: ok  (37106s, 7 running)
+2026-10-07 16:15:40,432 [pid21796] INFO [train] done M2_euclid6d_D90_s2 lr=0.001 loss=0.0429 802s
+2026-10-07 16:16:01,887 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D90_s2: ok  (37172s, 7 running)
+2026-10-07 16:18:20,045 [pid21802] INFO [train] done M1_riemannian_D175_s2 lr=0.003 loss=0.0722 892s
+2026-10-07 16:18:29,113 [pid21846] INFO [train] done M2_euclid6d_D175_s2 lr=0.001 loss=0.0512 743s
+2026-10-07 16:18:36,894 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.003/M1_riemannian_D175_s2: ok  (37327s, 7 running)
+2026-10-07 16:18:41,077 [pid15901] INFO [n2] cpu n3_B_gauss60_lr0.001/M2_euclid6d_D175_s2: ok  (37331s, 7 running)
+2026-10-07 16:20:27,457 [pid21850] INFO [train] done M1_riemannian_D30_s2 lr=0.0003 loss=0.0966 824s
+2026-10-07 16:20:40,418 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D30_s2: ok  (37450s, 6 running)
+2026-10-07 16:20:53,795 [pid21851] INFO [train] done M1_riemannian_D90_s2 lr=0.0003 loss=0.1068 846s
+2026-10-07 16:21:03,530 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D90_s2: ok  (37474s, 5 running)
+2026-10-07 16:25:13,697 [pid21946] INFO [train] done M1_riemannian_D175_s2 lr=0.0003 loss=0.1215 674s
+2026-10-07 16:25:20,378 [pid15901] INFO [n2] cpu n3_B_gauss90_lr0.0003/M1_riemannian_D175_s2: ok  (37730s, 4 running)
+2026-10-07 16:50:05,905 [pid21950] INFO [train] done M2_euclid6d_D30_s0 lr=0.003 loss=0.6666 2108s
+2026-10-07 16:50:17,818 [pid15901] INFO [n2] cpu n3_C_w2048_trunc150/M2_euclid6d_D30_s0: ok  (39228s, 3 running)
+2026-10-07 16:51:00,436 [pid22004] INFO [train] done M2_euclid6d_D150_s0 lr=0.003 loss=0.0214 1942s
+2026-10-07 16:51:04,990 [pid21949] INFO [train] done M1_riemannian_D30_s0 lr=0.001 loss=0.0311 2213s
+2026-10-07 16:51:11,091 [pid15901] INFO [n2] cpu n3_C_w2048_trunc150/M2_euclid6d_D150_s0: ok  (39281s, 2 running)
+2026-10-07 16:51:13,781 [pid15901] INFO [n2] cpu n3_C_w2048_trunc150/M1_riemannian_D30_s0: ok  (39284s, 1 running)
+2026-10-07 16:51:19,847 [pid21993] INFO [train] done M1_riemannian_D150_s0 lr=0.001 loss=0.0381 2116s
+2026-10-07 16:51:25,236 [pid15901] INFO [n2] cpu n3_C_w2048_trunc150/M1_riemannian_D150_s0: ok  (39295s, 0 running)
+2026-10-07 16:51:25,240 [pid15901] INFO [n2] scheduler: nothing left to run
